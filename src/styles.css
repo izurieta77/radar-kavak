@@ -220,6 +220,7 @@ h1 {
   background: #ffffff;
   border: 1px solid #dce3df;
   border-radius: 8px;
+  min-width: 0;
 }
 
 .panel-toolbar {
@@ -254,15 +255,16 @@ h1 {
 
 .opportunity-table {
   overflow: auto;
+  max-width: 100%;
 }
 
 .table-head,
 .table-row {
   display: grid;
-  grid-template-columns: minmax(190px, 1.45fr) 88px 114px 122px 122px 92px;
+  grid-template-columns: minmax(160px, 1.3fr) 76px 100px 110px 110px 78px;
   align-items: center;
-  gap: 10px;
-  min-width: 760px;
+  gap: 8px;
+  min-width: 690px;
 }
 
 .table-head {
