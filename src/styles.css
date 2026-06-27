@@ -259,10 +259,10 @@ h1 {
 .table-head,
 .table-row {
   display: grid;
-  grid-template-columns: minmax(178px, 1.45fr) 86px 112px 112px 92px;
+  grid-template-columns: minmax(190px, 1.45fr) 88px 114px 122px 122px 92px;
   align-items: center;
   gap: 10px;
-  min-width: 590px;
+  min-width: 760px;
 }
 
 .table-head {

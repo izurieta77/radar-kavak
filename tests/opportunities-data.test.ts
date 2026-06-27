@@ -46,4 +46,11 @@ describe('generated opportunities', () => {
     expect(kavakEvidence?.url).toContain('kavak.com/mx/v2/cotizar-auto/venta-multi-oferta-auto');
     expect(quotedX4?.notes).toContain('Kavak venta directa capturado: $853,289; cambio/trueque: $873,663; prestamo: $600,000; vigente hasta 2026-07-05.');
   });
+
+  it('has an explicit Kavak result for every analyzable vehicle', () => {
+    expect(opportunities.some((item) => item.kavakStatus === 'pendiente')).toBe(false);
+    expect(opportunities.filter((item) => item.kavakStatus === 'capturado')).not.toHaveLength(0);
+    expect(opportunities.find((item) => item.vehicle.no === 47)?.kavakStatus).toBe('solo_prestamo');
+    expect(opportunities.find((item) => item.vehicle.no === 4)?.kavakStatus).toBe('modelo_no_disponible');
+  });
 });

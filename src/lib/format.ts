@@ -52,6 +52,8 @@ export function negotiationRange(
 
 export function statusLabel(status: KavakStatus): string {
   if (status === 'capturado') return 'capturado';
+  if (status === 'solo_prestamo') return 'solo prestamo';
+  if (status === 'modelo_no_disponible') return 'sin modelo';
   if (status === 'estimado') return 'estimado';
   return 'pendiente';
 }

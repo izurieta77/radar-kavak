@@ -30,6 +30,22 @@ function confidenceLabel(confidence: number): string {
   return 'baja';
 }
 
+function kavakDisplay(item: Opportunity): string {
+  if (item.kavakOffer != null) return formatMoney(item.kavakOffer);
+  if (item.kavakStatus === 'solo_prestamo' && item.kavakLoanOffer != null) {
+    return `Prestamo ${formatMoney(item.kavakLoanOffer)}`;
+  }
+  return statusLabel(item.kavakStatus);
+}
+
+function marketDisplay(item: Opportunity): string {
+  return item.marketReference != null ? formatMoney(item.marketReference) : 'sin comparable';
+}
+
+function spreadDisplay(item: Opportunity): string {
+  return item.spread != null ? formatMoney(item.spread) : 'sin spread';
+}
+
 function App() {
   const [selectedNo, setSelectedNo] = useState(opportunities[0]?.vehicle.no ?? 0);
   const [query, setQuery] = useState('');
@@ -47,7 +63,11 @@ function App() {
     });
   }, [query, onlyPositive]);
 
-  const capturedRefs = opportunities.filter((item) => item.marketReference != null || item.kavakOffer != null).length;
+  const kavakResults = opportunities.filter((item) => item.kavakStatus !== 'pendiente').length;
+  const kavakSaleOffers = opportunities.filter((item) => item.kavakOffer != null).length;
+  const loanOnly = opportunities.filter((item) => item.kavakStatus === 'solo_prestamo').length;
+  const noModel = opportunities.filter((item) => item.kavakStatus === 'modelo_no_disponible').length;
+  const marketRefs = opportunities.filter((item) => item.marketReference != null).length;
   const positive = opportunities.filter((item) => (item.spread ?? 0) > 0);
   const publishedMargin = positive.reduce((sum, item) => sum + (item.spread ?? 0), 0);
 
@@ -79,7 +99,7 @@ function App() {
         <header className="topbar">
           <div>
             <h1>Oportunidades fin de mes</h1>
-            <p>Solo se rankea con Kavak capturado o publicaciones reales de mercado.</p>
+            <p>Resultado Kavak real para cada unidad analizable; mercado separado por publicaciones visibles.</p>
           </div>
           <div className="status-row">
             <span className="status-chip muted">
@@ -100,14 +120,14 @@ function App() {
             <small>{summary.total} total, {summary.excludedOrange} naranjas fuera</small>
           </div>
           <div className="kpi">
-            <span>Referencias reales</span>
-            <strong>{capturedRefs}</strong>
-            <small>Facebook, MercadoLibre, Kavak u otra URL verificable</small>
+            <span>Resultados Kavak</span>
+            <strong>{kavakResults}</strong>
+            <small>{kavakSaleOffers} venta, {loanOnly} solo prestamo, {noModel} sin modelo/version</small>
           </div>
           <div className="kpi">
-            <span>Spread positivo</span>
-            <strong>{positive.length}</strong>
-            <small>Solo con precio real visible</small>
+            <span>Mercado publicado</span>
+            <strong>{marketRefs}</strong>
+            <small>Facebook, MercadoLibre, Kavak u otra URL verificable</small>
           </div>
           <div className="kpi accent">
             <span>Margen potencial</span>
@@ -138,7 +158,8 @@ function App() {
                 <span>Auto</span>
                 <span>Lista</span>
                 <span>Compra obj.</span>
-                <span>Precio real</span>
+                <span>Kavak</span>
+                <span>Mercado</span>
                 <span>Spread</span>
               </div>
               {filtered.map((item) => (
@@ -157,11 +178,15 @@ function App() {
                     <small>agresivo {formatMoney(item.aggressiveBuyPrice)}</small>
                   </span>
                   <span>
-                    <strong>{formatMoney(item.marketReference ?? item.kavakOffer)}</strong>
-                    <small>Kavak {statusLabel(item.kavakStatus)}</small>
+                    <strong>{kavakDisplay(item)}</strong>
+                    <small>{statusLabel(item.kavakStatus)}</small>
+                  </span>
+                  <span>
+                    <strong>{marketDisplay(item)}</strong>
+                    <small>{item.marketReference == null ? 'sin publicacion' : 'venta publicado'}</small>
                   </span>
                   <span className={(item.spread ?? 0) > 0 ? 'spread good' : 'spread muted'}>
-                    {formatMoney(item.spread)}
+                    {spreadDisplay(item)}
                   </span>
                 </button>
               ))}
@@ -192,9 +217,27 @@ function App() {
                   <strong>{formatMoney(selected.kavakOffer)}</strong>
                 </div>
               )}
+              {selected.kavakOffer == null && (
+                <div>
+                  <span>Kavak resultado</span>
+                  <strong>{kavakDisplay(selected)}</strong>
+                </div>
+              )}
+              {selected.kavakTradeOffer != null && (
+                <div>
+                  <span>Kavak cambio</span>
+                  <strong>{formatMoney(selected.kavakTradeOffer)}</strong>
+                </div>
+              )}
+              {selected.marketReference != null && (
+                <div>
+                  <span>Mercado venta</span>
+                  <strong>{formatMoney(selected.marketReference)}</strong>
+                </div>
+              )}
               <div>
                 <span>Spread objetivo</span>
-                <strong className={(selected.spread ?? 0) > 0 ? 'good-text' : ''}>{formatMoney(selected.spread)}</strong>
+                <strong className={(selected.spread ?? 0) > 0 ? 'good-text' : ''}>{spreadDisplay(selected)}</strong>
               </div>
             </div>
 

@@ -1,4 +1,4 @@
-export type KavakStatus = 'pendiente' | 'estimado' | 'capturado';
+export type KavakStatus = 'pendiente' | 'estimado' | 'capturado' | 'solo_prestamo' | 'modelo_no_disponible';
 
 export interface InventoryVehicle {
   page: number;
@@ -22,7 +22,7 @@ export interface MarketEvidence {
   price: number | null;
   kilometers: number | null;
   zone: 'Toluca' | 'CDMX' | 'Metepec' | 'Nacional';
-  status: 'publicado' | 'capturado' | 'asistido' | 'pendiente';
+  status: 'publicado' | 'capturado' | 'solo_prestamo' | 'modelo_no_disponible' | 'asistido' | 'pendiente';
   observedAt?: string;
   publicationId?: string;
 }
@@ -31,6 +31,9 @@ export interface Opportunity {
   vehicle: InventoryVehicle;
   kavakStatus: KavakStatus;
   kavakOffer: number | null;
+  kavakTradeOffer: number | null;
+  kavakLoanOffer: number | null;
+  kavakSellOfferType: string | null;
   marketReference: number | null;
   targetBuyPrice: number | null;
   aggressiveBuyPrice: number | null;
