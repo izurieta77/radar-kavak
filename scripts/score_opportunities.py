@@ -212,6 +212,19 @@ def build_market_references(vehicle: dict[str, Any], listings: list[dict[str, An
     return references
 
 
+def market_price_range(references: list[dict[str, Any]]) -> dict[str, int] | None:
+    prices = sorted(reference["price"] for reference in references if reference["price"] is not None)
+    if not prices:
+        return None
+    middle_index = (len(prices) - 1) // 2
+    return {
+        "low": prices[0],
+        "mid": prices[middle_index],
+        "high": prices[-1],
+        "count": len(prices),
+    }
+
+
 def evidence_from_kavak_quote(quote: dict[str, Any]) -> dict[str, Any]:
     status = quote.get("status") or "capturado"
     sell_offer = positive_int(quote.get("sellOffer"))
@@ -263,7 +276,8 @@ def build_opportunity(
     evidence = list(market_references)
     if kavak_quote is not None:
         evidence.insert(0, evidence_from_kavak_quote(kavak_quote))
-    market_reference = max((reference["price"] for reference in market_references if reference["price"] is not None), default=None)
+    price_range = market_price_range(market_references)
+    market_reference = price_range["high"] if price_range is not None else None
     priced_market_count = sum(1 for reference in market_references if reference["price"] is not None)
     if kavak_offer is not None and priced_market_count >= 1:
         confidence = 0.95
@@ -327,6 +341,7 @@ def build_opportunity(
         "kavakLoanOffer": kavak_loan_offer,
         "kavakSellOfferType": kavak_quote.get("sellOfferType") if kavak_quote is not None else None,
         "marketReference": market_reference,
+        "marketPriceRange": price_range,
         "targetBuyPrice": target_price,
         "aggressiveBuyPrice": aggressive_price,
         "spread": spread,

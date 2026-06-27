@@ -38,6 +38,7 @@ export interface Opportunity {
   kavakLoanOffer: number | null;
   kavakSellOfferType: string | null;
   marketReference: number | null;
+  marketPriceRange: MarketPriceRange | null;
   targetBuyPrice: number | null;
   aggressiveBuyPrice: number | null;
   spread: number | null;
@@ -47,6 +48,13 @@ export interface Opportunity {
   marketReferences: MarketEvidence[];
   evidence: MarketEvidence[];
   notes: string[];
+}
+
+export interface MarketPriceRange {
+  low: number;
+  mid: number;
+  high: number;
+  count: number;
 }
 
 export interface NegotiationRange {

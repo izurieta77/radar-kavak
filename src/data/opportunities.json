@@ -20,6 +20,12 @@
     "kavakLoanOffer": 600000,
     "kavakSellOfferType": "sin_oferta_venta",
     "marketReference": 3210000,
+    "marketPriceRange": {
+      "low": 2199000,
+      "mid": 2520000,
+      "high": 3210000,
+      "count": 3
+    },
     "targetBuyPrice": 1939000,
     "aggressiveBuyPrice": 1919000,
     "spread": 1271000,
@@ -241,6 +247,12 @@
     "kavakLoanOffer": 600000,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 2210000,
+    "marketPriceRange": {
+      "low": 1385000,
+      "mid": 1580000,
+      "high": 2210000,
+      "count": 6
+    },
     "targetBuyPrice": 1239000,
     "aggressiveBuyPrice": 1219000,
     "spread": 971000,
@@ -547,6 +559,12 @@
     "kavakLoanOffer": 600000,
     "kavakSellOfferType": "venta_7_dias",
     "marketReference": 1300000,
+    "marketPriceRange": {
+      "low": 1300000,
+      "mid": 1300000,
+      "high": 1300000,
+      "count": 1
+    },
     "targetBuyPrice": 829000,
     "aggressiveBuyPrice": 809000,
     "spread": 471000,
@@ -735,6 +753,12 @@
     "kavakLoanOffer": null,
     "kavakSellOfferType": "modelo_no_disponible",
     "marketReference": 2497900,
+    "marketPriceRange": {
+      "low": 1989000,
+      "mid": 1999000,
+      "high": 2497900,
+      "count": 3
+    },
     "targetBuyPrice": 1939000,
     "aggressiveBuyPrice": 1919000,
     "spread": 558900,
@@ -956,6 +980,12 @@
     "kavakLoanOffer": 600000,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 1490000,
+    "marketPriceRange": {
+      "low": 1020999,
+      "mid": 1199000,
+      "high": 1490000,
+      "count": 3
+    },
     "targetBuyPrice": 1139000,
     "aggressiveBuyPrice": 1119000,
     "spread": 351000,
@@ -1156,6 +1186,12 @@
     "kavakLoanOffer": 600000,
     "kavakSellOfferType": null,
     "marketReference": 1295000,
+    "marketPriceRange": {
+      "low": 939500,
+      "mid": 939500,
+      "high": 1295000,
+      "count": 4
+    },
     "targetBuyPrice": 999000,
     "aggressiveBuyPrice": 979000,
     "spread": 296000,
@@ -1406,6 +1442,12 @@
     "kavakLoanOffer": 600000,
     "kavakSellOfferType": null,
     "marketReference": 1215000,
+    "marketPriceRange": {
+      "low": 1215000,
+      "mid": 1215000,
+      "high": 1215000,
+      "count": 1
+    },
     "targetBuyPrice": 989000,
     "aggressiveBuyPrice": 969000,
     "spread": 226000,
@@ -1594,6 +1636,12 @@
     "kavakLoanOffer": 283293,
     "kavakSellOfferType": null,
     "marketReference": 575000,
+    "marketPriceRange": {
+      "low": 430999,
+      "mid": 470000,
+      "high": 575000,
+      "count": 6
+    },
     "targetBuyPrice": 379000,
     "aggressiveBuyPrice": 359000,
     "spread": 196000,
@@ -1878,6 +1926,12 @@
     "kavakLoanOffer": 600000,
     "kavakSellOfferType": null,
     "marketReference": 999000,
+    "marketPriceRange": {
+      "low": 869000,
+      "mid": 927999,
+      "high": 999000,
+      "count": 5
+    },
     "targetBuyPrice": 819000,
     "aggressiveBuyPrice": 799000,
     "spread": 180000,
@@ -2135,6 +2189,12 @@
     "kavakLoanOffer": 195368,
     "kavakSellOfferType": null,
     "marketReference": 362800,
+    "marketPriceRange": {
+      "low": 155500,
+      "mid": 294999,
+      "high": 362800,
+      "count": 14
+    },
     "targetBuyPrice": 209000,
     "aggressiveBuyPrice": 189000,
     "spread": 153800,
@@ -2643,6 +2703,12 @@
     "kavakLoanOffer": 600000,
     "kavakSellOfferType": null,
     "marketReference": 1075000,
+    "marketPriceRange": {
+      "low": 999000,
+      "mid": 1010000,
+      "high": 1075000,
+      "count": 6
+    },
     "targetBuyPrice": 939000,
     "aggressiveBuyPrice": 919000,
     "spread": 136000,
@@ -2949,6 +3015,12 @@
     "kavakLoanOffer": 600000,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 1075000,
+    "marketPriceRange": {
+      "low": 999000,
+      "mid": 1010000,
+      "high": 1075000,
+      "count": 6
+    },
     "targetBuyPrice": 939000,
     "aggressiveBuyPrice": 919000,
     "spread": 136000,
@@ -3255,6 +3327,12 @@
     "kavakLoanOffer": 527231,
     "kavakSellOfferType": "venta_7_dias",
     "marketReference": 830000,
+    "marketPriceRange": {
+      "low": 547999,
+      "mid": 629999,
+      "high": 830000,
+      "count": 3
+    },
     "targetBuyPrice": 709000,
     "aggressiveBuyPrice": 689000,
     "spread": 121000,
@@ -3455,6 +3533,12 @@
     "kavakLoanOffer": null,
     "kavakSellOfferType": "modelo_no_disponible",
     "marketReference": 780000,
+    "marketPriceRange": {
+      "low": 699000,
+      "mid": 699000,
+      "high": 780000,
+      "count": 2
+    },
     "targetBuyPrice": 639000,
     "aggressiveBuyPrice": 619000,
     "spread": 141000,
@@ -3670,6 +3754,12 @@
     "kavakLoanOffer": 500372,
     "kavakSellOfferType": null,
     "marketReference": 830000,
+    "marketPriceRange": {
+      "low": 635999,
+      "mid": 654999,
+      "high": 830000,
+      "count": 3
+    },
     "targetBuyPrice": 719000,
     "aggressiveBuyPrice": 699000,
     "spread": 111000,
@@ -3870,6 +3960,12 @@
     "kavakLoanOffer": 600000,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 1249000,
+    "marketPriceRange": {
+      "low": 1249000,
+      "mid": 1249000,
+      "high": 1249000,
+      "count": 1
+    },
     "targetBuyPrice": 1139000,
     "aggressiveBuyPrice": 1119000,
     "spread": 110000,
@@ -4058,6 +4154,12 @@
     "kavakLoanOffer": 565351,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 847999,
+    "marketPriceRange": {
+      "low": 847999,
+      "mid": 847999,
+      "high": 847999,
+      "count": 1
+    },
     "targetBuyPrice": 739000,
     "aggressiveBuyPrice": 719000,
     "spread": 108999,
@@ -4224,6 +4326,12 @@
     "kavakLoanOffer": 474685,
     "kavakSellOfferType": "venta_7_dias",
     "marketReference": 695500,
+    "marketPriceRange": {
+      "low": 692999,
+      "mid": 692999,
+      "high": 695500,
+      "count": 2
+    },
     "targetBuyPrice": 589000,
     "aggressiveBuyPrice": 569000,
     "spread": 106500,
@@ -4418,6 +4526,12 @@
     "kavakLoanOffer": 241132,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 419999,
+    "marketPriceRange": {
+      "low": 319999,
+      "mid": 359999,
+      "high": 419999,
+      "count": 3
+    },
     "targetBuyPrice": 319000,
     "aggressiveBuyPrice": 299000,
     "spread": 100999,
@@ -4640,6 +4754,12 @@
     "kavakLoanOffer": 539319,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 881999,
+    "marketPriceRange": {
+      "low": 881999,
+      "mid": 881999,
+      "high": 881999,
+      "count": 1
+    },
     "targetBuyPrice": 789000,
     "aggressiveBuyPrice": 769000,
     "spread": 92999,
@@ -4806,6 +4926,12 @@
     "kavakLoanOffer": 376393,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 560999,
+    "marketPriceRange": {
+      "low": 409999,
+      "mid": 460999,
+      "high": 560999,
+      "count": 6
+    },
     "targetBuyPrice": 479000,
     "aggressiveBuyPrice": 459000,
     "spread": 81999,
@@ -5112,6 +5238,12 @@
     "kavakLoanOffer": 313626,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 416999,
+    "marketPriceRange": {
+      "low": 416999,
+      "mid": 416999,
+      "high": 416999,
+      "count": 1
+    },
     "targetBuyPrice": 339000,
     "aggressiveBuyPrice": 319000,
     "spread": 77999,
@@ -5278,6 +5410,12 @@
     "kavakLoanOffer": 387992,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 594999,
+    "marketPriceRange": {
+      "low": 512999,
+      "mid": 523999,
+      "high": 594999,
+      "count": 4
+    },
     "targetBuyPrice": 529000,
     "aggressiveBuyPrice": 509000,
     "spread": 65999,
@@ -5528,6 +5666,12 @@
     "kavakLoanOffer": 438631,
     "kavakSellOfferType": "venta_7_dias",
     "marketReference": 590999,
+    "marketPriceRange": {
+      "low": 537999,
+      "mid": 587999,
+      "high": 590999,
+      "count": 3
+    },
     "targetBuyPrice": 529000,
     "aggressiveBuyPrice": 509000,
     "spread": 61999,
@@ -5750,6 +5894,12 @@
     "kavakLoanOffer": 493273,
     "kavakSellOfferType": "venta_7_dias",
     "marketReference": 699000,
+    "marketPriceRange": {
+      "low": 499900,
+      "mid": 689000,
+      "high": 699000,
+      "count": 3
+    },
     "targetBuyPrice": 639000,
     "aggressiveBuyPrice": 619000,
     "spread": 60000,
@@ -5972,6 +6122,12 @@
     "kavakLoanOffer": 465147,
     "kavakSellOfferType": "venta_7_dias",
     "marketReference": 699000,
+    "marketPriceRange": {
+      "low": 699000,
+      "mid": 699000,
+      "high": 699000,
+      "count": 2
+    },
     "targetBuyPrice": 639000,
     "aggressiveBuyPrice": 619000,
     "spread": 60000,
@@ -6188,6 +6344,12 @@
     "kavakLoanOffer": 268868,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 383999,
+    "marketPriceRange": {
+      "low": 333999,
+      "mid": 352999,
+      "high": 383999,
+      "count": 6
+    },
     "targetBuyPrice": 329000,
     "aggressiveBuyPrice": 309000,
     "spread": 54999,
@@ -6494,6 +6656,12 @@
     "kavakLoanOffer": 159013,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 230999,
+    "marketPriceRange": {
+      "low": 204999,
+      "mid": 216999,
+      "high": 230999,
+      "count": 4
+    },
     "targetBuyPrice": 179000,
     "aggressiveBuyPrice": 159000,
     "spread": 51999,
@@ -6744,6 +6912,12 @@
     "kavakLoanOffer": 457010,
     "kavakSellOfferType": null,
     "marketReference": 738800,
+    "marketPriceRange": {
+      "low": 738800,
+      "mid": 738800,
+      "high": 738800,
+      "count": 1
+    },
     "targetBuyPrice": 689000,
     "aggressiveBuyPrice": 669000,
     "spread": 49800,
@@ -6910,6 +7084,12 @@
     "kavakLoanOffer": 470387,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 664999,
+    "marketPriceRange": {
+      "low": 520999,
+      "mid": 520999,
+      "high": 664999,
+      "count": 2
+    },
     "targetBuyPrice": 629000,
     "aggressiveBuyPrice": 609000,
     "spread": 35999,
@@ -7104,6 +7284,12 @@
     "kavakLoanOffer": 469456,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 664999,
+    "marketPriceRange": {
+      "low": 520999,
+      "mid": 520999,
+      "high": 664999,
+      "count": 2
+    },
     "targetBuyPrice": 629000,
     "aggressiveBuyPrice": 609000,
     "spread": 35999,
@@ -7298,6 +7484,12 @@
     "kavakLoanOffer": 316876,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 416999,
+    "marketPriceRange": {
+      "low": 416999,
+      "mid": 416999,
+      "high": 416999,
+      "count": 1
+    },
     "targetBuyPrice": 389000,
     "aggressiveBuyPrice": 369000,
     "spread": 27999,
@@ -7464,6 +7656,12 @@
     "kavakLoanOffer": 337446,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 416999,
+    "marketPriceRange": {
+      "low": 416999,
+      "mid": 416999,
+      "high": 416999,
+      "count": 1
+    },
     "targetBuyPrice": 389000,
     "aggressiveBuyPrice": 369000,
     "spread": 27999,
@@ -7630,6 +7828,12 @@
     "kavakLoanOffer": 454700,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 590999,
+    "marketPriceRange": {
+      "low": 537999,
+      "mid": 587999,
+      "high": 590999,
+      "count": 3
+    },
     "targetBuyPrice": 589000,
     "aggressiveBuyPrice": 569000,
     "spread": 1999,
@@ -7852,6 +8056,12 @@
     "kavakLoanOffer": 456163,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 590999,
+    "marketPriceRange": {
+      "low": 537999,
+      "mid": 587999,
+      "high": 590999,
+      "count": 3
+    },
     "targetBuyPrice": 589000,
     "aggressiveBuyPrice": 569000,
     "spread": 1999,
@@ -8074,6 +8284,12 @@
     "kavakLoanOffer": 427951,
     "kavakSellOfferType": "venta_directa",
     "marketReference": 607999,
+    "marketPriceRange": {
+      "low": 607999,
+      "mid": 607999,
+      "high": 607999,
+      "count": 1
+    },
     "targetBuyPrice": 639000,
     "aggressiveBuyPrice": 619000,
     "spread": -31001,
@@ -8239,6 +8455,12 @@
     "kavakLoanOffer": 600000,
     "kavakSellOfferType": "sin_oferta_venta",
     "marketReference": 1900000,
+    "marketPriceRange": {
+      "low": 1900000,
+      "mid": 1900000,
+      "high": 1900000,
+      "count": 1
+    },
     "targetBuyPrice": 1939000,
     "aggressiveBuyPrice": 1919000,
     "spread": -39000,
@@ -8403,6 +8625,7 @@
     "kavakLoanOffer": 600000,
     "kavakSellOfferType": "venta_7_dias",
     "marketReference": null,
+    "marketPriceRange": null,
     "targetBuyPrice": 1039000,
     "aggressiveBuyPrice": 1019000,
     "spread": -232067,

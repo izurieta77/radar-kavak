@@ -39,7 +39,10 @@ function kavakDisplay(item: Opportunity): string {
 }
 
 function marketDisplay(item: Opportunity): string {
-  return item.marketReference != null ? formatMoney(item.marketReference) : item.marketReferences[0]?.query ?? `${item.vehicle.brand} ${item.vehicle.model}`;
+  if (item.marketPriceRange != null) {
+    return `${formatMoney(item.marketPriceRange.low)} - ${formatMoney(item.marketPriceRange.high)}`;
+  }
+  return item.marketReferences[0]?.query ?? `${item.vehicle.brand} ${item.vehicle.model}`;
 }
 
 function spreadDisplay(item: Opportunity): string {
@@ -192,7 +195,7 @@ function App() {
                   </span>
                   <span>
                     <strong>{marketDisplay(item)}</strong>
-                    <small>{item.marketReference == null ? 'busqueda exacta' : 'venta publicado'}</small>
+                    <small>{item.marketPriceRange == null ? 'busqueda exacta' : `medio ${formatMoney(item.marketPriceRange.mid)}`}</small>
                   </span>
                   <span className={(item.spread ?? 0) > 0 ? 'spread good' : 'spread muted'}>
                     {spreadDisplay(item)}
@@ -240,9 +243,21 @@ function App() {
               )}
               {selected.marketReference != null && (
                 <div>
-                  <span>Mercado venta</span>
+                  <span>Mercado alto</span>
                   <strong>{formatMoney(selected.marketReference)}</strong>
                 </div>
+              )}
+              {selected.marketPriceRange != null && (
+                <>
+                  <div>
+                    <span>Mercado bajo</span>
+                    <strong>{formatMoney(selected.marketPriceRange.low)}</strong>
+                  </div>
+                  <div>
+                    <span>Mercado medio</span>
+                    <strong>{formatMoney(selected.marketPriceRange.mid)}</strong>
+                  </div>
+                </>
               )}
               <div>
                 <span>Spread objetivo</span>

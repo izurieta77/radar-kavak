@@ -79,4 +79,29 @@ describe('generated opportunities', () => {
       }
     }
   });
+
+  it('calculates low, middle and high market prices from the same-model references', () => {
+    for (const item of opportunities) {
+      const prices = item.marketReferences
+        .map((reference) => reference.price)
+        .filter((price): price is number => price != null)
+        .sort((a, b) => a - b);
+
+      if (prices.length === 0) {
+        expect(item.marketPriceRange).toBeNull();
+        continue;
+      }
+
+      const middleIndex = Math.floor((prices.length - 1) / 2);
+      expect(item.marketPriceRange).not.toBeNull();
+      const range = item.marketPriceRange!;
+      expect(range).toEqual({
+        low: prices[0],
+        mid: prices[middleIndex],
+        high: prices[prices.length - 1],
+        count: prices.length
+      });
+      expect(item.marketReference).toBe(range.high);
+    }
+  });
 });

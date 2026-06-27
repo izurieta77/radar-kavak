@@ -261,7 +261,7 @@ h1 {
 .table-head,
 .table-row {
   display: grid;
-  grid-template-columns: minmax(160px, 1.3fr) 76px 100px 110px 110px 78px;
+  grid-template-columns: minmax(154px, 1.25fr) 76px 98px 104px 148px 78px;
   align-items: center;
   gap: 8px;
   min-width: 690px;
