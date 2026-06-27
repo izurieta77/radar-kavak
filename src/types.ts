@@ -22,9 +22,12 @@ export interface MarketEvidence {
   price: number | null;
   kilometers: number | null;
   zone: 'Toluca' | 'CDMX' | 'Metepec' | 'Nacional';
-  status: 'publicado' | 'capturado' | 'solo_prestamo' | 'modelo_no_disponible' | 'asistido' | 'pendiente';
+  status: 'publicado' | 'captura' | 'capturado' | 'solo_prestamo' | 'modelo_no_disponible' | 'asistido' | 'pendiente';
   observedAt?: string;
   publicationId?: string;
+  query?: string;
+  evidenceType?: 'html' | 'captura' | 'manual' | 'busqueda';
+  screenshot?: string;
 }
 
 export interface Opportunity {
@@ -41,6 +44,7 @@ export interface Opportunity {
   aggressiveSpread: number | null;
   confidence: number;
   score: number;
+  marketReferences: MarketEvidence[];
   evidence: MarketEvidence[];
   notes: string[];
 }

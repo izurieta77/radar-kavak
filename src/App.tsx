@@ -39,11 +39,16 @@ function kavakDisplay(item: Opportunity): string {
 }
 
 function marketDisplay(item: Opportunity): string {
-  return item.marketReference != null ? formatMoney(item.marketReference) : 'sin comparable';
+  return item.marketReference != null ? formatMoney(item.marketReference) : item.marketReferences[0]?.query ?? `${item.vehicle.brand} ${item.vehicle.model}`;
 }
 
 function spreadDisplay(item: Opportunity): string {
   return item.spread != null ? formatMoney(item.spread) : 'sin spread';
+}
+
+function referencePriceLabel(reference: Opportunity['marketReferences'][number]): string {
+  if (reference.price != null) return formatMoney(reference.price);
+  return reference.evidenceType === 'captura' ? 'precio en captura' : 'buscar exacto';
 }
 
 function App() {
@@ -68,6 +73,10 @@ function App() {
   const loanOnly = opportunities.filter((item) => item.kavakStatus === 'solo_prestamo').length;
   const noModel = opportunities.filter((item) => item.kavakStatus === 'modelo_no_disponible').length;
   const marketRefs = opportunities.filter((item) => item.marketReference != null).length;
+  const pricedReferences = opportunities.reduce(
+    (sum, item) => sum + item.marketReferences.filter((reference) => reference.price != null).length,
+    0
+  );
   const positive = opportunities.filter((item) => (item.spread ?? 0) > 0);
   const publishedMargin = positive.reduce((sum, item) => sum + (item.spread ?? 0), 0);
 
@@ -127,7 +136,7 @@ function App() {
           <div className="kpi">
             <span>Mercado publicado</span>
             <strong>{marketRefs}</strong>
-            <small>Facebook, MercadoLibre, Kavak u otra URL verificable</small>
+            <small>{pricedReferences} precios con URL; el resto abre busqueda textual exacta</small>
           </div>
           <div className="kpi accent">
             <span>Margen potencial</span>
@@ -183,7 +192,7 @@ function App() {
                   </span>
                   <span>
                     <strong>{marketDisplay(item)}</strong>
-                    <small>{item.marketReference == null ? 'sin publicacion' : 'venta publicado'}</small>
+                    <small>{item.marketReference == null ? 'busqueda exacta' : 'venta publicado'}</small>
                   </span>
                   <span className={(item.spread ?? 0) > 0 ? 'spread good' : 'spread muted'}>
                     {spreadDisplay(item)}
@@ -247,6 +256,19 @@ function App() {
                 <i style={{ width: `${Math.round(selected.confidence * 100)}%` }} />
               </div>
             </div>
+
+            <section className="detail-section">
+              <h3>Referencias por pagina</h3>
+              {selected.marketReferences.slice(0, 12).map((reference) => (
+                <a href={reference.url} key={`${reference.source}-${reference.label}-${reference.url}`} target="_blank" rel="noreferrer">
+                  <span>
+                    <strong>{reference.source}: {referencePriceLabel(reference)}</strong>
+                    <small>{reference.query} · {reference.status} · {reference.evidenceType ?? 'manual'}</small>
+                  </span>
+                  <ExternalLink size={15} />
+                </a>
+              ))}
+            </section>
 
             <section className="detail-section">
               <h3>Evidencia</h3>

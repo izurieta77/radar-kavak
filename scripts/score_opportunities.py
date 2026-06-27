@@ -12,8 +12,10 @@ AGGRESSIVE_DISCOUNT = 70_000
 
 INVENTORY_PATH = Path("data/inventario.json")
 MARKET_LISTINGS_PATH = Path("data/market_listings.json")
+KAVAK_CATALOG_LISTINGS_PATH = Path("data/kavak_catalog_listings.json")
 KAVAK_QUOTES_PATH = Path("data/kavak_quotes.json")
 KAVAK_STATUS_RESULTS = {"capturado", "solo_prestamo", "modelo_no_disponible"}
+MARKET_SOURCES = ["Facebook Marketplace", "MercadoLibre", "Kavak Catalogo", "Seminuevos", "Google"]
 
 
 def positive_int(value: Any) -> int | None:
@@ -50,6 +52,10 @@ def vehicle_family(vehicle: dict[str, Any]) -> str | None:
     return None
 
 
+def vehicle_query(vehicle: dict[str, Any]) -> str:
+    return f"{vehicle['brand']} {vehicle['model']} {vehicle['year']}"
+
+
 def load_market_listings() -> list[dict[str, Any]]:
     if not MARKET_LISTINGS_PATH.exists():
         return []
@@ -61,6 +67,23 @@ def load_market_listings() -> list[dict[str, Any]]:
         if not isinstance(listing.get("price"), int) or listing["price"] <= 0:
             continue
         if not listing.get("family") or not listing.get("year"):
+            continue
+        valid.append(listing)
+    return valid
+
+
+def load_kavak_catalog_listings() -> list[dict[str, Any]]:
+    if not KAVAK_CATALOG_LISTINGS_PATH.exists():
+        return []
+    payload = json.loads(KAVAK_CATALOG_LISTINGS_PATH.read_text(encoding="utf-8"))
+    listings = payload.get("listings", payload if isinstance(payload, list) else [])
+    valid: list[dict[str, Any]] = []
+    for listing in listings:
+        if not isinstance(listing.get("vehicleNo"), int):
+            continue
+        if not isinstance(listing.get("price"), int) or listing["price"] <= 0:
+            continue
+        if not listing.get("url") or not str(listing["url"]).startswith("http"):
             continue
         valid.append(listing)
     return valid
@@ -97,9 +120,27 @@ def matching_listings(vehicle: dict[str, Any], listings: list[dict[str, Any]]) -
     return sorted(matches, key=lambda item: item["price"], reverse=True)
 
 
-def search_url(vehicle: dict[str, Any], zone: str) -> str:
-    query = f"{vehicle['brand']} {vehicle['model']} {vehicle['year']} {zone} seminuevo"
-    return "https://www.google.com/search?q=" + urllib.parse.quote_plus(query)
+def matching_catalog_listings(vehicle: dict[str, Any], listings: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return sorted(
+        [listing for listing in listings if listing.get("vehicleNo") == vehicle["no"]],
+        key=lambda item: item["price"],
+        reverse=True,
+    )
+
+
+def search_url(vehicle: dict[str, Any], source: str, zone: str | None = None) -> str:
+    query = vehicle_query(vehicle)
+    if zone:
+        query = f"{query} {zone}"
+    if source == "Facebook Marketplace":
+        return "https://www.facebook.com/marketplace/search/?query=" + urllib.parse.quote_plus(query)
+    if source == "MercadoLibre":
+        return "https://listado.mercadolibre.com.mx/" + urllib.parse.quote_plus(query)
+    if source == "Kavak Catalogo":
+        return "https://www.kavak.com/mx/seminuevos?keyword=" + urllib.parse.quote_plus(query)
+    if source == "Seminuevos":
+        return "https://www.seminuevos.com/buscar?keyword=" + urllib.parse.quote_plus(query)
+    return "https://www.google.com/search?q=" + urllib.parse.quote_plus(f"{query} seminuevo precio")
 
 
 def evidence_from_listing(listing: dict[str, Any]) -> dict[str, Any]:
@@ -114,7 +155,36 @@ def evidence_from_listing(listing: dict[str, Any]) -> dict[str, Any]:
         "status": "publicado",
         "observedAt": listing.get("observedAt"),
         "publicationId": listing.get("publicationId"),
+        "query": listing.get("query"),
+        "evidenceType": listing.get("evidenceType", "manual"),
+        "screenshot": listing.get("screenshot"),
     }
+
+
+def assisted_reference(vehicle: dict[str, Any], source: str) -> dict[str, Any]:
+    query = vehicle_query(vehicle)
+    return {
+        "source": source,
+        "label": f"Buscar {query} en {source}",
+        "url": search_url(vehicle, source),
+        "price": None,
+        "kilometers": vehicle.get("kilometers"),
+        "zone": "Nacional",
+        "status": "asistido",
+        "query": query,
+        "evidenceType": "busqueda",
+    }
+
+
+def build_market_references(vehicle: dict[str, Any], listings: list[dict[str, Any]], catalog_listings: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    query = vehicle_query(vehicle)
+    references = [evidence_from_listing(listing) | {"query": query} for listing in listings[:8]]
+    references.extend(evidence_from_listing(listing) | {"query": query} for listing in catalog_listings[:6])
+    present_sources = {reference["source"] for reference in references}
+    for source in MARKET_SOURCES:
+        if source not in present_sources:
+            references.append(assisted_reference(vehicle, source))
+    return references
 
 
 def evidence_from_kavak_quote(quote: dict[str, Any]) -> dict[str, Any]:
@@ -146,41 +216,34 @@ def evidence_from_kavak_quote(quote: dict[str, Any]) -> dict[str, Any]:
 
 
 def build_opportunity(
-    vehicle: dict[str, Any], market_listings: list[dict[str, Any]], kavak_quotes: dict[int, dict[str, Any]]
+    vehicle: dict[str, Any],
+    market_listings: list[dict[str, Any]],
+    catalog_listings: list[dict[str, Any]],
+    kavak_quotes: dict[int, dict[str, Any]],
 ) -> dict[str, Any]:
     list_price = vehicle["inventoryPrice"]
     target_price = max(0, list_price - TARGET_DISCOUNT) if list_price is not None else None
     aggressive_price = max(0, list_price - AGGRESSIVE_DISCOUNT) if list_price is not None else None
     listings = matching_listings(vehicle, market_listings)
+    catalog_matches = matching_catalog_listings(vehicle, catalog_listings)
     kavak_quote = kavak_quotes.get(vehicle["no"])
     kavak_status = (kavak_quote.get("status") or "capturado") if kavak_quote is not None else "pendiente"
     kavak_offer = positive_int(kavak_quote.get("sellOffer")) if kavak_quote is not None else None
     kavak_trade_offer = positive_int(kavak_quote.get("tradeInOffer")) if kavak_quote is not None else None
     kavak_loan_offer = positive_int(kavak_quote.get("loanOffer")) if kavak_quote is not None else None
 
-    evidence = [evidence_from_listing(listing) for listing in listings[:8]]
+    market_references = build_market_references(vehicle, listings, catalog_matches)
+    evidence = list(market_references)
     if kavak_quote is not None:
         evidence.insert(0, evidence_from_kavak_quote(kavak_quote))
-    market_reference = max((listing["price"] for listing in listings), default=None)
-    if kavak_offer is not None and len(listings) >= 1:
+    market_reference = max((reference["price"] for reference in market_references if reference["price"] is not None), default=None)
+    priced_market_count = sum(1 for reference in market_references if reference["price"] is not None)
+    if kavak_offer is not None and priced_market_count >= 1:
         confidence = 0.95
     elif kavak_offer is not None:
         confidence = 0.88
     else:
-        confidence = 0.9 if len(listings) >= 2 else 0.78 if len(listings) == 1 else 0.0
-
-    for zone in ["Toluca", "CDMX", "Metepec"]:
-        evidence.append(
-            {
-                "source": "Busqueda",
-                "label": f"Buscar comparables en {zone}",
-                "url": search_url(vehicle, zone),
-                "price": None,
-                "kilometers": None,
-                "zone": zone,
-                "status": "asistido",
-            }
-        )
+        confidence = 0.9 if priced_market_count >= 2 else 0.78 if priced_market_count == 1 else 0.0
 
     real_reference = max(
         (price for price in [market_reference, kavak_offer] if price is not None),
@@ -227,7 +290,7 @@ def build_opportunity(
         if spread is not None and spread > 0:
             notes.append("Spread positivo contra precio objetivo de fin de mes.")
     else:
-        notes.append("Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread.")
+        notes.append(f"Sin precio de venta capturado para {vehicle_query(vehicle)}; las referencias asistidas no suman spread.")
 
     return {
         "vehicle": vehicle,
@@ -243,6 +306,7 @@ def build_opportunity(
         "aggressiveSpread": aggressive_spread,
         "confidence": confidence,
         "score": score,
+        "marketReferences": market_references,
         "evidence": evidence,
         "notes": notes,
     }
@@ -251,9 +315,10 @@ def build_opportunity(
 def main() -> None:
     inventory = json.loads(INVENTORY_PATH.read_text(encoding="utf-8"))
     market_listings = load_market_listings()
+    catalog_listings = load_kavak_catalog_listings()
     kavak_quotes = load_kavak_quotes()
     opportunities = [
-        build_opportunity(vehicle, market_listings, kavak_quotes)
+        build_opportunity(vehicle, market_listings, catalog_listings, kavak_quotes)
         for vehicle in inventory
         if not vehicle["excludedOrange"]
     ]
@@ -268,6 +333,7 @@ def main() -> None:
             {
                 "opportunities": len(opportunities),
                 "publishedMarketListings": len(market_listings),
+                "kavakCatalogListings": len(catalog_listings),
                 "capturedKavakQuotes": len(kavak_quotes),
                 "loanOnlyKavakQuotes": sum(1 for quote in kavak_quotes.values() if quote.get("status") == "solo_prestamo"),
                 "noModelKavakResults": sum(1 for quote in kavak_quotes.values() if quote.get("status") == "modelo_no_disponible"),

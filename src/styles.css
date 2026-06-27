@@ -287,6 +287,10 @@ h1 {
   cursor: pointer;
 }
 
+.table-row > span {
+  min-width: 0;
+}
+
 .table-row.selected {
   background: #f0fbf7;
 }
@@ -294,6 +298,7 @@ h1 {
 .table-row strong,
 .table-row small {
   display: block;
+  overflow-wrap: anywhere;
 }
 
 .table-row small {

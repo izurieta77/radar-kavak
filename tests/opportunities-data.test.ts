@@ -53,4 +53,30 @@ describe('generated opportunities', () => {
     expect(opportunities.find((item) => item.vehicle.no === 47)?.kavakStatus).toBe('solo_prestamo');
     expect(opportunities.find((item) => item.vehicle.no === 4)?.kavakStatus).toBe('modelo_no_disponible');
   });
+
+  it('adds several text-exact market references for every vehicle', () => {
+    for (const item of opportunities) {
+      const literalName = `${item.vehicle.brand} ${item.vehicle.model} ${item.vehicle.year}`;
+      const sourceNames = item.marketReferences.map((reference) => reference.source);
+
+      expect(item.marketReferences.length).toBeGreaterThanOrEqual(4);
+      expect(sourceNames).toContain('Facebook Marketplace');
+      expect(sourceNames).toContain('MercadoLibre');
+      expect(sourceNames).toContain('Kavak Catalogo');
+      expect(sourceNames).toContain('Google');
+      expect(item.marketReferences.every((reference) => reference.query === literalName)).toBe(true);
+    }
+  });
+
+  it('keeps market references priced only when there is verifiable evidence', () => {
+    for (const item of opportunities) {
+      for (const reference of item.marketReferences) {
+        if (reference.price != null) {
+          expect(reference.status).toMatch(/publicado|captura/);
+          expect(reference.url).toMatch(/^https?:\/\//);
+          expect(reference.evidenceType).toMatch(/html|captura|manual/);
+        }
+      }
+    }
+  });
 });
