@@ -225,6 +225,57 @@ def market_price_range(references: list[dict[str, Any]]) -> dict[str, int] | Non
     }
 
 
+def deal_analysis(
+    vehicle: dict[str, Any],
+    target_price: int | None,
+    aggressive_price: int | None,
+    kavak_offer: int | None,
+    kavak_trade_offer: int | None,
+    price_range: dict[str, int] | None,
+) -> dict[str, Any]:
+    list_price = vehicle.get("inventoryPrice")
+    kavak_values = [
+        ("venta", kavak_offer),
+        ("cambio", kavak_trade_offer),
+    ]
+    kavak_values = [(kind, value) for kind, value in kavak_values if value is not None]
+    if kavak_values:
+        kavak_best_type, kavak_best_offer = max(kavak_values, key=lambda item: item[1])
+    else:
+        kavak_best_type, kavak_best_offer = None, None
+
+    analysis = {
+        "kavakBestOffer": kavak_best_offer,
+        "kavakBestOfferType": kavak_best_type,
+        "kavakVsList": kavak_best_offer - list_price if kavak_best_offer is not None and list_price is not None else None,
+        "kavakVsListPct": round((kavak_best_offer - list_price) / list_price, 4)
+        if kavak_best_offer is not None and list_price
+        else None,
+        "marketLowVsList": None,
+        "marketMidVsList": None,
+        "marketHighVsList": None,
+        "marketLowVsTarget": None,
+        "marketMidVsTarget": None,
+        "marketHighVsTarget": None,
+        "marketLowVsAggressive": None,
+    }
+    if price_range is None or list_price is None:
+        return analysis
+
+    analysis.update(
+        {
+            "marketLowVsList": price_range["low"] - list_price,
+            "marketMidVsList": price_range["mid"] - list_price,
+            "marketHighVsList": price_range["high"] - list_price,
+            "marketLowVsTarget": price_range["low"] - target_price if target_price is not None else None,
+            "marketMidVsTarget": price_range["mid"] - target_price if target_price is not None else None,
+            "marketHighVsTarget": price_range["high"] - target_price if target_price is not None else None,
+            "marketLowVsAggressive": price_range["low"] - aggressive_price if aggressive_price is not None else None,
+        }
+    )
+    return analysis
+
+
 def evidence_from_kavak_quote(quote: dict[str, Any]) -> dict[str, Any]:
     status = quote.get("status") or "capturado"
     sell_offer = positive_int(quote.get("sellOffer"))
@@ -278,6 +329,14 @@ def build_opportunity(
         evidence.insert(0, evidence_from_kavak_quote(kavak_quote))
     price_range = market_price_range(market_references)
     market_reference = price_range["high"] if price_range is not None else None
+    analysis = deal_analysis(
+        vehicle,
+        target_price,
+        aggressive_price,
+        kavak_offer,
+        kavak_trade_offer,
+        price_range,
+    )
     priced_market_count = sum(1 for reference in market_references if reference["price"] is not None)
     if kavak_offer is not None and priced_market_count >= 1:
         confidence = 0.95
@@ -348,6 +407,7 @@ def build_opportunity(
         "aggressiveSpread": aggressive_spread,
         "confidence": confidence,
         "score": score,
+        "dealAnalysis": analysis,
         "marketReferences": market_references,
         "evidence": evidence,
         "notes": notes,

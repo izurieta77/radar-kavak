@@ -32,6 +32,19 @@
     "aggressiveSpread": 1291000,
     "confidence": 0.9,
     "score": 1144,
+    "dealAnalysis": {
+      "kavakBestOffer": null,
+      "kavakBestOfferType": null,
+      "kavakVsList": null,
+      "kavakVsListPct": null,
+      "marketLowVsList": 210000,
+      "marketMidVsList": 531000,
+      "marketHighVsList": 1221000,
+      "marketLowVsTarget": 260000,
+      "marketMidVsTarget": 581000,
+      "marketHighVsTarget": 1271000,
+      "marketLowVsAggressive": 280000
+    },
     "marketReferences": [
       {
         "source": "Instagram",
@@ -259,6 +272,19 @@
     "aggressiveSpread": 991000,
     "confidence": 0.95,
     "score": 1107,
+    "dealAnalysis": {
+      "kavakBestOffer": 1002249,
+      "kavakBestOfferType": "venta",
+      "kavakVsList": -286751,
+      "kavakVsListPct": -0.2225,
+      "marketLowVsList": 96000,
+      "marketMidVsList": 291000,
+      "marketHighVsList": 921000,
+      "marketLowVsTarget": 146000,
+      "marketMidVsTarget": 341000,
+      "marketHighVsTarget": 971000,
+      "marketLowVsAggressive": 166000
+    },
     "marketReferences": [
       {
         "source": "Facebook Marketplace",
@@ -571,6 +597,19 @@
     "aggressiveSpread": 491000,
     "confidence": 0.95,
     "score": 537,
+    "dealAnalysis": {
+      "kavakBestOffer": 683515,
+      "kavakBestOfferType": "venta",
+      "kavakVsList": -195485,
+      "kavakVsListPct": -0.2224,
+      "marketLowVsList": 421000,
+      "marketMidVsList": 421000,
+      "marketHighVsList": 421000,
+      "marketLowVsTarget": 471000,
+      "marketMidVsTarget": 471000,
+      "marketHighVsTarget": 471000,
+      "marketLowVsAggressive": 491000
+    },
     "marketReferences": [
       {
         "source": "Facebook",
@@ -765,6 +804,19 @@
     "aggressiveSpread": 578900,
     "confidence": 0.9,
     "score": 503,
+    "dealAnalysis": {
+      "kavakBestOffer": null,
+      "kavakBestOfferType": null,
+      "kavakVsList": null,
+      "kavakVsListPct": null,
+      "marketLowVsList": 0,
+      "marketMidVsList": 10000,
+      "marketHighVsList": 508900,
+      "marketLowVsTarget": 50000,
+      "marketMidVsTarget": 60000,
+      "marketHighVsTarget": 558900,
+      "marketLowVsAggressive": 70000
+    },
     "marketReferences": [
       {
         "source": "Facebook",
@@ -961,6 +1013,269 @@
   },
   {
     "vehicle": {
+      "page": 2,
+      "no": 52,
+      "brand": "BMW",
+      "model": "X5 xDrive50e (Hibrido/Aut)",
+      "year": 2024,
+      "kilometers": 76702,
+      "exteriorColor": "Carbon Black",
+      "interiorColor": "Tartufo Brown",
+      "inventoryPrice": 1089000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": true
+    },
+    "kavakStatus": "capturado",
+    "kavakOffer": 806933,
+    "kavakTradeOffer": null,
+    "kavakLoanOffer": 600000,
+    "kavakSellOfferType": "venta_7_dias",
+    "marketReference": 1450000,
+    "marketPriceRange": {
+      "low": 1315000,
+      "mid": 1410000,
+      "high": 1450000,
+      "count": 3
+    },
+    "targetBuyPrice": 1039000,
+    "aggressiveBuyPrice": 1019000,
+    "spread": 411000,
+    "aggressiveSpread": 431000,
+    "confidence": 0.95,
+    "score": 469,
+    "dealAnalysis": {
+      "kavakBestOffer": 806933,
+      "kavakBestOfferType": "venta",
+      "kavakVsList": -282067,
+      "kavakVsListPct": -0.259,
+      "marketLowVsList": 226000,
+      "marketMidVsList": 321000,
+      "marketHighVsList": 361000,
+      "marketLowVsTarget": 276000,
+      "marketMidVsTarget": 371000,
+      "marketHighVsTarget": 411000,
+      "marketLowVsAggressive": 296000
+    },
+    "marketReferences": [
+      {
+        "source": "Instagram",
+        "label": "BMW X5 xDrive50e 2024 42,000 km publicado en Mexico",
+        "url": "https://www.instagram.com/p/DIxMw1OsWag/",
+        "price": 1450000,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "publicado",
+        "observedAt": "2026-06-27T23:12:00Z",
+        "publicationId": "DIxMw1OsWag",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "manual",
+        "screenshot": null
+      },
+      {
+        "source": "Instagram",
+        "label": "BMW X5 xDrive50e Hibrido 2024 22,100 km publicado en Mexico",
+        "url": "https://www.instagram.com/p/DPU-84YDsEc/",
+        "price": 1410000,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "publicado",
+        "observedAt": "2026-06-27T23:12:00Z",
+        "publicationId": "DPU-84YDsEc",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "manual",
+        "screenshot": null
+      },
+      {
+        "source": "Facebook",
+        "label": "BMW X5 xDrive50e 2024 38,500 km publicado en Veracruz",
+        "url": "https://www.facebook.com/SeminuevosVecsaVeracruz/posts/bmw-x5-xdrive50e-2024-38500-km-1315000-mxncont%C3%A1ctanos-229-465-0175contamos-con-p/1388339909318624/",
+        "price": 1315000,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "publicado",
+        "observedAt": "2026-06-27T23:12:00Z",
+        "publicationId": "1388339909318624",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "manual",
+        "screenshot": null
+      },
+      {
+        "source": "Facebook Marketplace",
+        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Facebook Marketplace",
+        "url": "https://www.facebook.com/marketplace/search/?query=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
+        "price": null,
+        "kilometers": 76702,
+        "zone": "Nacional",
+        "status": "asistido",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "busqueda"
+      },
+      {
+        "source": "MercadoLibre",
+        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en MercadoLibre",
+        "url": "https://listado.mercadolibre.com.mx/BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
+        "price": null,
+        "kilometers": 76702,
+        "zone": "Nacional",
+        "status": "asistido",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "busqueda"
+      },
+      {
+        "source": "Kavak Catalogo",
+        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Kavak Catalogo",
+        "url": "https://www.kavak.com/mx/seminuevos?keyword=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
+        "price": null,
+        "kilometers": 76702,
+        "zone": "Nacional",
+        "status": "asistido",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "busqueda"
+      },
+      {
+        "source": "Seminuevos",
+        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Seminuevos",
+        "url": "https://www.seminuevos.com/buscar?keyword=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
+        "price": null,
+        "kilometers": 76702,
+        "zone": "Nacional",
+        "status": "asistido",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "busqueda"
+      },
+      {
+        "source": "Google",
+        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Google",
+        "url": "https://www.google.com/search?q=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024+seminuevo+precio",
+        "price": null,
+        "kilometers": 76702,
+        "zone": "Nacional",
+        "status": "asistido",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "busqueda"
+      }
+    ],
+    "evidence": [
+      {
+        "source": "Kavak",
+        "label": "Venta en 7 dias Kavak capturada; vigente hasta 2026-07-05",
+        "url": "https://www.kavak.com/mx/v2/cotizar-auto/venta-multi-oferta-auto?flow-id=2a87b5b4-a17d-4871-b722-6e4016303481",
+        "price": 806933,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "capturado",
+        "observedAt": "2026-06-27T22:33:42.235Z",
+        "publicationId": "2a87b5b4-a17d-4871-b722-6e4016303481"
+      },
+      {
+        "source": "Instagram",
+        "label": "BMW X5 xDrive50e 2024 42,000 km publicado en Mexico",
+        "url": "https://www.instagram.com/p/DIxMw1OsWag/",
+        "price": 1450000,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "publicado",
+        "observedAt": "2026-06-27T23:12:00Z",
+        "publicationId": "DIxMw1OsWag",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "manual",
+        "screenshot": null
+      },
+      {
+        "source": "Instagram",
+        "label": "BMW X5 xDrive50e Hibrido 2024 22,100 km publicado en Mexico",
+        "url": "https://www.instagram.com/p/DPU-84YDsEc/",
+        "price": 1410000,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "publicado",
+        "observedAt": "2026-06-27T23:12:00Z",
+        "publicationId": "DPU-84YDsEc",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "manual",
+        "screenshot": null
+      },
+      {
+        "source": "Facebook",
+        "label": "BMW X5 xDrive50e 2024 38,500 km publicado en Veracruz",
+        "url": "https://www.facebook.com/SeminuevosVecsaVeracruz/posts/bmw-x5-xdrive50e-2024-38500-km-1315000-mxncont%C3%A1ctanos-229-465-0175contamos-con-p/1388339909318624/",
+        "price": 1315000,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "publicado",
+        "observedAt": "2026-06-27T23:12:00Z",
+        "publicationId": "1388339909318624",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "manual",
+        "screenshot": null
+      },
+      {
+        "source": "Facebook Marketplace",
+        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Facebook Marketplace",
+        "url": "https://www.facebook.com/marketplace/search/?query=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
+        "price": null,
+        "kilometers": 76702,
+        "zone": "Nacional",
+        "status": "asistido",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "busqueda"
+      },
+      {
+        "source": "MercadoLibre",
+        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en MercadoLibre",
+        "url": "https://listado.mercadolibre.com.mx/BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
+        "price": null,
+        "kilometers": 76702,
+        "zone": "Nacional",
+        "status": "asistido",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "busqueda"
+      },
+      {
+        "source": "Kavak Catalogo",
+        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Kavak Catalogo",
+        "url": "https://www.kavak.com/mx/seminuevos?keyword=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
+        "price": null,
+        "kilometers": 76702,
+        "zone": "Nacional",
+        "status": "asistido",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "busqueda"
+      },
+      {
+        "source": "Seminuevos",
+        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Seminuevos",
+        "url": "https://www.seminuevos.com/buscar?keyword=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
+        "price": null,
+        "kilometers": 76702,
+        "zone": "Nacional",
+        "status": "asistido",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "busqueda"
+      },
+      {
+        "source": "Google",
+        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Google",
+        "url": "https://www.google.com/search?q=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024+seminuevo+precio",
+        "price": null,
+        "kilometers": 76702,
+        "zone": "Nacional",
+        "status": "asistido",
+        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
+        "evidenceType": "busqueda"
+      }
+    ],
+    "notes": [
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak venta en 7 dias capturado: $806,933; prestamo: $600,000; vigente hasta 2026-07-05.",
+      "Kavak venta directa queda $282,067 debajo del precio de lista.",
+      "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.",
+      "Spread positivo contra precio objetivo de fin de mes."
+    ]
+  },
+  {
+    "vehicle": {
       "page": 1,
       "no": 22,
       "brand": "Ford",
@@ -992,6 +1307,19 @@
     "aggressiveSpread": 371000,
     "confidence": 0.95,
     "score": 400,
+    "dealAnalysis": {
+      "kavakBestOffer": 914001,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -274999,
+      "kavakVsListPct": -0.2313,
+      "marketLowVsList": -168001,
+      "marketMidVsList": 10000,
+      "marketHighVsList": 301000,
+      "marketLowVsTarget": -118001,
+      "marketMidVsTarget": 60000,
+      "marketHighVsTarget": 351000,
+      "marketLowVsAggressive": -98001
+    },
     "marketReferences": [
       {
         "source": "Facebook Marketplace",
@@ -1198,6 +1526,19 @@
     "aggressiveSpread": 316000,
     "confidence": 0.95,
     "score": 337,
+    "dealAnalysis": {
+      "kavakBestOffer": 884604,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -164396,
+      "kavakVsListPct": -0.1567,
+      "marketLowVsList": -109500,
+      "marketMidVsList": -109500,
+      "marketHighVsList": 246000,
+      "marketLowVsTarget": -59500,
+      "marketMidVsTarget": -59500,
+      "marketHighVsTarget": 296000,
+      "marketLowVsAggressive": -39500
+    },
     "marketReferences": [
       {
         "source": "Facebook Marketplace",
@@ -1454,6 +1795,19 @@
     "aggressiveSpread": 246000,
     "confidence": 0.95,
     "score": 258,
+    "dealAnalysis": {
+      "kavakBestOffer": 858920,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -180080,
+      "kavakVsListPct": -0.1733,
+      "marketLowVsList": 176000,
+      "marketMidVsList": 176000,
+      "marketHighVsList": 176000,
+      "marketLowVsTarget": 226000,
+      "marketMidVsTarget": 226000,
+      "marketHighVsTarget": 226000,
+      "marketLowVsAggressive": 246000
+    },
     "marketReferences": [
       {
         "source": "Facebook",
@@ -1648,6 +2002,19 @@
     "aggressiveSpread": 216000,
     "confidence": 0.95,
     "score": 223,
+    "dealAnalysis": {
+      "kavakBestOffer": 364504,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -64496,
+      "kavakVsListPct": -0.1503,
+      "marketLowVsList": 1999,
+      "marketMidVsList": 41000,
+      "marketHighVsList": 146000,
+      "marketLowVsTarget": 51999,
+      "marketMidVsTarget": 91000,
+      "marketHighVsTarget": 196000,
+      "marketLowVsAggressive": 71999
+    },
     "marketReferences": [
       {
         "source": "Facebook Marketplace",
@@ -1938,6 +2305,19 @@
     "aggressiveSpread": 200000,
     "confidence": 0.95,
     "score": 205,
+    "dealAnalysis": {
+      "kavakBestOffer": 873663,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": 4663,
+      "kavakVsListPct": 0.0054,
+      "marketLowVsList": 0,
+      "marketMidVsList": 58999,
+      "marketHighVsList": 130000,
+      "marketLowVsTarget": 50000,
+      "marketMidVsTarget": 108999,
+      "marketHighVsTarget": 180000,
+      "marketLowVsAggressive": 70000
+    },
     "marketReferences": [
       {
         "source": "Facebook Marketplace",
@@ -2201,6 +2581,19 @@
     "aggressiveSpread": 173800,
     "confidence": 0.95,
     "score": 175,
+    "dealAnalysis": {
+      "kavakBestOffer": 233249,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -25751,
+      "kavakVsListPct": -0.0994,
+      "marketLowVsList": -103500,
+      "marketMidVsList": 35999,
+      "marketHighVsList": 103800,
+      "marketLowVsTarget": -53500,
+      "marketMidVsTarget": 85999,
+      "marketHighVsTarget": 153800,
+      "marketLowVsAggressive": -33500
+    },
     "marketReferences": [
       {
         "source": "Facebook Marketplace",
@@ -2715,6 +3108,19 @@
     "aggressiveSpread": 156000,
     "confidence": 0.95,
     "score": 155,
+    "dealAnalysis": {
+      "kavakBestOffer": 886598,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -102402,
+      "kavakVsListPct": -0.1035,
+      "marketLowVsList": 10000,
+      "marketMidVsList": 21000,
+      "marketHighVsList": 86000,
+      "marketLowVsTarget": 60000,
+      "marketMidVsTarget": 71000,
+      "marketHighVsTarget": 136000,
+      "marketLowVsAggressive": 80000
+    },
     "marketReferences": [
       {
         "source": "Facebook Marketplace",
@@ -3027,6 +3433,19 @@
     "aggressiveSpread": 156000,
     "confidence": 0.95,
     "score": 155,
+    "dealAnalysis": {
+      "kavakBestOffer": 880331,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -108669,
+      "kavakVsListPct": -0.1099,
+      "marketLowVsList": 10000,
+      "marketMidVsList": 21000,
+      "marketHighVsList": 86000,
+      "marketLowVsTarget": 60000,
+      "marketMidVsTarget": 71000,
+      "marketHighVsTarget": 136000,
+      "marketLowVsAggressive": 80000
+    },
     "marketReferences": [
       {
         "source": "Facebook Marketplace",
@@ -3339,6 +3758,19 @@
     "aggressiveSpread": 141000,
     "confidence": 0.95,
     "score": 138,
+    "dealAnalysis": {
+      "kavakBestOffer": 548321,
+      "kavakBestOfferType": "venta",
+      "kavakVsList": -210679,
+      "kavakVsListPct": -0.2776,
+      "marketLowVsList": -211001,
+      "marketMidVsList": -129001,
+      "marketHighVsList": 71000,
+      "marketLowVsTarget": -161001,
+      "marketMidVsTarget": -79001,
+      "marketHighVsTarget": 121000,
+      "marketLowVsAggressive": -141001
+    },
     "marketReferences": [
       {
         "source": "Facebook Marketplace",
@@ -3545,6 +3977,19 @@
     "aggressiveSpread": 161000,
     "confidence": 0.9,
     "score": 127,
+    "dealAnalysis": {
+      "kavakBestOffer": null,
+      "kavakBestOfferType": null,
+      "kavakVsList": null,
+      "kavakVsListPct": null,
+      "marketLowVsList": 10000,
+      "marketMidVsList": 10000,
+      "marketHighVsList": 91000,
+      "marketLowVsTarget": 60000,
+      "marketMidVsTarget": 60000,
+      "marketHighVsTarget": 141000,
+      "marketLowVsAggressive": 80000
+    },
     "marketReferences": [
       {
         "source": "Facebook",
@@ -3766,6 +4211,19 @@
     "aggressiveSpread": 131000,
     "confidence": 0.95,
     "score": 127,
+    "dealAnalysis": {
+      "kavakBestOffer": 637474,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -131526,
+      "kavakVsListPct": -0.171,
+      "marketLowVsList": -133001,
+      "marketMidVsList": -114001,
+      "marketHighVsList": 61000,
+      "marketLowVsTarget": -83001,
+      "marketMidVsTarget": -64001,
+      "marketHighVsTarget": 111000,
+      "marketLowVsAggressive": -63001
+    },
     "marketReferences": [
       {
         "source": "Facebook Marketplace",
@@ -3972,6 +4430,19 @@
     "aggressiveSpread": 130000,
     "confidence": 0.95,
     "score": 125,
+    "dealAnalysis": {
+      "kavakBestOffer": 931223,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -257777,
+      "kavakVsListPct": -0.2168,
+      "marketLowVsList": 60000,
+      "marketMidVsList": 60000,
+      "marketHighVsList": 60000,
+      "marketLowVsTarget": 110000,
+      "marketMidVsTarget": 110000,
+      "marketHighVsTarget": 110000,
+      "marketLowVsAggressive": 130000
+    },
     "marketReferences": [
       {
         "source": "Facebook",
@@ -4166,6 +4637,19 @@
     "aggressiveSpread": 128999,
     "confidence": 0.95,
     "score": 124,
+    "dealAnalysis": {
+      "kavakBestOffer": 663850,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -125150,
+      "kavakVsListPct": -0.1586,
+      "marketLowVsList": 58999,
+      "marketMidVsList": 58999,
+      "marketHighVsList": 58999,
+      "marketLowVsTarget": 108999,
+      "marketMidVsTarget": 108999,
+      "marketHighVsTarget": 108999,
+      "marketLowVsAggressive": 128999
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -4338,6 +4822,19 @@
     "aggressiveSpread": 126500,
     "confidence": 0.95,
     "score": 121,
+    "dealAnalysis": {
+      "kavakBestOffer": 472275,
+      "kavakBestOfferType": "venta",
+      "kavakVsList": -166725,
+      "kavakVsListPct": -0.2609,
+      "marketLowVsList": 53999,
+      "marketMidVsList": 53999,
+      "marketHighVsList": 56500,
+      "marketLowVsTarget": 103999,
+      "marketMidVsTarget": 103999,
+      "marketHighVsTarget": 106500,
+      "marketLowVsAggressive": 123999
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -4538,6 +5035,19 @@
     "aggressiveSpread": 120999,
     "confidence": 0.95,
     "score": 115,
+    "dealAnalysis": {
+      "kavakBestOffer": 265474,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -103526,
+      "kavakVsListPct": -0.2806,
+      "marketLowVsList": -49001,
+      "marketMidVsList": -9001,
+      "marketHighVsList": 50999,
+      "marketLowVsTarget": 999,
+      "marketMidVsTarget": 40999,
+      "marketHighVsTarget": 100999,
+      "marketLowVsAggressive": 20999
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -4766,6 +5276,19 @@
     "aggressiveSpread": 112999,
     "confidence": 0.95,
     "score": 106,
+    "dealAnalysis": {
+      "kavakBestOffer": 703466,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -135534,
+      "kavakVsListPct": -0.1615,
+      "marketLowVsList": 42999,
+      "marketMidVsList": 42999,
+      "marketHighVsList": 42999,
+      "marketLowVsTarget": 92999,
+      "marketMidVsTarget": 92999,
+      "marketHighVsTarget": 92999,
+      "marketLowVsAggressive": 112999
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -4938,6 +5461,19 @@
     "aggressiveSpread": 101999,
     "confidence": 0.95,
     "score": 93,
+    "dealAnalysis": {
+      "kavakBestOffer": 521143,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -7857,
+      "kavakVsListPct": -0.0149,
+      "marketLowVsList": -119001,
+      "marketMidVsList": -68001,
+      "marketHighVsList": 31999,
+      "marketLowVsTarget": -69001,
+      "marketMidVsTarget": -18001,
+      "marketHighVsTarget": 81999,
+      "marketLowVsAggressive": -49001
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -5250,6 +5786,19 @@
     "aggressiveSpread": 97999,
     "confidence": 0.95,
     "score": 89,
+    "dealAnalysis": {
+      "kavakBestOffer": 365543,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -23457,
+      "kavakVsListPct": -0.0603,
+      "marketLowVsList": 27999,
+      "marketMidVsList": 27999,
+      "marketHighVsList": 27999,
+      "marketLowVsTarget": 77999,
+      "marketMidVsTarget": 77999,
+      "marketHighVsTarget": 77999,
+      "marketLowVsAggressive": 97999
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -5422,6 +5971,19 @@
     "aggressiveSpread": 85999,
     "confidence": 0.95,
     "score": 75,
+    "dealAnalysis": {
+      "kavakBestOffer": 561097,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -17903,
+      "kavakVsListPct": -0.0309,
+      "marketLowVsList": -66001,
+      "marketMidVsList": -55001,
+      "marketHighVsList": 15999,
+      "marketLowVsTarget": -16001,
+      "marketMidVsTarget": -5001,
+      "marketHighVsTarget": 65999,
+      "marketLowVsAggressive": 3999
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -5678,6 +6240,19 @@
     "aggressiveSpread": 81999,
     "confidence": 0.95,
     "score": 71,
+    "dealAnalysis": {
+      "kavakBestOffer": 433232,
+      "kavakBestOfferType": "venta",
+      "kavakVsList": -145768,
+      "kavakVsListPct": -0.2518,
+      "marketLowVsList": -41001,
+      "marketMidVsList": 8999,
+      "marketHighVsList": 11999,
+      "marketLowVsTarget": 8999,
+      "marketMidVsTarget": 58999,
+      "marketHighVsTarget": 61999,
+      "marketLowVsAggressive": 28999
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -5906,6 +6481,19 @@
     "aggressiveSpread": 80000,
     "confidence": 0.95,
     "score": 68,
+    "dealAnalysis": {
+      "kavakBestOffer": 497827,
+      "kavakBestOfferType": "venta",
+      "kavakVsList": -191173,
+      "kavakVsListPct": -0.2775,
+      "marketLowVsList": -189100,
+      "marketMidVsList": 0,
+      "marketHighVsList": 10000,
+      "marketLowVsTarget": -139100,
+      "marketMidVsTarget": 50000,
+      "marketHighVsTarget": 60000,
+      "marketLowVsAggressive": -119100
+    },
     "marketReferences": [
       {
         "source": "Facebook",
@@ -6134,6 +6722,19 @@
     "aggressiveSpread": 80000,
     "confidence": 0.95,
     "score": 68,
+    "dealAnalysis": {
+      "kavakBestOffer": 464432,
+      "kavakBestOfferType": "venta",
+      "kavakVsList": -224568,
+      "kavakVsListPct": -0.3259,
+      "marketLowVsList": 10000,
+      "marketMidVsList": 10000,
+      "marketHighVsList": 10000,
+      "marketLowVsTarget": 60000,
+      "marketMidVsTarget": 60000,
+      "marketHighVsTarget": 60000,
+      "marketLowVsAggressive": 80000
+    },
     "marketReferences": [
       {
         "source": "Facebook",
@@ -6356,6 +6957,19 @@
     "aggressiveSpread": 74999,
     "confidence": 0.95,
     "score": 63,
+    "dealAnalysis": {
+      "kavakBestOffer": 341380,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -37620,
+      "kavakVsListPct": -0.0993,
+      "marketLowVsList": -45001,
+      "marketMidVsList": -26001,
+      "marketHighVsList": 4999,
+      "marketLowVsTarget": 4999,
+      "marketMidVsTarget": 23999,
+      "marketHighVsTarget": 54999,
+      "marketLowVsAggressive": 24999
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -6668,6 +7282,19 @@
     "aggressiveSpread": 71999,
     "confidence": 0.95,
     "score": 59,
+    "dealAnalysis": {
+      "kavakBestOffer": 213849,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -15151,
+      "kavakVsListPct": -0.0662,
+      "marketLowVsList": -24001,
+      "marketMidVsList": -12001,
+      "marketHighVsList": 1999,
+      "marketLowVsTarget": 25999,
+      "marketMidVsTarget": 37999,
+      "marketHighVsTarget": 51999,
+      "marketLowVsAggressive": 45999
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -6924,6 +7551,19 @@
     "aggressiveSpread": 69800,
     "confidence": 0.95,
     "score": 57,
+    "dealAnalysis": {
+      "kavakBestOffer": 635921,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -103079,
+      "kavakVsListPct": -0.1395,
+      "marketLowVsList": -200,
+      "marketMidVsList": -200,
+      "marketHighVsList": -200,
+      "marketLowVsTarget": 49800,
+      "marketMidVsTarget": 49800,
+      "marketHighVsTarget": 49800,
+      "marketLowVsAggressive": 69800
+    },
     "marketReferences": [
       {
         "source": "Facebook Marketplace",
@@ -7096,6 +7736,19 @@
     "aggressiveSpread": 55999,
     "confidence": 0.95,
     "score": 41,
+    "dealAnalysis": {
+      "kavakBestOffer": 629154,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -49846,
+      "kavakVsListPct": -0.0734,
+      "marketLowVsList": -158001,
+      "marketMidVsList": -158001,
+      "marketHighVsList": -14001,
+      "marketLowVsTarget": -108001,
+      "marketMidVsTarget": -108001,
+      "marketHighVsTarget": 35999,
+      "marketLowVsAggressive": -88001
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -7296,6 +7949,19 @@
     "aggressiveSpread": 55999,
     "confidence": 0.95,
     "score": 41,
+    "dealAnalysis": {
+      "kavakBestOffer": 627909,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -51091,
+      "kavakVsListPct": -0.0752,
+      "marketLowVsList": -158001,
+      "marketMidVsList": -158001,
+      "marketHighVsList": -14001,
+      "marketLowVsTarget": -108001,
+      "marketMidVsTarget": -108001,
+      "marketHighVsTarget": 35999,
+      "marketLowVsAggressive": -88001
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -7496,6 +8162,19 @@
     "aggressiveSpread": 47999,
     "confidence": 0.95,
     "score": 32,
+    "dealAnalysis": {
+      "kavakBestOffer": 387759,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -51241,
+      "kavakVsListPct": -0.1167,
+      "marketLowVsList": -22001,
+      "marketMidVsList": -22001,
+      "marketHighVsList": -22001,
+      "marketLowVsTarget": 27999,
+      "marketMidVsTarget": 27999,
+      "marketHighVsTarget": 27999,
+      "marketLowVsAggressive": 47999
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -7668,6 +8347,19 @@
     "aggressiveSpread": 47999,
     "confidence": 0.95,
     "score": 32,
+    "dealAnalysis": {
+      "kavakBestOffer": 415747,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -23253,
+      "kavakVsListPct": -0.053,
+      "marketLowVsList": -22001,
+      "marketMidVsList": -22001,
+      "marketHighVsList": -22001,
+      "marketLowVsTarget": 27999,
+      "marketMidVsTarget": 27999,
+      "marketHighVsTarget": 27999,
+      "marketLowVsAggressive": 47999
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -7840,6 +8532,19 @@
     "aggressiveSpread": 21999,
     "confidence": 0.95,
     "score": 2,
+    "dealAnalysis": {
+      "kavakBestOffer": 595292,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -43708,
+      "kavakVsListPct": -0.0684,
+      "marketLowVsList": -101001,
+      "marketMidVsList": -51001,
+      "marketHighVsList": -48001,
+      "marketLowVsTarget": -51001,
+      "marketMidVsTarget": -1001,
+      "marketHighVsTarget": 1999,
+      "marketLowVsAggressive": -31001
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -8068,6 +8773,19 @@
     "aggressiveSpread": 21999,
     "confidence": 0.95,
     "score": 2,
+    "dealAnalysis": {
+      "kavakBestOffer": 598518,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -40482,
+      "kavakVsListPct": -0.0634,
+      "marketLowVsList": -101001,
+      "marketMidVsList": -51001,
+      "marketHighVsList": -48001,
+      "marketLowVsTarget": -51001,
+      "marketMidVsTarget": -1001,
+      "marketHighVsTarget": 1999,
+      "marketLowVsAggressive": -31001
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -8296,6 +9014,19 @@
     "aggressiveSpread": -11001,
     "confidence": 0.95,
     "score": 0,
+    "dealAnalysis": {
+      "kavakBestOffer": 483704,
+      "kavakBestOfferType": "cambio",
+      "kavakVsList": -205296,
+      "kavakVsListPct": -0.298,
+      "marketLowVsList": -81001,
+      "marketMidVsList": -81001,
+      "marketHighVsList": -81001,
+      "marketLowVsTarget": -31001,
+      "marketMidVsTarget": -31001,
+      "marketHighVsTarget": -31001,
+      "marketLowVsAggressive": -11001
+    },
     "marketReferences": [
       {
         "source": "Kavak Catalogo",
@@ -8467,6 +9198,19 @@
     "aggressiveSpread": -19000,
     "confidence": 0.78,
     "score": 0,
+    "dealAnalysis": {
+      "kavakBestOffer": null,
+      "kavakBestOfferType": null,
+      "kavakVsList": null,
+      "kavakVsListPct": null,
+      "marketLowVsList": -89000,
+      "marketMidVsList": -89000,
+      "marketHighVsList": -89000,
+      "marketLowVsTarget": -39000,
+      "marketMidVsTarget": -39000,
+      "marketHighVsTarget": -39000,
+      "marketLowVsAggressive": -19000
+    },
     "marketReferences": [
       {
         "source": "MercadoLibre",
@@ -8602,166 +9346,6 @@
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
       "Kavak no dio oferta de venta/cambio; solo prestamo: $600,000; vigente hasta 2026-07-05.",
       "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido."
-    ]
-  },
-  {
-    "vehicle": {
-      "page": 2,
-      "no": 52,
-      "brand": "BMW",
-      "model": "X5 xDrive50e (Hibrido/Aut)",
-      "year": 2024,
-      "kilometers": 76702,
-      "exteriorColor": "Carbon Black",
-      "interiorColor": "Tartufo Brown",
-      "inventoryPrice": 1089000,
-      "invoiceTax": "IVA 16%",
-      "excludedOrange": false,
-      "pinkNumberCell": true
-    },
-    "kavakStatus": "capturado",
-    "kavakOffer": 806933,
-    "kavakTradeOffer": null,
-    "kavakLoanOffer": 600000,
-    "kavakSellOfferType": "venta_7_dias",
-    "marketReference": null,
-    "marketPriceRange": null,
-    "targetBuyPrice": 1039000,
-    "aggressiveBuyPrice": 1019000,
-    "spread": -232067,
-    "aggressiveSpread": -212067,
-    "confidence": 0.88,
-    "score": 0,
-    "marketReferences": [
-      {
-        "source": "Facebook Marketplace",
-        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Facebook Marketplace",
-        "url": "https://www.facebook.com/marketplace/search/?query=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
-        "price": null,
-        "kilometers": 76702,
-        "zone": "Nacional",
-        "status": "asistido",
-        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
-        "evidenceType": "busqueda"
-      },
-      {
-        "source": "MercadoLibre",
-        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en MercadoLibre",
-        "url": "https://listado.mercadolibre.com.mx/BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
-        "price": null,
-        "kilometers": 76702,
-        "zone": "Nacional",
-        "status": "asistido",
-        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
-        "evidenceType": "busqueda"
-      },
-      {
-        "source": "Kavak Catalogo",
-        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Kavak Catalogo",
-        "url": "https://www.kavak.com/mx/seminuevos?keyword=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
-        "price": null,
-        "kilometers": 76702,
-        "zone": "Nacional",
-        "status": "asistido",
-        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
-        "evidenceType": "busqueda"
-      },
-      {
-        "source": "Seminuevos",
-        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Seminuevos",
-        "url": "https://www.seminuevos.com/buscar?keyword=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
-        "price": null,
-        "kilometers": 76702,
-        "zone": "Nacional",
-        "status": "asistido",
-        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
-        "evidenceType": "busqueda"
-      },
-      {
-        "source": "Google",
-        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Google",
-        "url": "https://www.google.com/search?q=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024+seminuevo+precio",
-        "price": null,
-        "kilometers": 76702,
-        "zone": "Nacional",
-        "status": "asistido",
-        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
-        "evidenceType": "busqueda"
-      }
-    ],
-    "evidence": [
-      {
-        "source": "Kavak",
-        "label": "Venta en 7 dias Kavak capturada; vigente hasta 2026-07-05",
-        "url": "https://www.kavak.com/mx/v2/cotizar-auto/venta-multi-oferta-auto?flow-id=2a87b5b4-a17d-4871-b722-6e4016303481",
-        "price": 806933,
-        "kilometers": null,
-        "zone": "Nacional",
-        "status": "capturado",
-        "observedAt": "2026-06-27T22:33:42.235Z",
-        "publicationId": "2a87b5b4-a17d-4871-b722-6e4016303481"
-      },
-      {
-        "source": "Facebook Marketplace",
-        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Facebook Marketplace",
-        "url": "https://www.facebook.com/marketplace/search/?query=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
-        "price": null,
-        "kilometers": 76702,
-        "zone": "Nacional",
-        "status": "asistido",
-        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
-        "evidenceType": "busqueda"
-      },
-      {
-        "source": "MercadoLibre",
-        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en MercadoLibre",
-        "url": "https://listado.mercadolibre.com.mx/BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
-        "price": null,
-        "kilometers": 76702,
-        "zone": "Nacional",
-        "status": "asistido",
-        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
-        "evidenceType": "busqueda"
-      },
-      {
-        "source": "Kavak Catalogo",
-        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Kavak Catalogo",
-        "url": "https://www.kavak.com/mx/seminuevos?keyword=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
-        "price": null,
-        "kilometers": 76702,
-        "zone": "Nacional",
-        "status": "asistido",
-        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
-        "evidenceType": "busqueda"
-      },
-      {
-        "source": "Seminuevos",
-        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Seminuevos",
-        "url": "https://www.seminuevos.com/buscar?keyword=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024",
-        "price": null,
-        "kilometers": 76702,
-        "zone": "Nacional",
-        "status": "asistido",
-        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
-        "evidenceType": "busqueda"
-      },
-      {
-        "source": "Google",
-        "label": "Buscar BMW X5 xDrive50e (Hibrido/Aut) 2024 en Google",
-        "url": "https://www.google.com/search?q=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024+seminuevo+precio",
-        "price": null,
-        "kilometers": 76702,
-        "zone": "Nacional",
-        "status": "asistido",
-        "query": "BMW X5 xDrive50e (Hibrido/Aut) 2024",
-        "evidenceType": "busqueda"
-      }
-    ],
-    "notes": [
-      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
-      "Kavak venta en 7 dias capturado: $806,933; prestamo: $600,000; vigente hasta 2026-07-05.",
-      "Kavak venta directa queda $282,067 debajo del precio de lista.",
-      "Sin precio de venta capturado para BMW X5 xDrive50e (Hibrido/Aut) 2024; las referencias asistidas no suman spread."
     ]
   }
 ]

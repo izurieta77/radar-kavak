@@ -185,5 +185,38 @@
     "publicationId": "mercadolibre-range-rover-sport-2024",
     "observedAt": "2026-06-27T23:03:00Z",
     "evidenceType": "manual"
+  },
+  {
+    "vehicleNo": 52,
+    "source": "Instagram",
+    "title": "BMW X5 xDrive50e Hibrido 2024 22,100 km",
+    "price": 1410000,
+    "location": "Mexico",
+    "url": "https://www.instagram.com/p/DPU-84YDsEc/",
+    "publicationId": "DPU-84YDsEc",
+    "observedAt": "2026-06-27T23:12:00Z",
+    "evidenceType": "manual"
+  },
+  {
+    "vehicleNo": 52,
+    "source": "Facebook",
+    "title": "BMW X5 xDrive50e 2024 38,500 km",
+    "price": 1315000,
+    "location": "Veracruz",
+    "url": "https://www.facebook.com/SeminuevosVecsaVeracruz/posts/bmw-x5-xdrive50e-2024-38500-km-1315000-mxncont%C3%A1ctanos-229-465-0175contamos-con-p/1388339909318624/",
+    "publicationId": "1388339909318624",
+    "observedAt": "2026-06-27T23:12:00Z",
+    "evidenceType": "manual"
+  },
+  {
+    "vehicleNo": 52,
+    "source": "Instagram",
+    "title": "BMW X5 xDrive50e 2024 42,000 km",
+    "price": 1450000,
+    "location": "Mexico",
+    "url": "https://www.instagram.com/p/DIxMw1OsWag/",
+    "publicationId": "DIxMw1OsWag",
+    "observedAt": "2026-06-27T23:12:00Z",
+    "evidenceType": "manual"
   }
 ]

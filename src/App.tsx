@@ -54,6 +54,12 @@ function referencePriceLabel(reference: Opportunity['marketReferences'][number])
   return reference.evidenceType === 'captura' ? 'precio en captura' : 'buscar exacto';
 }
 
+function deltaLabel(value: number | null): string {
+  if (value == null) return 'sin dato';
+  const prefix = value > 0 ? '+' : '';
+  return `${prefix}${formatMoney(value)}`;
+}
+
 function App() {
   const [selectedNo, setSelectedNo] = useState(opportunities[0]?.vehicle.no ?? 0);
   const [query, setQuery] = useState('');
@@ -82,6 +88,17 @@ function App() {
   );
   const positive = opportunities.filter((item) => (item.spread ?? 0) > 0);
   const publishedMargin = positive.reduce((sum, item) => sum + (item.spread ?? 0), 0);
+  const kavakAboveList = opportunities
+    .filter((item) => (item.dealAnalysis.kavakVsList ?? -Infinity) > 0)
+    .sort((a, b) => (b.dealAnalysis.kavakVsList ?? -Infinity) - (a.dealAnalysis.kavakVsList ?? -Infinity));
+  const closestKavak = [...opportunities]
+    .filter((item) => item.dealAnalysis.kavakBestOffer != null)
+    .sort((a, b) => (b.dealAnalysis.kavakVsList ?? -Infinity) - (a.dealAnalysis.kavakVsList ?? -Infinity))
+    .slice(0, 5);
+  const floorBargains = [...opportunities]
+    .filter((item) => item.dealAnalysis.marketLowVsTarget != null)
+    .sort((a, b) => (b.dealAnalysis.marketLowVsTarget ?? -Infinity) - (a.dealAnalysis.marketLowVsTarget ?? -Infinity))
+    .slice(0, 5);
 
   return (
     <div className="app-shell">
@@ -145,6 +162,36 @@ function App() {
             <span>Margen potencial</span>
             <strong>{formatMoney(publishedMargin)}</strong>
             <small>Contra compra objetivo -50k</small>
+          </div>
+        </section>
+
+        <section className="analysis-grid">
+          <div className="analysis-panel">
+            <span>Kavak arriba de lista</span>
+            <strong>{kavakAboveList.length ? `${kavakAboveList[0].vehicle.brand} ${kavakAboveList[0].vehicle.model}` : 'Ninguno venta directa'}</strong>
+            <small>
+              {kavakAboveList.length
+                ? `${deltaLabel(kavakAboveList[0].dealAnalysis.kavakVsList)} con ${kavakAboveList[0].dealAnalysis.kavakBestOfferType}`
+                : 'Solo cuentan venta/cambio reales capturados.'}
+            </small>
+          </div>
+          <div className="analysis-panel">
+            <span>Más cerca de lista</span>
+            {closestKavak.map((item) => (
+              <button key={item.vehicle.no} onClick={() => setSelectedNo(item.vehicle.no)}>
+                <strong>#{item.vehicle.no} {item.vehicle.brand} {item.vehicle.model}</strong>
+                <small>{deltaLabel(item.dealAnalysis.kavakVsList)} vs lista · {item.dealAnalysis.kavakBestOfferType}</small>
+              </button>
+            ))}
+          </div>
+          <div className="analysis-panel">
+            <span>Gangas por piso de mercado</span>
+            {floorBargains.map((item) => (
+              <button key={item.vehicle.no} onClick={() => setSelectedNo(item.vehicle.no)}>
+                <strong>#{item.vehicle.no} {item.vehicle.brand} {item.vehicle.model}</strong>
+                <small>{deltaLabel(item.dealAnalysis.marketLowVsTarget)} vs compra obj. · piso {formatMoney(item.marketPriceRange?.low ?? null)}</small>
+              </button>
+            ))}
           </div>
         </section>
 
@@ -259,6 +306,18 @@ function App() {
                   </div>
                 </>
               )}
+              <div>
+                <span>Kavak vs lista</span>
+                <strong className={(selected.dealAnalysis.kavakVsList ?? 0) > 0 ? 'good-text' : ''}>
+                  {deltaLabel(selected.dealAnalysis.kavakVsList)}
+                </strong>
+              </div>
+              <div>
+                <span>Piso mercado vs objetivo</span>
+                <strong className={(selected.dealAnalysis.marketLowVsTarget ?? 0) > 0 ? 'good-text' : ''}>
+                  {deltaLabel(selected.dealAnalysis.marketLowVsTarget)}
+                </strong>
+              </div>
               <div>
                 <span>Spread objetivo</span>
                 <strong className={(selected.spread ?? 0) > 0 ? 'good-text' : ''}>{spreadDisplay(selected)}</strong>

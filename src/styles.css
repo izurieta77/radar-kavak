@@ -208,6 +208,60 @@ h1 {
   background: #fff9ec;
 }
 
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1.4fr;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.analysis-panel {
+  display: grid;
+  gap: 7px;
+  background: #ffffff;
+  border: 1px solid #dce3df;
+  border-radius: 8px;
+  padding: 12px;
+  min-width: 0;
+}
+
+.analysis-panel > span {
+  color: #66736f;
+  font-size: 13px;
+}
+
+.analysis-panel > strong {
+  font-size: 16px;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.analysis-panel > small {
+  color: #40504b;
+}
+
+.analysis-panel button {
+  border: 0;
+  border-top: 1px solid #edf1ef;
+  background: transparent;
+  padding: 7px 0 0;
+  color: #17201d;
+  text-align: left;
+  cursor: pointer;
+}
+
+.analysis-panel button strong,
+.analysis-panel button small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.analysis-panel button small {
+  margin-top: 2px;
+  color: #66736f;
+  font-size: 12px;
+}
+
 .content-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 360px;
@@ -447,6 +501,7 @@ h1 {
   }
 
   .content-grid,
+  .analysis-grid,
   .kpi-grid {
     grid-template-columns: 1fr;
   }

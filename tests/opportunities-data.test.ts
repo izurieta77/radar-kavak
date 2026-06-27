@@ -104,4 +104,32 @@ describe('generated opportunities', () => {
       expect(item.marketReference).toBe(range.high);
     }
   });
+
+  it('calculates Kavak-vs-list and bargain spreads for ranking', () => {
+    const x4 = opportunities.find((item) => item.vehicle.no === 29);
+    expect(x4?.dealAnalysis.kavakBestOffer).toBe(873663);
+    expect(x4?.dealAnalysis.kavakBestOfferType).toBe('cambio');
+    expect(x4?.dealAnalysis.kavakVsList).toBe(4663);
+
+    for (const item of opportunities) {
+      const listPrice = item.vehicle.inventoryPrice;
+      if (listPrice == null) continue;
+
+      const expectedKavakBest = Math.max(item.kavakOffer ?? 0, item.kavakTradeOffer ?? 0) || null;
+      expect(item.dealAnalysis.kavakBestOffer).toBe(expectedKavakBest);
+      expect(item.dealAnalysis.kavakVsList).toBe(expectedKavakBest == null ? null : expectedKavakBest - listPrice);
+
+      if (item.marketPriceRange == null || item.targetBuyPrice == null) {
+        expect(item.dealAnalysis.marketLowVsTarget).toBeNull();
+        continue;
+      }
+
+      expect(item.dealAnalysis.marketLowVsList).toBe(item.marketPriceRange.low - listPrice);
+      expect(item.dealAnalysis.marketMidVsList).toBe(item.marketPriceRange.mid - listPrice);
+      expect(item.dealAnalysis.marketHighVsList).toBe(item.marketPriceRange.high - listPrice);
+      expect(item.dealAnalysis.marketLowVsTarget).toBe(item.marketPriceRange.low - item.targetBuyPrice);
+      expect(item.dealAnalysis.marketMidVsTarget).toBe(item.marketPriceRange.mid - item.targetBuyPrice);
+      expect(item.dealAnalysis.marketHighVsTarget).toBe(item.marketPriceRange.high - item.targetBuyPrice);
+    }
+  });
 });

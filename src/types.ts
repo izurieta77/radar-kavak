@@ -45,6 +45,7 @@ export interface Opportunity {
   aggressiveSpread: number | null;
   confidence: number;
   score: number;
+  dealAnalysis: DealAnalysis;
   marketReferences: MarketEvidence[];
   evidence: MarketEvidence[];
   notes: string[];
@@ -55,6 +56,20 @@ export interface MarketPriceRange {
   mid: number;
   high: number;
   count: number;
+}
+
+export interface DealAnalysis {
+  kavakBestOffer: number | null;
+  kavakBestOfferType: 'venta' | 'cambio' | null;
+  kavakVsList: number | null;
+  kavakVsListPct: number | null;
+  marketLowVsList: number | null;
+  marketMidVsList: number | null;
+  marketHighVsList: number | null;
+  marketLowVsTarget: number | null;
+  marketMidVsTarget: number | null;
+  marketHighVsTarget: number | null;
+  marketLowVsAggressive: number | null;
 }
 
 export interface NegotiationRange {
