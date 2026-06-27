@@ -47,9 +47,9 @@ function App() {
     });
   }, [query, onlyPositive]);
 
-  const capturedRefs = opportunities.filter((item) => item.marketReference != null).length;
+  const capturedRefs = opportunities.filter((item) => item.marketReference != null || item.kavakOffer != null).length;
   const positive = opportunities.filter((item) => (item.spread ?? 0) > 0);
-  const estimatedMargin = positive.reduce((sum, item) => sum + (item.spread ?? 0), 0);
+  const publishedMargin = positive.reduce((sum, item) => sum + (item.spread ?? 0), 0);
 
   return (
     <div className="app-shell">
@@ -79,7 +79,7 @@ function App() {
         <header className="topbar">
           <div>
             <h1>Oportunidades fin de mes</h1>
-            <p>El precio lista se ajusta con compra objetivo -50k y escenario agresivo -70k.</p>
+            <p>Solo se rankea con Kavak capturado o publicaciones reales de mercado.</p>
           </div>
           <div className="status-row">
             <span className="status-chip muted">
@@ -100,19 +100,19 @@ function App() {
             <small>{summary.total} total, {summary.excludedOrange} naranjas fuera</small>
           </div>
           <div className="kpi">
-            <span>Referencias capturadas</span>
+            <span>Referencias reales</span>
             <strong>{capturedRefs}</strong>
-            <small>Seminuevos directo; ML asistido</small>
+            <small>Facebook, MercadoLibre, Kavak u otra URL verificable</small>
           </div>
           <div className="kpi">
             <span>Spread positivo</span>
             <strong>{positive.length}</strong>
-            <small>Contra compra objetivo -50k</small>
+            <small>Solo con precio real visible</small>
           </div>
           <div className="kpi accent">
-            <span>Margen estimado</span>
-            <strong>{formatMoney(estimatedMargin)}</strong>
-            <small>Sin contar Kavak pendiente</small>
+            <span>Margen potencial</span>
+            <strong>{formatMoney(publishedMargin)}</strong>
+            <small>Contra compra objetivo -50k</small>
           </div>
         </section>
 
@@ -124,7 +124,7 @@ function App() {
                 <input
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Buscar marca, modelo o año"
+                  placeholder="Buscar marca, modelo o anio"
                 />
               </label>
               <button className={onlyPositive ? 'toggle active' : 'toggle'} onClick={() => setOnlyPositive(!onlyPositive)}>
@@ -138,7 +138,7 @@ function App() {
                 <span>Auto</span>
                 <span>Lista</span>
                 <span>Compra obj.</span>
-                <span>Mercado/Kavak</span>
+                <span>Precio real</span>
                 <span>Spread</span>
               </div>
               {filtered.map((item) => (

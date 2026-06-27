@@ -20,5 +20,19 @@ describe('generated opportunities', () => {
 
     expect(scores).toEqual(sorted);
   });
-});
 
+  it('does not create positive spreads without captured Kavak or published market evidence', () => {
+    for (const item of opportunities) {
+      const hasCapturedKavak = item.kavakStatus === 'capturado' && item.kavakOffer != null;
+      const hasPublishedMarketEvidence = item.evidence.some(
+        (evidence) => evidence.status === 'publicado' && evidence.price != null && evidence.url.startsWith('http')
+      );
+
+      if (!hasCapturedKavak && !hasPublishedMarketEvidence) {
+        expect(item.marketReference).toBeNull();
+        expect(item.spread).toBeNull();
+        expect(item.score).toBe(0);
+      }
+    }
+  });
+});

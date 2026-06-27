@@ -27,9 +27,12 @@ export function opportunityScore(input: {
   spread: number | null;
   confidence: number;
   kavakStatus: KavakStatus;
+  hasPublishedMarketEvidence?: boolean;
 }): number {
+  if (input.kavakStatus !== 'capturado' && !input.hasPublishedMarketEvidence) return 0;
+
   const spreadScore = Math.max(0, input.spread ?? 0) / 1000;
-  const statusMultiplier = input.kavakStatus === 'capturado' ? 1.2 : input.kavakStatus === 'estimado' ? 1 : 0.72;
+  const statusMultiplier = input.kavakStatus === 'capturado' ? 1.2 : 1;
   return Math.round(spreadScore * input.confidence * statusMultiplier);
 }
 

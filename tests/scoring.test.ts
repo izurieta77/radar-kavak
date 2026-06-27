@@ -32,18 +32,28 @@ describe('opportunity scoring', () => {
     });
   });
 
-  it('prioritizes positive spreads with captured Kavak evidence over pending estimates', () => {
+  it('does not score spreads unless Kavak or market evidence is real', () => {
     const captured = opportunityScore({
       spread: 90000,
       confidence: 0.8,
-      kavakStatus: 'capturado'
+      kavakStatus: 'capturado',
+      hasPublishedMarketEvidence: false
     });
     const pending = opportunityScore({
       spread: 90000,
       confidence: 0.8,
-      kavakStatus: 'pendiente'
+      kavakStatus: 'pendiente',
+      hasPublishedMarketEvidence: false
+    });
+    const market = opportunityScore({
+      spread: 90000,
+      confidence: 0.8,
+      kavakStatus: 'pendiente',
+      hasPublishedMarketEvidence: true
     });
 
-    expect(captured).toBeGreaterThan(pending);
+    expect(pending).toBe(0);
+    expect(captured).toBeGreaterThan(0);
+    expect(market).toBeGreaterThan(0);
   });
 });

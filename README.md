@@ -2,11 +2,14 @@
 
 App operativa para detectar oportunidades de arbitraje entre inventario seminuevo, Kavak y mercado local Toluca/CDMX/Metepec.
 
+Regla central: no inventar valores. El ranking solo suma spread cuando hay una cotizacion real de Kavak capturada o una publicacion real de mercado guardada con precio y URL.
+
 ## Datos actuales
 
 - PDF extraido: 48 filas.
 - Excluidos: 10 filas naranjas completas.
 - Analizables: 38 filas.
+- Publicaciones reales capturadas en `data/market_listings.json`: Facebook Marketplace con URL, precio visible y hora de consulta.
 - Precio de lista ajustado por fin de mes:
   - compra objetivo: lista - 50,000 MXN
   - compra agresiva: lista - 70,000 MXN
@@ -23,12 +26,7 @@ npm run build
 npm run dev
 ```
 
-Para intentar referencias vivas de Seminuevos en el scoring:
-
-```powershell
-$env:RADAR_KAVAK_LIVE_MARKET_LIMIT='8'
-python scripts/score_opportunities.py
-```
+`scripts/score_opportunities.py` no usa promedios ni precios guia. Lee `data/market_listings.json` y solo activa oportunidades con publicaciones reales por misma familia y anio.
 
 ## Kavak asistido
 
@@ -45,6 +43,20 @@ Reglas:
 - No crear citas ni aceptar ventas.
 - Si Kavak pide captcha u OTP, se resuelve manualmente y luego se captura la oferta.
 
+## Mercado real
+
+Las publicaciones externas deben guardarse con:
+
+- fuente
+- URL directa
+- titulo visible
+- anio/familia
+- precio publicado
+- ubicacion
+- fecha/hora de consulta
+
+Los links de busqueda Toluca/CDMX/Metepec son solo asistidos; ayudan a abrir busquedas, pero no cuentan como evidencia hasta capturar una publicacion concreta.
+
 ## Deploy
 
 Netlify usa:
@@ -58,4 +70,3 @@ npx netlify init
 npx netlify deploy
 npx netlify deploy --prod
 ```
-
