@@ -3,5 +3,5 @@ dist/
 tmp/
 .playwright-cli/
 .netlify/
+output/
 *.log
-
