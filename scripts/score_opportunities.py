@@ -4,6 +4,7 @@ import json
 import os
 import re
 import time
+import unicodedata
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass
@@ -34,15 +35,7 @@ class MarketKey:
 
 
 def slugify(value: str) -> str:
-    normalized = (
-        value.lower()
-        .replace("á", "a")
-        .replace("é", "e")
-        .replace("í", "i")
-        .replace("ó", "o")
-        .replace("ú", "u")
-        .replace("ñ", "n")
-    )
+    normalized = unicodedata.normalize("NFKD", value.lower()).encode("ascii", "ignore").decode("ascii")
     normalized = re.sub(r"[^a-z0-9]+", "-", normalized).strip("-")
     return normalized
 

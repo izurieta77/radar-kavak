@@ -71,7 +71,7 @@ def main() -> None:
             "kilometers": vehicle["kilometers"],
             "url": url,
             "instructions": [
-                "Selecciona año, marca y modelo en Kavak.",
+                "Selecciona anio, marca y modelo en Kavak.",
                 "Continua hasta capturar oferta o rango.",
                 "Si aparece captcha/OTP, resuelvelo manualmente.",
                 "No agendes cita ni aceptes operacion desde este flujo.",
@@ -86,4 +86,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
