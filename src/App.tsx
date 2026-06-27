@@ -15,6 +15,7 @@ import opportunitiesData from './data/opportunities.json';
 import inventoryData from './data/inventario.json';
 import type { Opportunity } from './types';
 import { formatKm, formatMoney, statusLabel, summarizeInventory } from './lib/format';
+import { opportunityTone } from './lib/opportunityTone';
 
 const opportunities = opportunitiesData as Opportunity[];
 const workflowItems = [
@@ -49,6 +50,10 @@ function spreadDisplay(item: Opportunity): string {
   return item.spread != null ? formatMoney(item.spread) : 'sin spread';
 }
 
+function toneLabel(item: Opportunity): string {
+  return opportunityTone(item) === 'ganga' ? 'Ganga mercado' : 'Mi lista';
+}
+
 function referencePriceLabel(reference: Opportunity['marketReferences'][number]): string {
   if (reference.price != null) return formatMoney(reference.price);
   return reference.evidenceType === 'captura' ? 'precio en captura' : 'buscar exacto';
@@ -67,6 +72,7 @@ function App() {
 
   const summary = summarizeInventory(inventoryData);
   const selected = opportunities.find((item) => item.vehicle.no === selectedNo) ?? opportunities[0];
+  const selectedTone = opportunityTone(selected);
   const filtered = useMemo(() => {
     const text = query.trim().toLowerCase();
     return opportunities.filter((item) => {
@@ -128,7 +134,7 @@ function App() {
         <header className="topbar">
           <div>
             <h1>Oportunidades fin de mes</h1>
-            <p>Resultado Kavak real para cada unidad analizable; mercado separado por publicaciones visibles.</p>
+            <p>Azul: tu lista y Kavak. Amarillo: gangas detectadas contra piso real de mercado.</p>
           </div>
           <div className="status-row">
             <span className="status-chip muted">
@@ -143,22 +149,22 @@ function App() {
         </header>
 
         <section className="kpi-grid">
-          <div className="kpi">
+          <div className="kpi kpi-lista">
             <span>Analizables</span>
             <strong>{summary.analyzable}</strong>
             <small>{summary.total} total, {summary.excludedOrange} naranjas fuera</small>
           </div>
-          <div className="kpi">
+          <div className="kpi kpi-lista">
             <span>Resultados Kavak</span>
             <strong>{kavakResults}</strong>
             <small>{kavakSaleOffers} venta, {loanOnly} solo prestamo, {noModel} sin modelo/version</small>
           </div>
-          <div className="kpi">
+          <div className="kpi kpi-ganga">
             <span>Mercado publicado</span>
             <strong>{marketRefs}</strong>
             <small>{pricedReferences} precios con URL; el resto abre busqueda textual exacta</small>
           </div>
-          <div className="kpi accent">
+          <div className="kpi kpi-ganga accent">
             <span>Margen potencial</span>
             <strong>{formatMoney(publishedMargin)}</strong>
             <small>Contra compra objetivo -50k</small>
@@ -166,30 +172,34 @@ function App() {
         </section>
 
         <section className="analysis-grid">
-          <div className="analysis-panel">
+          <div className="analysis-panel panel-lista">
             <span>Kavak arriba de lista</span>
-            <strong>{kavakAboveList.length ? `${kavakAboveList[0].vehicle.brand} ${kavakAboveList[0].vehicle.model}` : 'Ninguno venta directa'}</strong>
+            <strong>
+              {kavakAboveList.length
+                ? `${kavakAboveList[0].vehicle.brand} ${kavakAboveList[0].vehicle.model}`
+                : 'Ninguno venta directa'}
+            </strong>
             <small>
               {kavakAboveList.length
                 ? `${deltaLabel(kavakAboveList[0].dealAnalysis.kavakVsList)} con ${kavakAboveList[0].dealAnalysis.kavakBestOfferType}`
                 : 'Solo cuentan venta/cambio reales capturados.'}
             </small>
           </div>
-          <div className="analysis-panel">
-            <span>Más cerca de lista</span>
+          <div className="analysis-panel panel-lista">
+            <span>Mas cerca de lista</span>
             {closestKavak.map((item) => (
               <button key={item.vehicle.no} onClick={() => setSelectedNo(item.vehicle.no)}>
                 <strong>#{item.vehicle.no} {item.vehicle.brand} {item.vehicle.model}</strong>
-                <small>{deltaLabel(item.dealAnalysis.kavakVsList)} vs lista · {item.dealAnalysis.kavakBestOfferType}</small>
+                <small>{deltaLabel(item.dealAnalysis.kavakVsList)} vs lista - {item.dealAnalysis.kavakBestOfferType}</small>
               </button>
             ))}
           </div>
-          <div className="analysis-panel">
+          <div className="analysis-panel panel-ganga">
             <span>Gangas por piso de mercado</span>
             {floorBargains.map((item) => (
               <button key={item.vehicle.no} onClick={() => setSelectedNo(item.vehicle.no)}>
                 <strong>#{item.vehicle.no} {item.vehicle.brand} {item.vehicle.model}</strong>
-                <small>{deltaLabel(item.dealAnalysis.marketLowVsTarget)} vs compra obj. · piso {formatMoney(item.marketPriceRange?.low ?? null)}</small>
+                <small>{deltaLabel(item.dealAnalysis.marketLowVsTarget)} vs compra obj. - piso {formatMoney(item.marketPriceRange?.low ?? null)}</small>
               </button>
             ))}
           </div>
@@ -221,43 +231,56 @@ function App() {
                 <span>Mercado</span>
                 <span>Spread</span>
               </div>
-              {filtered.map((item) => (
-                <button
-                  className={item.vehicle.no === selected.vehicle.no ? 'table-row selected' : 'table-row'}
-                  key={item.vehicle.no}
-                  onClick={() => setSelectedNo(item.vehicle.no)}
-                >
-                  <span>
-                    <strong>{item.vehicle.brand} {item.vehicle.model}</strong>
-                    <small>{item.vehicle.year} · {formatKm(item.vehicle.kilometers)}</small>
-                  </span>
-                  <span>{formatMoney(item.vehicle.inventoryPrice)}</span>
-                  <span>
-                    <strong>{formatMoney(item.targetBuyPrice)}</strong>
-                    <small>agresivo {formatMoney(item.aggressiveBuyPrice)}</small>
-                  </span>
-                  <span>
-                    <strong>{kavakDisplay(item)}</strong>
-                    <small>{statusLabel(item.kavakStatus)}</small>
-                  </span>
-                  <span>
-                    <strong>{marketDisplay(item)}</strong>
-                    <small>{item.marketPriceRange == null ? 'busqueda exacta' : `medio ${formatMoney(item.marketPriceRange.mid)}`}</small>
-                  </span>
-                  <span className={(item.spread ?? 0) > 0 ? 'spread good' : 'spread muted'}>
-                    {spreadDisplay(item)}
-                  </span>
-                </button>
-              ))}
+              {filtered.map((item) => {
+                const tone = opportunityTone(item);
+                return (
+                  <button
+                    className={[
+                      'table-row',
+                      tone === 'ganga' ? 'tone-ganga' : 'tone-lista',
+                      item.vehicle.no === selected.vehicle.no ? 'selected' : ''
+                    ].filter(Boolean).join(' ')}
+                    key={item.vehicle.no}
+                    onClick={() => setSelectedNo(item.vehicle.no)}
+                  >
+                    <span>
+                      <strong>{item.vehicle.brand} {item.vehicle.model}</strong>
+                      <small>{item.vehicle.year} - {formatKm(item.vehicle.kilometers)}</small>
+                      <small className={`tone-badge ${tone === 'ganga' ? 'tone-badge-ganga' : 'tone-badge-lista'}`}>
+                        {toneLabel(item)}
+                      </small>
+                    </span>
+                    <span>{formatMoney(item.vehicle.inventoryPrice)}</span>
+                    <span>
+                      <strong>{formatMoney(item.targetBuyPrice)}</strong>
+                      <small>agresivo {formatMoney(item.aggressiveBuyPrice)}</small>
+                    </span>
+                    <span>
+                      <strong>{kavakDisplay(item)}</strong>
+                      <small>{statusLabel(item.kavakStatus)}</small>
+                    </span>
+                    <span>
+                      <strong>{marketDisplay(item)}</strong>
+                      <small>{item.marketPriceRange == null ? 'busqueda exacta' : `medio ${formatMoney(item.marketPriceRange.mid)}`}</small>
+                    </span>
+                    <span className={(item.spread ?? 0) > 0 ? 'spread good' : 'spread muted'}>
+                      {spreadDisplay(item)}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
-          <aside className="detail-panel">
+          <aside className={`detail-panel ${selectedTone === 'ganga' ? 'tone-ganga-panel' : 'tone-lista-panel'}`}>
             <div className="detail-title">
               <CircleDot size={18} />
               <div>
                 <h2>{selected.vehicle.brand} {selected.vehicle.model}</h2>
-                <p>{selected.vehicle.year} · {formatKm(selected.vehicle.kilometers)} · #{selected.vehicle.no}</p>
+                <p>{selected.vehicle.year} - {formatKm(selected.vehicle.kilometers)} - #{selected.vehicle.no}</p>
+                <span className={`tone-badge ${selectedTone === 'ganga' ? 'tone-badge-ganga' : 'tone-badge-lista'}`}>
+                  {toneLabel(selected)}
+                </span>
               </div>
             </div>
 
@@ -337,7 +360,7 @@ function App() {
                 <a href={reference.url} key={`${reference.source}-${reference.label}-${reference.url}`} target="_blank" rel="noreferrer">
                   <span>
                     <strong>{reference.source}: {referencePriceLabel(reference)}</strong>
-                    <small>{reference.query} · {reference.status} · {reference.evidenceType ?? 'manual'}</small>
+                    <small>{reference.query} - {reference.status} - {reference.evidenceType ?? 'manual'}</small>
                   </span>
                   <ExternalLink size={15} />
                 </a>
@@ -350,7 +373,7 @@ function App() {
                 <a href={evidence.url} key={`${evidence.source}-${evidence.label}`} target="_blank" rel="noreferrer">
                   <span>
                     <strong>{evidence.label}</strong>
-                    <small>{evidence.source} · {evidence.zone} · {evidence.status}</small>
+                    <small>{evidence.source} - {evidence.zone} - {evidence.status}</small>
                   </span>
                   <ExternalLink size={15} />
                 </a>
