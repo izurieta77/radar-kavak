@@ -12,6 +12,7 @@ AGGRESSIVE_DISCOUNT = 70_000
 
 INVENTORY_PATH = Path("data/inventario.json")
 MARKET_LISTINGS_PATH = Path("data/market_listings.json")
+KAVAK_QUOTES_PATH = Path("data/kavak_quotes.json")
 
 
 def normalize(value: str) -> str:
@@ -56,6 +57,24 @@ def load_market_listings() -> list[dict[str, Any]]:
     return valid
 
 
+def load_kavak_quotes() -> dict[int, dict[str, Any]]:
+    if not KAVAK_QUOTES_PATH.exists():
+        return {}
+    quotes = json.loads(KAVAK_QUOTES_PATH.read_text(encoding="utf-8"))
+    valid: dict[int, dict[str, Any]] = {}
+    for quote in quotes:
+        vehicle_no = quote.get("vehicleNo")
+        sell_offer = quote.get("sellOffer")
+        if not isinstance(vehicle_no, int):
+            continue
+        if not isinstance(sell_offer, int) or sell_offer <= 0:
+            continue
+        if not quote.get("url") or not str(quote["url"]).startswith("https://www.kavak.com/"):
+            continue
+        valid[vehicle_no] = quote
+    return valid
+
+
 def matching_listings(vehicle: dict[str, Any], listings: list[dict[str, Any]]) -> list[dict[str, Any]]:
     family = vehicle_family(vehicle)
     if family is None:
@@ -88,15 +107,40 @@ def evidence_from_listing(listing: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def build_opportunity(vehicle: dict[str, Any], market_listings: list[dict[str, Any]]) -> dict[str, Any]:
+def evidence_from_kavak_quote(quote: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "source": "Kavak",
+        "label": f"Venta directa Kavak capturada; vigente hasta {quote.get('validUntil')}",
+        "url": quote["url"],
+        "price": quote["sellOffer"],
+        "kilometers": None,
+        "zone": "Nacional",
+        "status": "capturado",
+        "observedAt": quote.get("capturedAt"),
+        "publicationId": quote.get("flowId"),
+    }
+
+
+def build_opportunity(
+    vehicle: dict[str, Any], market_listings: list[dict[str, Any]], kavak_quotes: dict[int, dict[str, Any]]
+) -> dict[str, Any]:
     list_price = vehicle["inventoryPrice"]
     target_price = max(0, list_price - TARGET_DISCOUNT) if list_price is not None else None
     aggressive_price = max(0, list_price - AGGRESSIVE_DISCOUNT) if list_price is not None else None
     listings = matching_listings(vehicle, market_listings)
+    kavak_quote = kavak_quotes.get(vehicle["no"])
+    kavak_offer = kavak_quote["sellOffer"] if kavak_quote is not None else None
 
     evidence = [evidence_from_listing(listing) for listing in listings[:8]]
+    if kavak_quote is not None:
+        evidence.insert(0, evidence_from_kavak_quote(kavak_quote))
     market_reference = max((listing["price"] for listing in listings), default=None)
-    confidence = 0.9 if len(listings) >= 2 else 0.78 if len(listings) == 1 else 0.0
+    if kavak_quote is not None and len(listings) >= 1:
+        confidence = 0.95
+    elif kavak_quote is not None:
+        confidence = 0.88
+    else:
+        confidence = 0.9 if len(listings) >= 2 else 0.78 if len(listings) == 1 else 0.0
 
     for zone in ["Toluca", "CDMX", "Metepec"]:
         evidence.append(
@@ -111,18 +155,34 @@ def build_opportunity(vehicle: dict[str, Any], market_listings: list[dict[str, A
             }
         )
 
-    spread = market_reference - target_price if market_reference is not None and target_price is not None else None
-    aggressive_spread = (
-        market_reference - aggressive_price if market_reference is not None and aggressive_price is not None else None
+    real_reference = max(
+        (price for price in [market_reference, kavak_offer] if price is not None),
+        default=None,
     )
-    has_real_market = market_reference is not None
-    score = round(max(0, spread or 0) / 1000 * confidence) if has_real_market else 0
+    spread = real_reference - target_price if real_reference is not None and target_price is not None else None
+    aggressive_spread = (
+        real_reference - aggressive_price if real_reference is not None and aggressive_price is not None else None
+    )
+    has_real_reference = real_reference is not None
+    status_multiplier = 1.2 if kavak_quote is not None else 1
+    score = round(max(0, spread or 0) / 1000 * confidence * status_multiplier) if has_real_reference else 0
 
-    notes = [
-        "Kavak pendiente: capturar oferta real antes de comprar.",
-        "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
-    ]
-    if has_real_market:
+    notes = ["Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k."]
+    if kavak_quote is not None:
+        trade_in_offer = kavak_quote.get("tradeInOffer")
+        loan_offer = kavak_quote.get("loanOffer")
+        valid_until = kavak_quote.get("validUntil")
+        notes.append(
+            f"Kavak venta directa capturado: ${kavak_offer:,}; cambio/trueque: ${trade_in_offer:,}; "
+            f"prestamo: ${loan_offer:,}; vigente hasta {valid_until}."
+        )
+        if list_price is not None and trade_in_offer is not None and trade_in_offer > list_price:
+            notes.append(f"Kavak cambio/trueque queda ${trade_in_offer - list_price:,} arriba del precio de lista.")
+        if list_price is not None and kavak_offer is not None and kavak_offer < list_price:
+            notes.append(f"Kavak venta directa queda ${list_price - kavak_offer:,} debajo del precio de lista.")
+    else:
+        notes.append("Kavak pendiente: capturar oferta real antes de comprar.")
+    if market_reference is not None:
         notes.append("Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.")
         if spread is not None and spread > 0:
             notes.append("Spread positivo contra precio objetivo de fin de mes.")
@@ -131,8 +191,8 @@ def build_opportunity(vehicle: dict[str, Any], market_listings: list[dict[str, A
 
     return {
         "vehicle": vehicle,
-        "kavakStatus": "pendiente",
-        "kavakOffer": None,
+        "kavakStatus": "capturado" if kavak_quote is not None else "pendiente",
+        "kavakOffer": kavak_offer,
         "marketReference": market_reference,
         "targetBuyPrice": target_price,
         "aggressiveBuyPrice": aggressive_price,
@@ -148,8 +208,9 @@ def build_opportunity(vehicle: dict[str, Any], market_listings: list[dict[str, A
 def main() -> None:
     inventory = json.loads(INVENTORY_PATH.read_text(encoding="utf-8"))
     market_listings = load_market_listings()
+    kavak_quotes = load_kavak_quotes()
     opportunities = [
-        build_opportunity(vehicle, market_listings)
+        build_opportunity(vehicle, market_listings, kavak_quotes)
         for vehicle in inventory
         if not vehicle["excludedOrange"]
     ]
@@ -164,7 +225,9 @@ def main() -> None:
             {
                 "opportunities": len(opportunities),
                 "publishedMarketListings": len(market_listings),
+                "capturedKavakQuotes": len(kavak_quotes),
                 "withMarketReference": sum(1 for item in opportunities if item["marketReference"] is not None),
+                "withKavakOffer": sum(1 for item in opportunities if item["kavakOffer"] is not None),
                 "positiveSpread": sum(1 for item in opportunities if (item["spread"] or 0) > 0),
             },
             ensure_ascii=False,

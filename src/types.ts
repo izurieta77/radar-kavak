@@ -22,7 +22,7 @@ export interface MarketEvidence {
   price: number | null;
   kilometers: number | null;
   zone: 'Toluca' | 'CDMX' | 'Metepec' | 'Nacional';
-  status: 'publicado' | 'asistido' | 'pendiente';
+  status: 'publicado' | 'capturado' | 'asistido' | 'pendiente';
   observedAt?: string;
   publicationId?: string;
 }

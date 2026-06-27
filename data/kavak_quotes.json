@@ -1,0 +1,15 @@
+[
+  {
+    "vehicleNo": 29,
+    "source": "Kavak",
+    "url": "https://www.kavak.com/mx/v2/cotizar-auto/venta-multi-oferta-auto?flow-id=6924d107-a136-4001-a4d1-9e8ccb81c6e4",
+    "flowId": "6924d107-a136-4001-a4d1-9e8ccb81c6e4",
+    "capturedAt": "2026-06-27T15:35:44.6208973-06:00",
+    "validUntil": "2026-07-05",
+    "sellOffer": 853289,
+    "tradeInOffer": 873663,
+    "loanOffer": 600000,
+    "scoringOffer": "sellOffer",
+    "rawText": "Cambialo y asegura: $873,663. Vendelo y obten hasta: $853,289. Obten un prestamo: $600,000. Vigente hasta el 05/JUL/2026."
+  }
+]

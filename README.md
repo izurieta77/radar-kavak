@@ -10,6 +10,7 @@ Regla central: no inventar valores. El ranking solo suma spread cuando hay una c
 - Excluidos: 10 filas naranjas completas.
 - Analizables: 38 filas.
 - Publicaciones reales capturadas en `data/market_listings.json`: Facebook Marketplace con URL, precio visible y hora de consulta.
+- Cotizaciones Kavak capturadas en `data/kavak_quotes.json`: URL Kavak, oferta de venta directa, cambio/trueque, prestamo y vigencia. No contiene PII.
 - Precio de lista ajustado por fin de mes:
   - compra objetivo: lista - 50,000 MXN
   - compra agresiva: lista - 70,000 MXN
@@ -27,6 +28,7 @@ npm run dev
 ```
 
 `scripts/score_opportunities.py` no usa promedios ni precios guia. Lee `data/market_listings.json` y solo activa oportunidades con publicaciones reales por misma familia y anio.
+Tambien lee `data/kavak_quotes.json`; si una fila tiene oferta Kavak real, marca `kavakStatus: capturado` y conserva `kavakOffer`.
 
 ## Kavak asistido
 
@@ -42,6 +44,9 @@ Reglas:
 - No evadir captcha.
 - No crear citas ni aceptar ventas.
 - Si Kavak pide captcha u OTP, se resuelve manualmente y luego se captura la oferta.
+- En el formulario Kavak, usar los datos personales indicados por el operador en Chrome; no versionarlos en el repo.
+- Para el origen del auto, elegir siempre seminuevo.
+- Para tipo de persona, elegir siempre persona fisica.
 
 ## Mercado real
 

@@ -35,4 +35,15 @@ describe('generated opportunities', () => {
       }
     }
   });
+
+  it('keeps the captured Kavak offer for the quoted BMW X4', () => {
+    const quotedX4 = opportunities.find((item) => item.vehicle.no === 29);
+    const kavakEvidence = quotedX4?.evidence.find((evidence) => evidence.source === 'Kavak');
+
+    expect(quotedX4?.kavakStatus).toBe('capturado');
+    expect(quotedX4?.kavakOffer).toBe(853289);
+    expect(kavakEvidence?.price).toBe(853289);
+    expect(kavakEvidence?.url).toContain('kavak.com/mx/v2/cotizar-auto/venta-multi-oferta-auto');
+    expect(quotedX4?.notes).toContain('Kavak venta directa capturado: $853,289; cambio/trueque: $873,663; prestamo: $600,000; vigente hasta 2026-07-05.');
+  });
 });

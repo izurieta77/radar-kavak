@@ -119,8 +119,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.",
       "Spread positivo contra precio objetivo de fin de mes."
     ]
@@ -201,8 +201,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.",
       "Spread positivo contra precio objetivo de fin de mes."
     ]
@@ -305,8 +305,125 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.",
+      "Spread positivo contra precio objetivo de fin de mes."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 29,
+      "brand": "BMW",
+      "model": "X4 xDrive 30i (Automatico)",
+      "year": 2024,
+      "kilometers": 34069,
+      "exteriorColor": "Alpine White",
+      "interiorColor": "Sensatec Black",
+      "inventoryPrice": 869000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "capturado",
+    "kavakOffer": 853289,
+    "marketReference": 999000,
+    "targetBuyPrice": 819000,
+    "aggressiveBuyPrice": 799000,
+    "spread": 180000,
+    "aggressiveSpread": 200000,
+    "confidence": 0.95,
+    "score": 205,
+    "evidence": [
+      {
+        "source": "Kavak",
+        "label": "Venta directa Kavak capturada; vigente hasta 2026-07-05",
+        "url": "https://www.kavak.com/mx/v2/cotizar-auto/venta-multi-oferta-auto?flow-id=6924d107-a136-4001-a4d1-9e8ccb81c6e4",
+        "price": 853289,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "capturado",
+        "observedAt": "2026-06-27T15:35:44.6208973-06:00",
+        "publicationId": "6924d107-a136-4001-a4d1-9e8ccb81c6e4"
+      },
+      {
+        "source": "Facebook Marketplace",
+        "label": "2024 BMW x4 xdrive30i publicado en Metepec, Edomex",
+        "url": "https://www.facebook.com/marketplace/item/879438851634736/?ref=search&referral_code=null&referral_story_type=post",
+        "price": 999000,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "publicado",
+        "observedAt": "2026-06-27T21:14:23.501Z",
+        "publicationId": "879438851634736"
+      },
+      {
+        "source": "Facebook Marketplace",
+        "label": "2024 BMW x4 xdrive30i publicado en Metepec, Edomex",
+        "url": "https://www.facebook.com/marketplace/item/1908969223158416/?ref=search&referral_code=null&referral_story_type=post",
+        "price": 959000,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "publicado",
+        "observedAt": "2026-06-27T21:14:23.501Z",
+        "publicationId": "1908969223158416"
+      },
+      {
+        "source": "Facebook Marketplace",
+        "label": "2024 BMW X4 publicado en Azcapotzalco, CDMX",
+        "url": "https://www.facebook.com/marketplace/item/1326760562210475/?ref=search&referral_code=null&referral_story_type=post",
+        "price": 895000,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "publicado",
+        "observedAt": "2026-06-27T21:13:40.644Z",
+        "publicationId": "1326760562210475"
+      },
+      {
+        "source": "Facebook Marketplace",
+        "label": "2024 BMW x4 publicado en Toluca de Lerdo, Edomex",
+        "url": "https://www.facebook.com/marketplace/item/2062220274342879/?ref=search&referral_code=null&referral_story_type=post",
+        "price": 869000,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "publicado",
+        "observedAt": "2026-06-27T21:14:23.501Z",
+        "publicationId": "2062220274342879"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+X4+xDrive+30i+%28Automatico%29+2024+Toluca+seminuevo",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+X4+xDrive+30i+%28Automatico%29+2024+CDMX+seminuevo",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+X4+xDrive+30i+%28Automatico%29+2024+Metepec+seminuevo",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak venta directa capturado: $853,289; cambio/trueque: $873,663; prestamo: $600,000; vigente hasta 2026-07-05.",
+      "Kavak cambio/trueque queda $4,663 arriba del precio de lista.",
+      "Kavak venta directa queda $15,711 debajo del precio de lista.",
       "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.",
       "Spread positivo contra precio objetivo de fin de mes."
     ]
@@ -420,112 +537,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
-      "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.",
-      "Spread positivo contra precio objetivo de fin de mes."
-    ]
-  },
-  {
-    "vehicle": {
-      "page": 1,
-      "no": 29,
-      "brand": "BMW",
-      "model": "X4 xDrive 30i (Automatico)",
-      "year": 2024,
-      "kilometers": 34069,
-      "exteriorColor": "Alpine White",
-      "interiorColor": "Sensatec Black",
-      "inventoryPrice": 869000,
-      "invoiceTax": "IVA 16%",
-      "excludedOrange": false,
-      "pinkNumberCell": false
-    },
-    "kavakStatus": "pendiente",
-    "kavakOffer": null,
-    "marketReference": 999000,
-    "targetBuyPrice": 819000,
-    "aggressiveBuyPrice": 799000,
-    "spread": 180000,
-    "aggressiveSpread": 200000,
-    "confidence": 0.9,
-    "score": 162,
-    "evidence": [
-      {
-        "source": "Facebook Marketplace",
-        "label": "2024 BMW x4 xdrive30i publicado en Metepec, Edomex",
-        "url": "https://www.facebook.com/marketplace/item/879438851634736/?ref=search&referral_code=null&referral_story_type=post",
-        "price": 999000,
-        "kilometers": null,
-        "zone": "Toluca",
-        "status": "publicado",
-        "observedAt": "2026-06-27T21:14:23.501Z",
-        "publicationId": "879438851634736"
-      },
-      {
-        "source": "Facebook Marketplace",
-        "label": "2024 BMW x4 xdrive30i publicado en Metepec, Edomex",
-        "url": "https://www.facebook.com/marketplace/item/1908969223158416/?ref=search&referral_code=null&referral_story_type=post",
-        "price": 959000,
-        "kilometers": null,
-        "zone": "Toluca",
-        "status": "publicado",
-        "observedAt": "2026-06-27T21:14:23.501Z",
-        "publicationId": "1908969223158416"
-      },
-      {
-        "source": "Facebook Marketplace",
-        "label": "2024 BMW X4 publicado en Azcapotzalco, CDMX",
-        "url": "https://www.facebook.com/marketplace/item/1326760562210475/?ref=search&referral_code=null&referral_story_type=post",
-        "price": 895000,
-        "kilometers": null,
-        "zone": "CDMX",
-        "status": "publicado",
-        "observedAt": "2026-06-27T21:13:40.644Z",
-        "publicationId": "1326760562210475"
-      },
-      {
-        "source": "Facebook Marketplace",
-        "label": "2024 BMW x4 publicado en Toluca de Lerdo, Edomex",
-        "url": "https://www.facebook.com/marketplace/item/2062220274342879/?ref=search&referral_code=null&referral_story_type=post",
-        "price": 869000,
-        "kilometers": null,
-        "zone": "Toluca",
-        "status": "publicado",
-        "observedAt": "2026-06-27T21:14:23.501Z",
-        "publicationId": "2062220274342879"
-      },
-      {
-        "source": "Busqueda",
-        "label": "Buscar comparables en Toluca",
-        "url": "https://www.google.com/search?q=BMW+X4+xDrive+30i+%28Automatico%29+2024+Toluca+seminuevo",
-        "price": null,
-        "kilometers": null,
-        "zone": "Toluca",
-        "status": "asistido"
-      },
-      {
-        "source": "Busqueda",
-        "label": "Buscar comparables en CDMX",
-        "url": "https://www.google.com/search?q=BMW+X4+xDrive+30i+%28Automatico%29+2024+CDMX+seminuevo",
-        "price": null,
-        "kilometers": null,
-        "zone": "CDMX",
-        "status": "asistido"
-      },
-      {
-        "source": "Busqueda",
-        "label": "Buscar comparables en Metepec",
-        "url": "https://www.google.com/search?q=BMW+X4+xDrive+30i+%28Automatico%29+2024+Metepec+seminuevo",
-        "price": null,
-        "kilometers": null,
-        "zone": "Metepec",
-        "status": "asistido"
-      }
-    ],
-    "notes": [
       "Kavak pendiente: capturar oferta real antes de comprar.",
-      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
       "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.",
       "Spread positivo contra precio objetivo de fin de mes."
     ]
@@ -672,8 +685,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.",
       "Spread positivo contra precio objetivo de fin de mes."
     ]
@@ -798,8 +811,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.",
       "Spread positivo contra precio objetivo de fin de mes."
     ]
@@ -924,8 +937,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.",
       "Spread positivo contra precio objetivo de fin de mes."
     ]
@@ -995,8 +1008,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.",
       "Spread positivo contra precio objetivo de fin de mes."
     ]
@@ -1066,8 +1079,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.",
       "Spread positivo contra precio objetivo de fin de mes."
     ]
@@ -1137,8 +1150,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Referencia de mercado usa publicaciones reales capturadas; no es precio vendido.",
       "Spread positivo contra precio objetivo de fin de mes."
     ]
@@ -1197,8 +1210,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -1256,8 +1269,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -1315,8 +1328,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -1374,8 +1387,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -1433,8 +1446,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -1492,8 +1505,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -1551,8 +1564,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -1610,8 +1623,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -1669,8 +1682,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -1728,8 +1741,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -1787,8 +1800,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -1846,8 +1859,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -1905,8 +1918,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -1964,8 +1977,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -2023,8 +2036,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -2082,8 +2095,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -2141,8 +2154,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -2200,8 +2213,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -2259,8 +2272,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -2318,8 +2331,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -2377,8 +2390,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -2436,8 +2449,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -2495,8 +2508,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -2554,8 +2567,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -2613,8 +2626,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -2672,8 +2685,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   },
@@ -2731,8 +2744,8 @@
       }
     ],
     "notes": [
-      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Kavak pendiente: capturar oferta real antes de comprar.",
       "Sin publicacion real capturada para este anio/modelo; links asistidos no suman spread."
     ]
   }

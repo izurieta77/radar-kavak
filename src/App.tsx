@@ -186,6 +186,12 @@ function App() {
                 <span>Compra objetivo</span>
                 <strong>{formatMoney(selected.targetBuyPrice)}</strong>
               </div>
+              {selected.kavakOffer != null && (
+                <div>
+                  <span>Kavak venta</span>
+                  <strong>{formatMoney(selected.kavakOffer)}</strong>
+                </div>
+              )}
               <div>
                 <span>Spread objetivo</span>
                 <strong className={(selected.spread ?? 0) > 0 ? 'good-text' : ''}>{formatMoney(selected.spread)}</strong>
