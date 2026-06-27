@@ -1,0 +1,2595 @@
+[
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 29,
+      "brand": "BMW",
+      "model": "X4 xDrive 30i (Automatico)",
+      "year": 2024,
+      "kilometers": 34069,
+      "exteriorColor": "Alpine White",
+      "interiorColor": "Sensatec Black",
+      "inventoryPrice": 869000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": 1024281,
+    "targetBuyPrice": 819000,
+    "aggressiveBuyPrice": 799000,
+    "spread": 205281,
+    "aggressiveSpread": 225281,
+    "confidence": 0.92,
+    "score": 136,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Precio ideal BMW x4 2024",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/x4/2024",
+        "price": 1024281,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "scrapeable"
+      },
+      {
+        "source": "Seminuevos",
+        "label": "Rango bajo-alto 849,000-1,589,000",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/x4/2024",
+        "price": 849000,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "scrapeable"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+X4+xDrive+30i+%28Automatico%29+2024+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+X4+xDrive+30i+%28Automatico%29+2024+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+X4+xDrive+30i+%28Automatico%29+2024+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Spread positivo contra precio objetivo de fin de mes."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 1,
+      "brand": "Land-Rover",
+      "model": "Velar R-Dynamic S 340PS",
+      "year": 2023,
+      "kilometers": 24269,
+      "exteriorColor": "EIGER GREY",
+      "interiorColor": "LIGHT OYSTER",
+      "inventoryPrice": 1049000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 999000,
+    "aggressiveBuyPrice": 979000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente Land-Rover range-rover-velar 2023",
+        "url": "https://www.seminuevos.com/precio/autos/land-rover/range-rover-velar/2023",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=Land-Rover+Velar+R-Dynamic+S+340PS+2023+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=Land-Rover+Velar+R-Dynamic+S+340PS+2023+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=Land-Rover+Velar+R-Dynamic+S+340PS+2023+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 4,
+      "brand": "BMW",
+      "model": "M5 (Hibrido/Automatico)",
+      "year": 2025,
+      "kilometers": 9972,
+      "exteriorColor": "Isle of Man Gr}n metalizado",
+      "interiorColor": "Leather Merino Kyalami Orange",
+      "inventoryPrice": 1989000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 1939000,
+    "aggressiveBuyPrice": 1919000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW serie-5 2025",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/serie-5/2025",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+M5+%28Hibrido%2FAutomatico%29+2025+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+M5+%28Hibrido%2FAutomatico%29+2025+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+M5+%28Hibrido%2FAutomatico%29+2025+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 5,
+      "brand": "BMW",
+      "model": "X4 xDrive 30i (Automatico)",
+      "year": 2025,
+      "kilometers": 24164,
+      "exteriorColor": "BMW Ind Tanzanite Blue II",
+      "interiorColor": "Sensatec Cognac",
+      "inventoryPrice": 989000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 939000,
+    "aggressiveBuyPrice": 919000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW x4 2025",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/x4/2025",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+X4+xDrive+30i+%28Automatico%29+2025+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+X4+xDrive+30i+%28Automatico%29+2025+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+X4+xDrive+30i+%28Automatico%29+2025+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 6,
+      "brand": "Tesla",
+      "model": "Model Y de Autonomía Mayor",
+      "year": 2024,
+      "kilometers": 18662,
+      "exteriorColor": "Pintura stealth grey",
+      "interiorColor": "premium completamente negro",
+      "inventoryPrice": 739000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 689000,
+    "aggressiveBuyPrice": 669000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente Tesla model-y 2024",
+        "url": "https://www.seminuevos.com/precio/autos/tesla/model-y/2024",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=Tesla+Model+Y+de+Autonom%C3%ADa+Mayor+2024+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=Tesla+Model+Y+de+Autonom%C3%ADa+Mayor+2024+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=Tesla+Model+Y+de+Autonom%C3%ADa+Mayor+2024+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 7,
+      "brand": "MINI",
+      "model": "Cooper Convertible C (Aut)",
+      "year": 2026,
+      "kilometers": 9308,
+      "exteriorColor": "Cooper Grey",
+      "interiorColor": "Black / Cloth Blue",
+      "inventoryPrice": 689000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 639000,
+    "aggressiveBuyPrice": 619000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente MINI cooper 2026",
+        "url": "https://www.seminuevos.com/precio/autos/mini/cooper/2026",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=MINI+Cooper+Convertible+C+%28Aut%29+2026+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=MINI+Cooper+Convertible+C+%28Aut%29+2026+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=MINI+Cooper+Convertible+C+%28Aut%29+2026+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 8,
+      "brand": "BMW",
+      "model": "X4 M40i Automatico",
+      "year": 2021,
+      "kilometers": 51908,
+      "exteriorColor": "Sophisto Grey",
+      "interiorColor": "Piel Black costura azu",
+      "inventoryPrice": 769000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 719000,
+    "aggressiveBuyPrice": 699000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW x4 2021",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/x4/2021",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+X4+M40i+Automatico+2021+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+X4+M40i+Automatico+2021+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+X4+M40i+Automatico+2021+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 9,
+      "brand": "MINI",
+      "model": "Countryman Classic (Aut)",
+      "year": 2023,
+      "kilometers": 36964,
+      "exteriorColor": "Nanuq White",
+      "interiorColor": "Carbon Black Leatherette",
+      "inventoryPrice": 429000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 379000,
+    "aggressiveBuyPrice": 359000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente MINI countryman 2023",
+        "url": "https://www.seminuevos.com/precio/autos/mini/countryman/2023",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=MINI+Countryman+Classic+%28Aut%29+2023+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=MINI+Countryman+Classic+%28Aut%29+2023+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=MINI+Countryman+Classic+%28Aut%29+2023+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 10,
+      "brand": "KIA",
+      "model": "Seltos 1.6 LX M/T",
+      "year": 2022,
+      "kilometers": 50727,
+      "exteriorColor": "AURORA BLACK PEARL",
+      "interiorColor": "SATURN BLACK",
+      "inventoryPrice": 259000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 209000,
+    "aggressiveBuyPrice": 189000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente KIA seltos 2022",
+        "url": "https://www.seminuevos.com/precio/autos/kia/seltos/2022",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=KIA+Seltos+1.6+LX+M%2FT+2022+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=KIA+Seltos+1.6+LX+M%2FT+2022+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=KIA+Seltos+1.6+LX+M%2FT+2022+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 11,
+      "brand": "Volvo",
+      "model": "XC60 Ultimate Dark T8 PLUG-IN HYBRID",
+      "year": 2023,
+      "kilometers": 50507,
+      "exteriorColor": "CRYSTAL WHITE PEARL",
+      "interiorColor": "CHARCOAL/LEABR/CHAR",
+      "inventoryPrice": 759000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 709000,
+    "aggressiveBuyPrice": 689000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente Volvo xc60 2023",
+        "url": "https://www.seminuevos.com/precio/autos/volvo/xc60/2023",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=Volvo+XC60+Ultimate+Dark+T8+PLUG-IN+HYBRID+2023+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=Volvo+XC60+Ultimate+Dark+T8+PLUG-IN+HYBRID+2023+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=Volvo+XC60+Ultimate+Dark+T8+PLUG-IN+HYBRID+2023+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 12,
+      "brand": "Mercedes-Benz",
+      "model": "GLS 450 4MATIC",
+      "year": 2024,
+      "kilometers": 45122,
+      "exteriorColor": "Blanco Polar",
+      "interiorColor": "Cuero Negro",
+      "inventoryPrice": 1289000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 1239000,
+    "aggressiveBuyPrice": 1219000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente Mercedes-Benz gls 2024",
+        "url": "https://www.seminuevos.com/precio/autos/mercedes-benz/gls/2024",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=Mercedes-Benz+GLS+450+4MATIC+2024+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=Mercedes-Benz+GLS+450+4MATIC+2024+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=Mercedes-Benz+GLS+450+4MATIC+2024+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 14,
+      "brand": "Mercedes-Benz",
+      "model": "A 35 AMG 4MATIC Sedan",
+      "year": 2024,
+      "kilometers": 20285,
+      "exteriorColor": "Pintura Metalizada",
+      "interiorColor": "Simil De Cuero Artico",
+      "inventoryPrice": 839000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 789000,
+    "aggressiveBuyPrice": 769000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente Mercedes-Benz clase-a 2024",
+        "url": "https://www.seminuevos.com/precio/autos/mercedes-benz/clase-a/2024",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=Mercedes-Benz+A+35+AMG+4MATIC+Sedan+2024+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=Mercedes-Benz+A+35+AMG+4MATIC+Sedan+2024+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=Mercedes-Benz+A+35+AMG+4MATIC+Sedan+2024+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 16,
+      "brand": "BMW",
+      "model": "X5 xDrive40i (Automatico)",
+      "year": 2024,
+      "kilometers": 46294,
+      "exteriorColor": "Black Sapphire",
+      "interiorColor": "BMW Ind Coffee",
+      "inventoryPrice": 1039000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 989000,
+    "aggressiveBuyPrice": 969000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW x5 2024",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/x5/2024",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+X5+xDrive40i+%28Automatico%29+2024+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+X5+xDrive40i+%28Automatico%29+2024+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+X5+xDrive40i+%28Automatico%29+2024+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 18,
+      "brand": "MINI",
+      "model": "Cooper SE Classic (Electrico/Aut.)",
+      "year": 2024,
+      "kilometers": 27314,
+      "exteriorColor": "Nanuq White",
+      "interiorColor": "Carbon Black Leatherette",
+      "inventoryPrice": 439000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 389000,
+    "aggressiveBuyPrice": 369000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente MINI cooper 2024",
+        "url": "https://www.seminuevos.com/precio/autos/mini/cooper/2024",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=MINI+Cooper+SE+Classic+%28Electrico%2FAut.%29+2024+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=MINI+Cooper+SE+Classic+%28Electrico%2FAut.%29+2024+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=MINI+Cooper+SE+Classic+%28Electrico%2FAut.%29+2024+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 19,
+      "brand": "BMW",
+      "model": "X1 sDrive18i (Automatico)",
+      "year": 2023,
+      "kilometers": 38232,
+      "exteriorColor": "Utah Orange",
+      "interiorColor": "Sensatec Black",
+      "inventoryPrice": 579000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 529000,
+    "aggressiveBuyPrice": 509000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW x1 2023",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/x1/2023",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+X1+sDrive18i+%28Automatico%29+2023+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+X1+sDrive18i+%28Automatico%29+2023+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+X1+sDrive18i+%28Automatico%29+2023+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 20,
+      "brand": "Volkswagen",
+      "model": "Terramont Highline 3.6 FSI",
+      "year": 2021,
+      "kilometers": 56933,
+      "exteriorColor": "Gris Platino Metalico",
+      "interiorColor": "Café Con Negro",
+      "inventoryPrice": 529000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 479000,
+    "aggressiveBuyPrice": 459000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente Volkswagen terramont 2021",
+        "url": "https://www.seminuevos.com/precio/autos/volkswagen/terramont/2021",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=Volkswagen+Terramont+Highline+3.6+FSI+2021+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=Volkswagen+Terramont+Highline+3.6+FSI+2021+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=Volkswagen+Terramont+Highline+3.6+FSI+2021+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 22,
+      "brand": "Ford",
+      "model": "Expedition Stealth Performance 4X2 3.5L Ecobost",
+      "year": 2024,
+      "kilometers": 11583,
+      "exteriorColor": "Azul Cobalto",
+      "interiorColor": "Asientos Piel Negro",
+      "inventoryPrice": 1189000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 1139000,
+    "aggressiveBuyPrice": 1119000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente Ford expedition 2024",
+        "url": "https://www.seminuevos.com/precio/autos/ford/expedition/2024",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=Ford+Expedition+Stealth+Performance+4X2+3.5L+Ecobost+2024+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=Ford+Expedition+Stealth+Performance+4X2+3.5L+Ecobost+2024+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=Ford+Expedition+Stealth+Performance+4X2+3.5L+Ecobost+2024+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 24,
+      "brand": "BMW",
+      "model": "X2 sDrive 18i Automatico",
+      "year": 2021,
+      "kilometers": 109807,
+      "exteriorColor": "Galvanic-gold metallic",
+      "interiorColor": "Sensatec Black",
+      "inventoryPrice": 369000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 319000,
+    "aggressiveBuyPrice": 299000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW x2 2021",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/x2/2021",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+X2+sDrive+18i+Automatico+2021+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+X2+sDrive+18i+Automatico+2021+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+X2+sDrive+18i+Automatico+2021+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 25,
+      "brand": "BMW",
+      "model": "X1 sDrive20i (Automatico)",
+      "year": 2022,
+      "kilometers": 71422,
+      "exteriorColor": "Alpine White",
+      "interiorColor": "Sensatec Black",
+      "inventoryPrice": 379000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 329000,
+    "aggressiveBuyPrice": 309000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW x1 2022",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/x1/2022",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+X1+sDrive20i+%28Automatico%29+2022+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+X1+sDrive20i+%28Automatico%29+2022+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+X1+sDrive20i+%28Automatico%29+2022+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 26,
+      "brand": "BMW",
+      "model": "330e (Hibrido/Aut)",
+      "year": 2023,
+      "kilometers": 79661,
+      "exteriorColor": "BMW Ind. Dravit Grey",
+      "interiorColor": "Alcantara/Sensatec Black",
+      "inventoryPrice": 579000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 529000,
+    "aggressiveBuyPrice": 509000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW serie-3 2023",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/serie-3/2023",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+330e+%28Hibrido%2FAut%29+2023+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+330e+%28Hibrido%2FAut%29+2023+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+330e+%28Hibrido%2FAut%29+2023+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 27,
+      "brand": "BMW",
+      "model": "iX3 M Sport Inspiring (Elect.Automat)",
+      "year": 2023,
+      "kilometers": 27606,
+      "exteriorColor": "Mineral White",
+      "interiorColor": "Sensatec Cognac",
+      "inventoryPrice": 689000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 639000,
+    "aggressiveBuyPrice": 619000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW ix3 2023",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/ix3/2023",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+iX3+M+Sport+Inspiring+%28Elect.Automat%29+2023+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+iX3+M+Sport+Inspiring+%28Elect.Automat%29+2023+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+iX3+M+Sport+Inspiring+%28Elect.Automat%29+2023+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 28,
+      "brand": "BMW",
+      "model": "iX xDrive40 (Electrico/Aut)",
+      "year": 2024,
+      "kilometers": 24168,
+      "exteriorColor": "Sophisto Grey",
+      "interiorColor": "Diseño Atelier Oyster",
+      "inventoryPrice": 879000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 829000,
+    "aggressiveBuyPrice": 809000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW ix 2024",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/ix/2024",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+iX+xDrive40+%28Electrico%2FAut%29+2024+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+iX+xDrive40+%28Electrico%2FAut%29+2024+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+iX+xDrive40+%28Electrico%2FAut%29+2024+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 31,
+      "brand": "Volvo",
+      "model": "EX30 BEV Ultra Electrico Aut",
+      "year": 2025,
+      "kilometers": 27323,
+      "exteriorColor": "CRYSTAL WHITE PEARL",
+      "interiorColor": "INDIGO",
+      "inventoryPrice": 689000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 639000,
+    "aggressiveBuyPrice": 619000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente Volvo ex30 2025",
+        "url": "https://www.seminuevos.com/precio/autos/volvo/ex30/2025",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=Volvo+EX30+BEV+Ultra+Electrico+Aut+2025+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=Volvo+EX30+BEV+Ultra+Electrico+Aut+2025+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=Volvo+EX30+BEV+Ultra+Electrico+Aut+2025+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 33,
+      "brand": "BMW",
+      "model": "X5 xDrive45e (Hibrido/Aut)",
+      "year": 2020,
+      "kilometers": 79929,
+      "exteriorColor": "Mineral White",
+      "interiorColor": "Piel Coffe",
+      "inventoryPrice": 639000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 589000,
+    "aggressiveBuyPrice": 569000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW x5 2020",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/x5/2020",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+X5+xDrive45e+%28Hibrido%2FAut%29+2020+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+X5+xDrive45e+%28Hibrido%2FAut%29+2020+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+X5+xDrive45e+%28Hibrido%2FAut%29+2020+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 1,
+      "no": 34,
+      "brand": "BMW",
+      "model": "X3 xDrive30e (Hibrido/Aut)",
+      "year": 2023,
+      "kilometers": 62889,
+      "exteriorColor": "Mineral White",
+      "interiorColor": "Piel Mokka",
+      "inventoryPrice": 689000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 639000,
+    "aggressiveBuyPrice": 619000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW x3 2023",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/x3/2023",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+X3+xDrive30e+%28Hibrido%2FAut%29+2023+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+X3+xDrive30e+%28Hibrido%2FAut%29+2023+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+X3+xDrive30e+%28Hibrido%2FAut%29+2023+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 2,
+      "no": 35,
+      "brand": "MINI",
+      "model": "MINI Countryman S ALL4 Aut.",
+      "year": 2025,
+      "kilometers": 28101,
+      "exteriorColor": "Melting Silver III",
+      "interiorColor": "Black / Cloth Blue",
+      "inventoryPrice": 679000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 629000,
+    "aggressiveBuyPrice": 609000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente MINI countryman 2025",
+        "url": "https://www.seminuevos.com/precio/autos/mini/countryman/2025",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=MINI+MINI+Countryman+S+ALL4+Aut.+2025+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=MINI+MINI+Countryman+S+ALL4+Aut.+2025+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=MINI+MINI+Countryman+S+ALL4+Aut.+2025+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 2,
+      "no": 36,
+      "brand": "MINI",
+      "model": "MINI Countryman S ALL4 Aut.",
+      "year": 2025,
+      "kilometers": 29590,
+      "exteriorColor": "Melting Silver III",
+      "interiorColor": "Black / Cloth Blue",
+      "inventoryPrice": 679000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 629000,
+    "aggressiveBuyPrice": 609000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente MINI countryman 2025",
+        "url": "https://www.seminuevos.com/precio/autos/mini/countryman/2025",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=MINI+MINI+Countryman+S+ALL4+Aut.+2025+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=MINI+MINI+Countryman+S+ALL4+Aut.+2025+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=MINI+MINI+Countryman+S+ALL4+Aut.+2025+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 2,
+      "no": 37,
+      "brand": "BMW",
+      "model": "X4 xDrive30i (Automático)",
+      "year": 2025,
+      "kilometers": 29497,
+      "exteriorColor": "Alpine White",
+      "interiorColor": "Sensatec Tacora Red",
+      "inventoryPrice": 989000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 939000,
+    "aggressiveBuyPrice": 919000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW x4 2025",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/x4/2025",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+X4+xDrive30i+%28Autom%C3%A1tico%29+2025+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+X4+xDrive30i+%28Autom%C3%A1tico%29+2025+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+X4+xDrive30i+%28Autom%C3%A1tico%29+2025+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 2,
+      "no": 39,
+      "brand": "BMW",
+      "model": "330e (Hibrido/Aut)",
+      "year": 2023,
+      "kilometers": 52774,
+      "exteriorColor": "Mineral White",
+      "interiorColor": "Piel Mokka",
+      "inventoryPrice": 639000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 589000,
+    "aggressiveBuyPrice": 569000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW serie-3 2023",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/serie-3/2023",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+330e+%28Hibrido%2FAut%29+2023+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+330e+%28Hibrido%2FAut%29+2023+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+330e+%28Hibrido%2FAut%29+2023+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 2,
+      "no": 40,
+      "brand": "BMW",
+      "model": "X3 xDrive30e Hibrido",
+      "year": 2024,
+      "kilometers": 49740,
+      "exteriorColor": "Skyscraper Grey",
+      "interiorColor": "Sensatec Cognac",
+      "inventoryPrice": 789000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 739000,
+    "aggressiveBuyPrice": 719000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW x3 2024",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/x3/2024",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+X3+xDrive30e+Hibrido+2024+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+X3+xDrive30e+Hibrido+2024+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+X3+xDrive30e+Hibrido+2024+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 2,
+      "no": 42,
+      "brand": "BMW",
+      "model": "330e (Hibrido/Aut)",
+      "year": 2023,
+      "kilometers": 50315,
+      "exteriorColor": "Mineral White",
+      "interiorColor": "Piel Mokka",
+      "inventoryPrice": 639000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 589000,
+    "aggressiveBuyPrice": 569000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW serie-3 2023",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/serie-3/2023",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+330e+%28Hibrido%2FAut%29+2023+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+330e+%28Hibrido%2FAut%29+2023+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+330e+%28Hibrido%2FAut%29+2023+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 2,
+      "no": 43,
+      "brand": "MINI",
+      "model": "Cooper SE Iconic (Electrico/Aut.)",
+      "year": 2024,
+      "kilometers": 35825,
+      "exteriorColor": "Chili Red",
+      "interiorColor": "Carbon Black Leatherette",
+      "inventoryPrice": 439000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 389000,
+    "aggressiveBuyPrice": 369000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente MINI cooper 2024",
+        "url": "https://www.seminuevos.com/precio/autos/mini/cooper/2024",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=MINI+Cooper+SE+Iconic+%28Electrico%2FAut.%29+2024+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=MINI+Cooper+SE+Iconic+%28Electrico%2FAut.%29+2024+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=MINI+Cooper+SE+Iconic+%28Electrico%2FAut.%29+2024+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 2,
+      "no": 45,
+      "brand": "BMW",
+      "model": "iX xDrive50 (Electrico/Automatico)",
+      "year": 2025,
+      "kilometers": 22451,
+      "exteriorColor": "Black Sapphire",
+      "interiorColor": "Diseño Atelier Oyster",
+      "inventoryPrice": 1189000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": false
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 1139000,
+    "aggressiveBuyPrice": 1119000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW ix 2025",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/ix/2025",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+iX+xDrive50+%28Electrico%2FAutomatico%29+2025+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+iX+xDrive50+%28Electrico%2FAutomatico%29+2025+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+iX+xDrive50+%28Electrico%2FAutomatico%29+2025+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 2,
+      "no": 46,
+      "brand": "MINI",
+      "model": "Cooper SE (Electrico/Aut.)",
+      "year": 2024,
+      "kilometers": 42393,
+      "exteriorColor": "Melting Silver III",
+      "interiorColor": "Carbon Black Leatherette",
+      "inventoryPrice": 389000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": true
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 339000,
+    "aggressiveBuyPrice": 319000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente MINI cooper 2024",
+        "url": "https://www.seminuevos.com/precio/autos/mini/cooper/2024",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=MINI+Cooper+SE+%28Electrico%2FAut.%29+2024+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=MINI+Cooper+SE+%28Electrico%2FAut.%29+2024+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=MINI+Cooper+SE+%28Electrico%2FAut.%29+2024+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 2,
+      "no": 47,
+      "brand": "BMW",
+      "model": "XM (Hibrido/Automatico)",
+      "year": 2023,
+      "kilometers": 44407,
+      "exteriorColor": "Black Sapphire",
+      "interiorColor": "Piel merino Black",
+      "inventoryPrice": 1989000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": true
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 1939000,
+    "aggressiveBuyPrice": 1919000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW XM (Hibrido/Automatico) 2023",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/xm/2023",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+XM+%28Hibrido%2FAutomatico%29+2023+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+XM+%28Hibrido%2FAutomatico%29+2023+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+XM+%28Hibrido%2FAutomatico%29+2023+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 2,
+      "no": 49,
+      "brand": "Land-Rover",
+      "model": "Range-Rover Sport 3.0 Dynamic SE 400PS MHEV",
+      "year": 2024,
+      "kilometers": 19228,
+      "exteriorColor": "Eifer Grey",
+      "interiorColor": "Raven Blue/Ebony Perforated",
+      "inventoryPrice": 1989000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": true
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 1939000,
+    "aggressiveBuyPrice": 1919000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente Land-Rover range-rover-sport 2024",
+        "url": "https://www.seminuevos.com/precio/autos/land-rover/range-rover-sport/2024",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=Land-Rover+Range-Rover+Sport+3.0+Dynamic+SE+400PS+MHEV+2024+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=Land-Rover+Range-Rover+Sport+3.0+Dynamic+SE+400PS+MHEV+2024+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=Land-Rover+Range-Rover+Sport+3.0+Dynamic+SE+400PS+MHEV+2024+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 2,
+      "no": 50,
+      "brand": "BMW",
+      "model": "118i (Automatico) 5p",
+      "year": 2018,
+      "kilometers": 100941,
+      "exteriorColor": "Mineral Grey",
+      "interiorColor": "Sensatec Black",
+      "inventoryPrice": 229000,
+      "invoiceTax": "IVA USADOS",
+      "excludedOrange": false,
+      "pinkNumberCell": true
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 179000,
+    "aggressiveBuyPrice": 159000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW serie-1 2018",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/serie-1/2018",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+118i+%28Automatico%29+5p+2018+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+118i+%28Automatico%29+5p+2018+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+118i+%28Automatico%29+5p+2018+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  },
+  {
+    "vehicle": {
+      "page": 2,
+      "no": 52,
+      "brand": "BMW",
+      "model": "X5 xDrive50e (Hibrido/Aut)",
+      "year": 2024,
+      "kilometers": 76702,
+      "exteriorColor": "Carbon Black",
+      "interiorColor": "Tartufo Brown",
+      "inventoryPrice": 1089000,
+      "invoiceTax": "IVA 16%",
+      "excludedOrange": false,
+      "pinkNumberCell": true
+    },
+    "kavakStatus": "pendiente",
+    "kavakOffer": null,
+    "marketReference": null,
+    "targetBuyPrice": 1039000,
+    "aggressiveBuyPrice": 1019000,
+    "spread": null,
+    "aggressiveSpread": null,
+    "confidence": 0.28,
+    "score": 0,
+    "evidence": [
+      {
+        "source": "Seminuevos",
+        "label": "Referencia pendiente BMW x5 2024",
+        "url": "https://www.seminuevos.com/precio/autos/bmw/x5/2024",
+        "price": null,
+        "kilometers": null,
+        "zone": "Nacional",
+        "status": "pendiente"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Toluca",
+        "url": "https://www.google.com/search?q=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024+Toluca",
+        "price": null,
+        "kilometers": null,
+        "zone": "Toluca",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en CDMX",
+        "url": "https://www.google.com/search?q=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024+CDMX",
+        "price": null,
+        "kilometers": null,
+        "zone": "CDMX",
+        "status": "asistido"
+      },
+      {
+        "source": "Busqueda",
+        "label": "Buscar comparables en Metepec",
+        "url": "https://www.google.com/search?q=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024+Metepec",
+        "price": null,
+        "kilometers": null,
+        "zone": "Metepec",
+        "status": "asistido"
+      }
+    ],
+    "notes": [
+      "Kavak pendiente: capturar oferta real antes de comprar.",
+      "Precio lista ajustado con descuento fin de mes de 50k; escenario agresivo usa 70k.",
+      "Sin referencia scrapeable; usar links asistidos por zona."
+    ]
+  }
+]
