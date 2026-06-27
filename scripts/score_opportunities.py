@@ -13,6 +13,7 @@ AGGRESSIVE_DISCOUNT = 70_000
 INVENTORY_PATH = Path("data/inventario.json")
 MARKET_LISTINGS_PATH = Path("data/market_listings.json")
 KAVAK_CATALOG_LISTINGS_PATH = Path("data/kavak_catalog_listings.json")
+MANUAL_MARKET_REFERENCES_PATH = Path("data/manual_market_references.json")
 KAVAK_QUOTES_PATH = Path("data/kavak_quotes.json")
 KAVAK_STATUS_RESULTS = {"capturado", "solo_prestamo", "modelo_no_disponible"}
 MARKET_SOURCES = ["Facebook Marketplace", "MercadoLibre", "Kavak Catalogo", "Seminuevos", "Google"]
@@ -89,6 +90,22 @@ def load_kavak_catalog_listings() -> list[dict[str, Any]]:
     return valid
 
 
+def load_manual_market_references() -> list[dict[str, Any]]:
+    if not MANUAL_MARKET_REFERENCES_PATH.exists():
+        return []
+    references = json.loads(MANUAL_MARKET_REFERENCES_PATH.read_text(encoding="utf-8"))
+    valid: list[dict[str, Any]] = []
+    for reference in references:
+        if not isinstance(reference.get("vehicleNo"), int):
+            continue
+        if not isinstance(reference.get("price"), int) or reference["price"] <= 0:
+            continue
+        if not reference.get("url") or not str(reference["url"]).startswith("http"):
+            continue
+        valid.append(reference)
+    return valid
+
+
 def load_kavak_quotes() -> dict[int, dict[str, Any]]:
     if not KAVAK_QUOTES_PATH.exists():
         return {}
@@ -123,6 +140,14 @@ def matching_listings(vehicle: dict[str, Any], listings: list[dict[str, Any]]) -
 def matching_catalog_listings(vehicle: dict[str, Any], listings: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return sorted(
         [listing for listing in listings if listing.get("vehicleNo") == vehicle["no"]],
+        key=lambda item: item["price"],
+        reverse=True,
+    )
+
+
+def matching_manual_references(vehicle: dict[str, Any], references: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return sorted(
+        [reference for reference in references if reference.get("vehicleNo") == vehicle["no"]],
         key=lambda item: item["price"],
         reverse=True,
     )
@@ -219,6 +244,7 @@ def build_opportunity(
     vehicle: dict[str, Any],
     market_listings: list[dict[str, Any]],
     catalog_listings: list[dict[str, Any]],
+    manual_references: list[dict[str, Any]],
     kavak_quotes: dict[int, dict[str, Any]],
 ) -> dict[str, Any]:
     list_price = vehicle["inventoryPrice"]
@@ -226,13 +252,14 @@ def build_opportunity(
     aggressive_price = max(0, list_price - AGGRESSIVE_DISCOUNT) if list_price is not None else None
     listings = matching_listings(vehicle, market_listings)
     catalog_matches = matching_catalog_listings(vehicle, catalog_listings)
+    manual_matches = matching_manual_references(vehicle, manual_references)
     kavak_quote = kavak_quotes.get(vehicle["no"])
     kavak_status = (kavak_quote.get("status") or "capturado") if kavak_quote is not None else "pendiente"
     kavak_offer = positive_int(kavak_quote.get("sellOffer")) if kavak_quote is not None else None
     kavak_trade_offer = positive_int(kavak_quote.get("tradeInOffer")) if kavak_quote is not None else None
     kavak_loan_offer = positive_int(kavak_quote.get("loanOffer")) if kavak_quote is not None else None
 
-    market_references = build_market_references(vehicle, listings, catalog_matches)
+    market_references = build_market_references(vehicle, listings + manual_matches, catalog_matches)
     evidence = list(market_references)
     if kavak_quote is not None:
         evidence.insert(0, evidence_from_kavak_quote(kavak_quote))
@@ -316,9 +343,10 @@ def main() -> None:
     inventory = json.loads(INVENTORY_PATH.read_text(encoding="utf-8"))
     market_listings = load_market_listings()
     catalog_listings = load_kavak_catalog_listings()
+    manual_references = load_manual_market_references()
     kavak_quotes = load_kavak_quotes()
     opportunities = [
-        build_opportunity(vehicle, market_listings, catalog_listings, kavak_quotes)
+        build_opportunity(vehicle, market_listings, catalog_listings, manual_references, kavak_quotes)
         for vehicle in inventory
         if not vehicle["excludedOrange"]
     ]
@@ -334,6 +362,7 @@ def main() -> None:
                 "opportunities": len(opportunities),
                 "publishedMarketListings": len(market_listings),
                 "kavakCatalogListings": len(catalog_listings),
+                "manualMarketReferences": len(manual_references),
                 "capturedKavakQuotes": len(kavak_quotes),
                 "loanOnlyKavakQuotes": sum(1 for quote in kavak_quotes.values() if quote.get("status") == "solo_prestamo"),
                 "noModelKavakResults": sum(1 for quote in kavak_quotes.values() if quote.get("status") == "modelo_no_disponible"),
