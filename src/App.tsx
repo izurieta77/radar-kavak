@@ -97,7 +97,7 @@ function marketTargetStatusLabel(status: DirectSaleMarketTarget['status']): stri
 
 function marketTargetFitLabel(fit: DirectSaleMarketTarget['fit']): string {
   if (fit === 'same_version_comparable') return 'version comparable';
-  if (fit === 'same_version_higher_km') return 'mismo version, km distinto';
+  if (fit === 'same_version_higher_km') return 'misma version, km distinto';
   if (fit === 'same_model_unquoted') return 'mismo modelo, falta Kavak';
   return 'version/precio dudoso';
 }
@@ -274,7 +274,7 @@ function App() {
               <span>Kavak venta directa</span>
               <h2 id="direct-market-title">Compra bajo oferta Kavak</h2>
               <p>
-                Mercado actual contra la oferta que nos da Kavak. Solo venta directa; no toma valores de cambio.
+                Mercado actual contra la oferta que nos da Kavak. Solo venta directa y precio publicado.
               </p>
             </div>
             <div className="scan-summary direct-summary">
