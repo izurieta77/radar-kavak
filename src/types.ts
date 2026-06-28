@@ -51,6 +51,26 @@ export interface Opportunity {
   notes: string[];
 }
 
+export interface ExternalBargain {
+  id: string;
+  rank: number;
+  source: string;
+  observedAt: string;
+  region: 'CDMX' | 'Edomex' | 'Queretaro' | 'Hidalgo' | 'Puebla' | 'Morelos';
+  city: string;
+  year: number;
+  name: string;
+  version: string;
+  km: number | null;
+  price: number;
+  medianComparable: number;
+  gapToMedian: number;
+  gapPct: number;
+  compCount: number;
+  url: string;
+  why: string;
+}
+
 export interface MarketPriceRange {
   low: number;
   mid: number;

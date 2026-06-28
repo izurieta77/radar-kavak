@@ -12,12 +12,14 @@ import {
   TrendingUp
 } from 'lucide-react';
 import opportunitiesData from './data/opportunities.json';
+import externalBargainsData from './data/external_bargains.json';
 import inventoryData from './data/inventario.json';
-import type { Opportunity } from './types';
+import type { ExternalBargain, Opportunity } from './types';
 import { formatKm, formatMoney, statusLabel, summarizeInventory } from './lib/format';
 import { opportunityTone } from './lib/opportunityTone';
 
 const opportunities = opportunitiesData as Opportunity[];
+const externalBargains = externalBargainsData as ExternalBargain[];
 const workflowItems = [
   { label: 'Inventario', Icon: Car },
   { label: 'Kavak', Icon: BadgeDollarSign },
@@ -105,6 +107,8 @@ function App() {
     .filter((item) => item.dealAnalysis.marketLowVsTarget != null)
     .sort((a, b) => (b.dealAnalysis.marketLowVsTarget ?? -Infinity) - (a.dealAnalysis.marketLowVsTarget ?? -Infinity))
     .slice(0, 5);
+  const externalGapTotal = externalBargains.reduce((sum, item) => sum + item.gapToMedian, 0);
+  const externalTop = externalBargains[0];
 
   return (
     <div className="app-shell">
@@ -203,6 +207,67 @@ function App() {
               </button>
             ))}
           </div>
+        </section>
+
+        <section className="external-bargains" aria-labelledby="external-bargains-title">
+          <div className="section-heading">
+            <div>
+              <span>Fuera de tu lista</span>
+              <h2 id="external-bargains-title">Gangas externas muy fuertes</h2>
+              <p>
+                Barrido Seminuevos: CDMX, Edomex, Queretaro, Hidalgo, Puebla y Morelos. Michoacan fuera.
+              </p>
+            </div>
+            <div className="scan-summary">
+              <strong>{externalBargains.length}</strong>
+              <span>candidatas</span>
+              <small>{formatMoney(externalGapTotal)} abajo de medianas</small>
+            </div>
+          </div>
+
+          <div className="external-grid">
+            {externalBargains.map((deal) => (
+              <article className={deal.rank === 1 ? 'external-card priority' : 'external-card'} key={deal.id}>
+                <div className="deal-topline">
+                  <span className="deal-rank">#{deal.rank}</span>
+                  <span className="tone-badge tone-badge-ganga">Ganga externa</span>
+                </div>
+                <h3>{deal.year} {deal.name}</h3>
+                {deal.version && <p className="deal-version">{deal.version}</p>}
+                <div className="deal-price">
+                  <span>Precio publicado</span>
+                  <strong>{formatMoney(deal.price)}</strong>
+                </div>
+                <div className="deal-metrics">
+                  <span>
+                    <strong>{formatMoney(deal.gapToMedian)}</strong>
+                    abajo mediana
+                  </span>
+                  <span>
+                    <strong>{Math.round(deal.gapPct * 100)}%</strong>
+                    descuento vs mediana
+                  </span>
+                  <span>
+                    <strong>{deal.compCount}</strong>
+                    comparables
+                  </span>
+                </div>
+                <p className="deal-location">
+                  {deal.city}, {deal.region} - {formatKm(deal.km)} - visto {deal.observedAt}
+                </p>
+                <p className="deal-why">{deal.why}</p>
+                <a className="deal-link" href={deal.url} target="_blank" rel="noreferrer">
+                  Abrir ficha {deal.source}
+                  <ExternalLink size={15} />
+                </a>
+              </article>
+            ))}
+          </div>
+          {externalTop && (
+            <p className="external-footnote">
+              Prioridad actual: {externalTop.year} {externalTop.name} en {externalTop.city}, {externalTop.region}, por {formatMoney(externalTop.price)}.
+            </p>
+          )}
         </section>
 
         <section className="content-grid">
