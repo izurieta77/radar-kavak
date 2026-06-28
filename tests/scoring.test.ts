@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { formatKm, formatMoney, negotiationRange, opportunityScore, summarizeInventory } from '../src/lib/format';
+import { formatKm, formatMoney, negotiationRange, summarizeInventory } from '../src/lib/format';
 import inventory from '../src/data/inventario.json';
+import opportunitiesData from '../src/data/opportunities.json';
+import type { Opportunity } from '../src/types';
+
+const opportunities = opportunitiesData as Opportunity[];
 
 describe('inventory contract', () => {
   it('keeps pink-number rows and excludes only full orange rows', () => {
@@ -32,28 +36,23 @@ describe('opportunity scoring', () => {
     });
   });
 
-  it('does not score spreads unless Kavak or market evidence is real', () => {
-    const captured = opportunityScore({
-      spread: 90000,
-      confidence: 0.8,
-      kavakStatus: 'capturado',
-      hasPublishedMarketEvidence: false
-    });
-    const pending = opportunityScore({
-      spread: 90000,
-      confidence: 0.8,
-      kavakStatus: 'pendiente',
-      hasPublishedMarketEvidence: false
-    });
-    const market = opportunityScore({
-      spread: 90000,
-      confidence: 0.8,
-      kavakStatus: 'pendiente',
-      hasPublishedMarketEvidence: true
-    });
+  it('only scores opportunities backed by real kavak or market evidence', () => {
+    const violated = opportunities.filter(
+      (item) => item.score > 0 && item.kavakOffer == null && item.marketReference == null
+    );
+    expect(violated).toHaveLength(0);
+  });
 
-    expect(pending).toBe(0);
-    expect(captured).toBeGreaterThan(0);
-    expect(market).toBeGreaterThan(0);
+  it('awards score when kavak offer covers the target buy price', () => {
+    const withPositiveSpreadAndKavak = opportunities.filter(
+      (item) => item.kavakOffer != null && (item.spread ?? 0) > 0
+    );
+    expect(withPositiveSpreadAndKavak.length).toBeGreaterThan(0);
+    const allScored = withPositiveSpreadAndKavak.every((item) => item.score > 0);
+    expect(allScored).toBe(true);
+  });
+
+  it('covers all 38 analyzable vehicles', () => {
+    expect(opportunities).toHaveLength(38);
   });
 });

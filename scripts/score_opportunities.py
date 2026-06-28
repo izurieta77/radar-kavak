@@ -4,6 +4,7 @@ import json
 import re
 import unicodedata
 import urllib.parse
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -106,11 +107,19 @@ def load_manual_market_references() -> list[dict[str, Any]]:
     return valid
 
 
+def _is_expired(valid_until: str, today: date) -> bool:
+    try:
+        return date.fromisoformat(valid_until) < today
+    except ValueError:
+        return False
+
+
 def load_kavak_quotes() -> dict[int, dict[str, Any]]:
     if not KAVAK_QUOTES_PATH.exists():
         return {}
     quotes = json.loads(KAVAK_QUOTES_PATH.read_text(encoding="utf-8"))
     valid: dict[int, dict[str, Any]] = {}
+    today = date.today()
     for quote in quotes:
         vehicle_no = quote.get("vehicleNo")
         status = quote.get("status") or "capturado"
@@ -120,6 +129,9 @@ def load_kavak_quotes() -> dict[int, dict[str, Any]]:
             continue
         has_any_offer = any(positive_int(quote.get(field)) is not None for field in ["sellOffer", "tradeInOffer", "loanOffer"])
         if status not in KAVAK_STATUS_RESULTS and not has_any_offer:
+            continue
+        valid_until = quote.get("validUntil")
+        if valid_until and _is_expired(valid_until, today):
             continue
         valid[vehicle_no] = quote
     return valid
@@ -418,6 +430,12 @@ def main() -> None:
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(json.dumps(opportunities, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
+    all_quotes_raw = json.loads(KAVAK_QUOTES_PATH.read_text(encoding="utf-8")) if KAVAK_QUOTES_PATH.exists() else []
+    today = date.today()
+    expired_quotes = sum(
+        1 for q in all_quotes_raw
+        if q.get("validUntil") and _is_expired(q["validUntil"], today)
+    )
     print(
         json.dumps(
             {
@@ -426,6 +444,7 @@ def main() -> None:
                 "kavakCatalogListings": len(catalog_listings),
                 "manualMarketReferences": len(manual_references),
                 "capturedKavakQuotes": len(kavak_quotes),
+                "expiredKavakQuotes": expired_quotes,
                 "loanOnlyKavakQuotes": sum(1 for quote in kavak_quotes.values() if quote.get("status") == "solo_prestamo"),
                 "noModelKavakResults": sum(1 for quote in kavak_quotes.values() if quote.get("status") == "modelo_no_disponible"),
                 "withMarketReference": sum(1 for item in opportunities if item["marketReference"] is not None),
