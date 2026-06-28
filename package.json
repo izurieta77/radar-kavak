@@ -9,6 +9,7 @@
     "preview": "vite preview --host 127.0.0.1",
     "test": "vitest",
     "extract": "python scripts/extract_inventory.py",
+    "scan:ml": "python scripts/scrape_ml_candidates.py",
     "score": "python scripts/score_opportunities.py"
   },
   "dependencies": {
@@ -26,4 +27,3 @@
     "@types/react-dom": "^19.2.3"
   }
 }
-

@@ -22,6 +22,7 @@ npm install
 python scripts/extract_inventory.py
 python scripts/score_opportunities.py
 python scripts/market_scan.py
+python scripts/scrape_ml_candidates.py
 npm test -- --run
 npm run build
 npm run dev
@@ -61,6 +62,26 @@ Las publicaciones externas deben guardarse con:
 - fecha/hora de consulta
 
 Los links de busqueda Toluca/CDMX/Metepec son solo asistidos; ayudan a abrir busquedas, pero no cuentan como evidencia hasta capturar una publicacion concreta.
+
+### Barrido MercadoLibre vs Kavak
+
+```powershell
+pip install playwright
+python -m playwright install chromium
+python scripts/scrape_ml_candidates.py
+```
+
+El scraper lee `data/kavak_quotes.json` y solo compara contra `sellOffer` real de Kavak. Filtra CDMX, Estado de Mexico, Morelos, Puebla y Queretaro, excluye Michoacan, bloquea vendedor Kavak y escribe:
+
+- `data/ml_candidates.json`
+- `src/data/direct_sale_market_targets.json`
+- `output/evidence/ml_candidates_<fecha>.csv`
+
+Si MercadoLibre muestra captcha, corre:
+
+```powershell
+python scripts/scrape_ml_candidates.py --headed --stop-on-captcha
+```
 
 ## Deploy
 
