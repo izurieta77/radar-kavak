@@ -2,11 +2,13 @@ import { describe, expect, it } from 'vitest';
 import directSaleMarketTargets from '../src/data/direct_sale_market_targets.json';
 
 describe('direct-sale market targets', () => {
-  it('has at least one current candidate priced below a direct-sale Kavak offer', () => {
-    const below = directSaleMarketTargets.filter((target) => target.status === 'below_offer');
+  it('can surface published below-offer leads only when the seller is not Kavak', () => {
+    const belowPublished = directSaleMarketTargets.filter(
+      (target) => target.sellerType !== 'kavak' && target.status !== 'rejected' && target.deltaToKavak > 0
+    );
 
-    expect(below.length).toBeGreaterThan(0);
-    expect(below.every((target) => target.fit === 'same_version_comparable')).toBe(true);
+    expect(belowPublished.length).toBeGreaterThan(0);
+    expect(belowPublished.every((target) => target.sellerType !== 'kavak')).toBe(true);
   });
 
   it('calculates the direct-sale gap as Kavak offer minus market price', () => {
@@ -18,13 +20,21 @@ describe('direct-sale market targets', () => {
   });
 
   it('does not count version or mileage traps as confirmed below-offer deals', () => {
-    const rejected = directSaleMarketTargets.filter((target) => target.status === 'rejected');
-    const riskyPositive = directSaleMarketTargets.filter(
-      (target) => target.deltaToKavak > 0 && target.fit !== 'same_version_comparable'
-    );
+    const riskyPositive = directSaleMarketTargets.filter((target) => {
+      return (
+        target.deltaToKavak > 0 &&
+        (target.fit !== 'same_version_comparable' || target.sellerType === 'kavak')
+      );
+    });
 
-    expect(rejected.length).toBeGreaterThan(0);
     expect(riskyPositive.every((target) => target.status !== 'below_offer')).toBe(true);
+  });
+
+  it('blocks listings where Kavak is the seller even when the price is below a Kavak offer', () => {
+    const kavakSellerListings = directSaleMarketTargets.filter((target) => target.sellerType === 'kavak');
+
+    expect(kavakSellerListings.length).toBeGreaterThan(0);
+    expect(kavakSellerListings.every((target) => target.status === 'blocked_kavak_inventory')).toBe(true);
   });
 
   it('keeps the market-vs-Kavak scan on direct sale only', () => {

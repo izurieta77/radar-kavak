@@ -87,12 +87,18 @@ export interface ExternalKavakQuote {
   reason: string | null;
 }
 
-export type DirectSaleMarketTargetStatus = 'below_offer' | 'near_offer' | 'needs_quote' | 'rejected';
+export type DirectSaleMarketTargetStatus =
+  | 'below_offer'
+  | 'near_offer'
+  | 'needs_quote'
+  | 'blocked_kavak_inventory'
+  | 'rejected';
 
 export type DirectSaleMarketTargetFit =
   | 'same_version_comparable'
   | 'same_version_higher_km'
   | 'same_model_unquoted'
+  | 'kavak_inventory_not_operable'
   | 'version_or_price_mismatch';
 
 export interface DirectSaleMarketTarget {
@@ -106,6 +112,8 @@ export interface DirectSaleMarketTarget {
   title: string;
   subtitle: string;
   source: string;
+  sellerName: string;
+  sellerType: 'dealer' | 'private' | 'kavak' | 'unknown';
   sourceUrl: string;
   observedAt: string;
   region: string;

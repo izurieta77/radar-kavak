@@ -88,10 +88,13 @@ function externalKavakDetail(quote: ExternalKavakQuote | undefined, price: numbe
   return quote?.reason ?? 'sin resultado Kavak';
 }
 
-function marketTargetStatusLabel(status: DirectSaleMarketTarget['status']): string {
-  if (status === 'below_offer') return 'Abajo Kavak';
-  if (status === 'near_offer') return 'Muy cerca';
-  if (status === 'needs_quote') return 'Cotizar exacto';
+function marketTargetStatusLabel(item: DirectSaleMarketTarget): string {
+  if (item.status === 'below_offer') return 'Abajo confirmado';
+  if (item.status === 'near_offer') return 'Muy cerca';
+  if (item.status === 'needs_quote') {
+    return item.deltaToKavak > 0 ? 'Abajo, cotizar' : 'Cotizar exacto';
+  }
+  if (item.status === 'blocked_kavak_inventory') return 'Bloqueado Kavak';
   return 'No usar';
 }
 
@@ -99,6 +102,7 @@ function marketTargetFitLabel(fit: DirectSaleMarketTarget['fit']): string {
   if (fit === 'same_version_comparable') return 'version comparable';
   if (fit === 'same_version_higher_km') return 'misma version, km distinto';
   if (fit === 'same_model_unquoted') return 'mismo modelo, falta Kavak';
+  if (fit === 'kavak_inventory_not_operable') return 'vendedor Kavak';
   return 'version/precio dudoso';
 }
 
@@ -162,11 +166,15 @@ function App() {
       return (quoteB?.sellOffer ?? 0) - b.price - ((quoteA?.sellOffer ?? 0) - a.price);
     })[0];
   const belowDirectSale = directSaleMarketTargets.filter((target) => target.status === 'below_offer');
+  const belowPublished = directSaleMarketTargets.filter(
+    (target) => target.sellerType !== 'kavak' && target.status !== 'rejected' && target.deltaToKavak > 0
+  );
   const nearDirectSale = directSaleMarketTargets.filter((target) => target.status === 'near_offer');
   const needsExactQuote = directSaleMarketTargets.filter((target) => target.status === 'needs_quote');
+  const blockedKavakInventory = directSaleMarketTargets.filter((target) => target.status === 'blocked_kavak_inventory');
   const rejectedMarketTargets = directSaleMarketTargets.filter((target) => target.status === 'rejected');
   const marketTargetBest = directSaleMarketTargets
-    .filter((target) => target.status !== 'rejected')
+    .filter((target) => target.sellerType !== 'kavak' && target.status !== 'rejected')
     .sort((a, b) => b.deltaToKavak - a.deltaToKavak)[0];
 
   return (
@@ -278,9 +286,9 @@ function App() {
               </p>
             </div>
             <div className="scan-summary direct-summary">
-              <strong>{belowDirectSale.length}</strong>
-              <span>abajo real</span>
-              <small>{nearDirectSale.length} cerca, {needsExactQuote.length} por cotizar, {rejectedMarketTargets.length} descartados</small>
+              <strong>{belowPublished.length}</strong>
+              <span>abajo publicados</span>
+              <small>{belowDirectSale.length} confirmado, {needsExactQuote.length} por cotizar, {nearDirectSale.length} cerca, {blockedKavakInventory.length} bloqueados Kavak, {rejectedMarketTargets.length} descartados</small>
             </div>
           </div>
 
@@ -290,10 +298,10 @@ function App() {
               <strong>
                 {marketTargetBest
                   ? `${marketTargetBest.title}: ${marketTargetDeltaLabel(marketTargetBest)}`
-                  : 'Sin compras abajo de Kavak'}
+                  : 'Sin compras externas abajo de Kavak'}
               </strong>
               <span>
-                Los casos con mas kilometraje o version dudosa no cuentan como margen confirmado hasta cotizar esa unidad exacta.
+                El contador excluye vendedor Kavak. Los casos con mas kilometraje o version dudosa no son margen confirmado hasta cotizar esa unidad exacta.
               </span>
             </div>
           </div>
@@ -304,7 +312,7 @@ function App() {
                 <div className="deal-topline">
                   <span className="deal-rank">#{target.priority}</span>
                   <span className={`target-badge target-badge-${target.status}`}>
-                    {marketTargetStatusLabel(target.status)}
+                    {marketTargetStatusLabel(target)}
                   </span>
                 </div>
                 <h3>{target.title}</h3>
@@ -333,6 +341,7 @@ function App() {
 
                 <div className="direct-meta">
                   <span>{target.source}</span>
+                  <span>{target.sellerName}</span>
                   <span>{target.region}</span>
                   <span>{target.observedAt}</span>
                 </div>
