@@ -139,43 +139,29 @@ h1, h2, h3, p { margin: 0; }
 
 .brand {
   display: flex;
-  gap: 11px;
+  flex-direction: column;
   align-items: center;
-  padding: 6px 2px;
+  gap: 6px;
+  padding: 4px 0 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
-.brand-mark {
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  border-radius: 11px;
-  background: linear-gradient(135deg, var(--amber-300) 0%, var(--blue-400) 100%);
-  font-weight: 900;
-  font-size: 18px;
-  color: var(--navy-950);
-  flex-shrink: 0;
-  letter-spacing: -0.5px;
-  box-shadow:
-    0 3px 12px rgba(240, 180, 42, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.45);
-}
-
-.brand strong {
+.brand-logo {
+  width: 100%;
+  max-width: 176px;
   display: block;
-  color: #eef6ff;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: -0.2px;
-  line-height: 1.2;
+  border-radius: 6px;
+  /* logo already has navy bg matching the sidebar — no extra treatment needed */
 }
 
-.brand span {
+.brand-tagline {
   display: block;
-  margin-top: 2px;
-  color: rgba(148, 183, 225, 0.64);
-  font-size: 11px;
-  letter-spacing: 0.2px;
+  color: rgba(148, 183, 225, 0.55);
+  font-size: 10.5px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
 }
 
 .workflow { display: grid; gap: 2px; }

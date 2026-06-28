@@ -181,11 +181,8 @@ function App() {
     <div className="app-shell">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-mark">RI</div>
-          <div>
-            <strong>Radar Izurietas Cars</strong>
-            <span>Arbitraje seminuevos</span>
-          </div>
+          <img src="/izu-dynamics-logo.jpg" alt="IZU Dynamics" className="brand-logo" />
+          <span className="brand-tagline">Arbitraje seminuevos</span>
         </div>
         <nav className="workflow">
           {workflowItems.map(({ label, Icon }) => (
@@ -204,7 +201,7 @@ function App() {
       <main className="workspace">
         <header className="topbar">
           <div>
-            <h1>Radar Izurietas Cars</h1>
+            <h1>IZU Dynamics · Radar</h1>
             <p>Azul: tu lista y Kavak. Amarillo: gangas detectadas contra piso real de mercado.</p>
           </div>
           <div className="status-row">
