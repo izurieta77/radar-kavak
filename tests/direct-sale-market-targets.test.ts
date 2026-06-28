@@ -37,6 +37,12 @@ describe('direct-sale market targets', () => {
     expect(kavakSellerListings.every((target) => target.status === 'blocked_kavak_inventory')).toBe(true);
   });
 
+  it('keeps the validated MercadoLibre evidence link for the Puebla BMW X1 lead', () => {
+    const x1PueblaLead = directSaleMarketTargets.find((target) => target.id === 'bmw-x1-2023-ml-512500');
+
+    expect(x1PueblaLead?.sourceUrl).toContain('MLM-5456970990');
+  });
+
   it('keeps the market-vs-Kavak scan on direct sale only', () => {
     const serialized = JSON.stringify(directSaleMarketTargets).toLowerCase();
 
