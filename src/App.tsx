@@ -499,6 +499,13 @@ function App() {
                     </span>
                     <span className={(item.spread ?? 0) > 0 ? 'spread good' : 'spread muted'}>
                       {spreadDisplay(item)}
+                      {item.score > 0 && (
+                        <small>
+                          <span className={`score-badge${item.score >= 300 ? ' strong' : item.score >= 80 ? ' medium' : ''}`}>
+                            {item.score}
+                          </span>
+                        </small>
+                      )}
                     </span>
                   </button>
                 );
@@ -515,6 +522,11 @@ function App() {
                 <span className={`tone-badge ${selectedTone === 'ganga' ? 'tone-badge-ganga' : 'tone-badge-lista'}`}>
                   {toneLabel(selected)}
                 </span>
+                {selected.score > 0 && (
+                  <span className={`score-badge${selected.score >= 300 ? ' strong' : selected.score >= 80 ? ' medium' : ''}`} style={{ marginTop: 4 }}>
+                    score {selected.score}
+                  </span>
+                )}
               </div>
             </div>
 
@@ -576,9 +588,15 @@ function App() {
             </div>
 
             <div className="confidence">
-              <span>Confianza {confidenceLabel(selected.confidence)}</span>
+              <span>Confianza {confidenceLabel(selected.confidence)} — {Math.round(selected.confidence * 100)}%</span>
               <div>
-                <i style={{ width: `${Math.round(selected.confidence * 100)}%` }} />
+                {Array.from({ length: 10 }, (_, i) => {
+                  const filled = i < Math.round(selected.confidence * 10);
+                  const cls = filled
+                    ? (selected.confidence >= 0.9 ? 'seg-blue' : 'seg-amber')
+                    : '';
+                  return <i key={i} className={cls} />;
+                })}
               </div>
             </div>
 
