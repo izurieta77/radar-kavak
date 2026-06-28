@@ -332,7 +332,7 @@ def build_opportunity(
     if kavak_quote is not None:
         evidence.insert(0, evidence_from_kavak_quote(kavak_quote))
     price_range = market_price_range(market_references)
-    market_reference = price_range["high"] if price_range is not None else None
+    market_reference = price_range["mid"] if price_range is not None else None
     analysis = deal_analysis(
         vehicle,
         target_price,

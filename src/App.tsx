@@ -541,19 +541,19 @@ function App() {
               )}
               {selected.marketReference != null && (
                 <div>
-                  <span>Mercado alto</span>
+                  <span>Ref. scoring (mid)</span>
                   <strong>{formatMoney(selected.marketReference)}</strong>
                 </div>
               )}
               {selected.marketPriceRange != null && (
                 <>
                   <div>
-                    <span>Mercado bajo</span>
-                    <strong>{formatMoney(selected.marketPriceRange.low)}</strong>
+                    <span>Mercado alto</span>
+                    <strong>{formatMoney(selected.marketPriceRange.high)}</strong>
                   </div>
                   <div>
-                    <span>Mercado medio</span>
-                    <strong>{formatMoney(selected.marketPriceRange.mid)}</strong>
+                    <span>Mercado bajo</span>
+                    <strong>{formatMoney(selected.marketPriceRange.low)}</strong>
                   </div>
                 </>
               )}

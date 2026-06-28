@@ -102,7 +102,7 @@ describe('generated opportunities', () => {
         high: prices[prices.length - 1],
         count: prices.length
       });
-      expect(item.marketReference).toBe(range.high);
+      expect(item.marketReference).toBe(range.mid);
     }
   });
 
