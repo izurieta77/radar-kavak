@@ -403,6 +403,27 @@ h1 {
   font-size: 12px;
 }
 
+.external-kavak-summary {
+  display: grid;
+  gap: 3px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border: 1px solid rgba(13, 90, 167, 0.22);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(222, 240, 255, 0.84), rgba(255, 255, 255, 0.56));
+}
+
+.external-kavak-summary span,
+.external-kavak-summary small {
+  color: var(--muted);
+}
+
+.external-kavak-summary strong {
+  color: var(--blue-900);
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
 .external-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -476,6 +497,32 @@ h1 {
 .deal-price strong {
   color: #06213f;
   text-align: right;
+}
+
+.kavak-sale {
+  display: grid;
+  gap: 2px;
+  padding: 8px;
+  border: 1px solid rgba(13, 90, 167, 0.2);
+  border-radius: 7px;
+  background: rgba(222, 240, 255, 0.56);
+}
+
+.kavak-sale.positive {
+  border-color: rgba(11, 106, 57, 0.36);
+  background: rgba(219, 247, 228, 0.72);
+}
+
+.kavak-sale span,
+.kavak-sale small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.kavak-sale strong {
+  color: var(--blue-900);
+  font-size: 16px;
+  overflow-wrap: anywhere;
 }
 
 .deal-metrics {

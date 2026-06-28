@@ -42,9 +42,10 @@ describe('generated opportunities', () => {
 
     expect(quotedX4?.kavakStatus).toBe('capturado');
     expect(quotedX4?.kavakOffer).toBe(853289);
+    expect(quotedX4?.kavakTradeOffer).toBeNull();
     expect(kavakEvidence?.price).toBe(853289);
     expect(kavakEvidence?.url).toContain('kavak.com/mx/v2/cotizar-auto/venta-multi-oferta-auto');
-    expect(quotedX4?.notes).toContain('Kavak venta directa capturado: $853,289; cambio/trueque: $873,663; prestamo: $600,000; vigente hasta 2026-07-05.');
+    expect(quotedX4?.notes).toContain('Kavak venta directa capturado: $853,289; prestamo: $600,000; vigente hasta 2026-07-05.');
   });
 
   it('has an explicit Kavak result for every analyzable vehicle', () => {
@@ -107,16 +108,18 @@ describe('generated opportunities', () => {
 
   it('calculates Kavak-vs-list and bargain spreads for ranking', () => {
     const x4 = opportunities.find((item) => item.vehicle.no === 29);
-    expect(x4?.dealAnalysis.kavakBestOffer).toBe(873663);
-    expect(x4?.dealAnalysis.kavakBestOfferType).toBe('cambio');
-    expect(x4?.dealAnalysis.kavakVsList).toBe(4663);
+    expect(x4?.dealAnalysis.kavakBestOffer).toBe(853289);
+    expect(x4?.dealAnalysis.kavakBestOfferType).toBe('venta');
+    expect(x4?.dealAnalysis.kavakVsList).toBe(-15711);
 
     for (const item of opportunities) {
       const listPrice = item.vehicle.inventoryPrice;
       if (listPrice == null) continue;
 
-      const expectedKavakBest = Math.max(item.kavakOffer ?? 0, item.kavakTradeOffer ?? 0) || null;
+      expect(item.kavakTradeOffer).toBeNull();
+      const expectedKavakBest = item.kavakOffer ?? null;
       expect(item.dealAnalysis.kavakBestOffer).toBe(expectedKavakBest);
+      expect(item.dealAnalysis.kavakBestOfferType).toBe(expectedKavakBest == null ? null : 'venta');
       expect(item.dealAnalysis.kavakVsList).toBe(expectedKavakBest == null ? null : expectedKavakBest - listPrice);
 
       if (item.marketPriceRange == null || item.targetBuyPrice == null) {

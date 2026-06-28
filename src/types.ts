@@ -71,6 +71,22 @@ export interface ExternalBargain {
   why: string;
 }
 
+export type ExternalKavakQuoteStatus = 'capturado' | 'solo_prestamo' | 'requiere_version';
+
+export interface ExternalKavakQuote {
+  externalId: string;
+  source: 'Kavak';
+  status: ExternalKavakQuoteStatus;
+  url: string | null;
+  capturedAt: string;
+  validUntil: string | null;
+  selectedVersion: string | null;
+  sellOffer: number | null;
+  sellOfferType: 'venta_directa' | 'venta_7_dias' | null;
+  loanOffer: number | null;
+  reason: string | null;
+}
+
 export interface MarketPriceRange {
   low: number;
   mid: number;
@@ -80,7 +96,7 @@ export interface MarketPriceRange {
 
 export interface DealAnalysis {
   kavakBestOffer: number | null;
-  kavakBestOfferType: 'venta' | 'cambio' | null;
+  kavakBestOfferType: 'venta' | null;
   kavakVsList: number | null;
   kavakVsListPct: number | null;
   marketLowVsList: number | null;

@@ -13,13 +13,16 @@ import {
 } from 'lucide-react';
 import opportunitiesData from './data/opportunities.json';
 import externalBargainsData from './data/external_bargains.json';
+import externalKavakQuotesData from './data/external_kavak_quotes.json';
 import inventoryData from './data/inventario.json';
-import type { ExternalBargain, Opportunity } from './types';
+import type { ExternalBargain, ExternalKavakQuote, Opportunity } from './types';
 import { formatKm, formatMoney, statusLabel, summarizeInventory } from './lib/format';
 import { opportunityTone } from './lib/opportunityTone';
 
 const opportunities = opportunitiesData as Opportunity[];
 const externalBargains = externalBargainsData as ExternalBargain[];
+const externalKavakQuotes = externalKavakQuotesData as ExternalKavakQuote[];
+const externalKavakById = new Map(externalKavakQuotes.map((quote) => [quote.externalId, quote]));
 const workflowItems = [
   { label: 'Inventario', Icon: Car },
   { label: 'Kavak', Icon: BadgeDollarSign },
@@ -67,6 +70,21 @@ function deltaLabel(value: number | null): string {
   return `${prefix}${formatMoney(value)}`;
 }
 
+function externalKavakDisplay(quote: ExternalKavakQuote | undefined): string {
+  if (quote?.sellOffer != null) return formatMoney(quote.sellOffer);
+  if (quote?.status === 'solo_prestamo') return 'sin venta directa';
+  if (quote?.status === 'requiere_version') return 'requiere version';
+  return 'pendiente';
+}
+
+function externalKavakDetail(quote: ExternalKavakQuote | undefined, price: number): string {
+  if (quote?.sellOffer != null) {
+    return `${deltaLabel(quote.sellOffer - price)} vs precio publicado`;
+  }
+  if (quote?.loanOffer != null) return `solo prestamo ${formatMoney(quote.loanOffer)}`;
+  return quote?.reason ?? 'sin resultado Kavak';
+}
+
 function App() {
   const [selectedNo, setSelectedNo] = useState(opportunities[0]?.vehicle.no ?? 0);
   const [query, setQuery] = useState('');
@@ -109,6 +127,18 @@ function App() {
     .slice(0, 5);
   const externalGapTotal = externalBargains.reduce((sum, item) => sum + item.gapToMedian, 0);
   const externalTop = externalBargains[0];
+  const externalSaleQuotes = externalKavakQuotes.filter((quote) => quote.sellOffer != null);
+  const externalAboveList = externalBargains.filter((deal) => {
+    const quote = externalKavakById.get(deal.id);
+    return quote?.sellOffer != null && quote.sellOffer > deal.price;
+  });
+  const externalClosestSale = [...externalBargains]
+    .filter((deal) => externalKavakById.get(deal.id)?.sellOffer != null)
+    .sort((a, b) => {
+      const quoteA = externalKavakById.get(a.id);
+      const quoteB = externalKavakById.get(b.id);
+      return (quoteB?.sellOffer ?? 0) - b.price - ((quoteA?.sellOffer ?? 0) - a.price);
+    })[0];
 
   return (
     <div className="app-shell">
@@ -185,8 +215,8 @@ function App() {
             </strong>
             <small>
               {kavakAboveList.length
-                ? `${deltaLabel(kavakAboveList[0].dealAnalysis.kavakVsList)} con ${kavakAboveList[0].dealAnalysis.kavakBestOfferType}`
-                : 'Solo cuentan venta/cambio reales capturados.'}
+                ? `${deltaLabel(kavakAboveList[0].dealAnalysis.kavakVsList)} con venta directa`
+                : 'Solo cuenta venta directa capturada.'}
             </small>
           </div>
           <div className="analysis-panel panel-lista">
@@ -194,7 +224,7 @@ function App() {
             {closestKavak.map((item) => (
               <button key={item.vehicle.no} onClick={() => setSelectedNo(item.vehicle.no)}>
                 <strong>#{item.vehicle.no} {item.vehicle.brand} {item.vehicle.model}</strong>
-                <small>{deltaLabel(item.dealAnalysis.kavakVsList)} vs lista - {item.dealAnalysis.kavakBestOfferType}</small>
+                <small>{deltaLabel(item.dealAnalysis.kavakVsList)} vs lista - venta directa</small>
               </button>
             ))}
           </div>
@@ -221,47 +251,70 @@ function App() {
             <div className="scan-summary">
               <strong>{externalBargains.length}</strong>
               <span>candidatas</span>
-              <small>{formatMoney(externalGapTotal)} abajo de medianas</small>
+              <small>{externalSaleQuotes.length} con venta Kavak; {externalAboveList.length} arriba de lista</small>
             </div>
           </div>
 
+          <div className="external-kavak-summary">
+            <span>Kavak venta directa</span>
+            <strong>
+              {externalAboveList.length
+                ? `${externalAboveList.length} arriba de lista`
+                : 'Ninguna arriba de lista'}
+            </strong>
+            <small>
+              {externalClosestSale
+                ? `Mas cerca: ${externalClosestSale.year} ${externalClosestSale.name} (${externalKavakDetail(externalKavakById.get(externalClosestSale.id), externalClosestSale.price)})`
+                : `${formatMoney(externalGapTotal)} abajo de medianas`}
+            </small>
+          </div>
+
           <div className="external-grid">
-            {externalBargains.map((deal) => (
-              <article className={deal.rank === 1 ? 'external-card priority' : 'external-card'} key={deal.id}>
-                <div className="deal-topline">
-                  <span className="deal-rank">#{deal.rank}</span>
-                  <span className="tone-badge tone-badge-ganga">Ganga externa</span>
-                </div>
-                <h3>{deal.year} {deal.name}</h3>
-                {deal.version && <p className="deal-version">{deal.version}</p>}
-                <div className="deal-price">
-                  <span>Precio publicado</span>
-                  <strong>{formatMoney(deal.price)}</strong>
-                </div>
-                <div className="deal-metrics">
-                  <span>
-                    <strong>{formatMoney(deal.gapToMedian)}</strong>
-                    abajo mediana
-                  </span>
-                  <span>
-                    <strong>{Math.round(deal.gapPct * 100)}%</strong>
-                    descuento vs mediana
-                  </span>
-                  <span>
-                    <strong>{deal.compCount}</strong>
-                    comparables
-                  </span>
-                </div>
-                <p className="deal-location">
-                  {deal.city}, {deal.region} - {formatKm(deal.km)} - visto {deal.observedAt}
-                </p>
-                <p className="deal-why">{deal.why}</p>
-                <a className="deal-link" href={deal.url} target="_blank" rel="noreferrer">
-                  Abrir ficha {deal.source}
-                  <ExternalLink size={15} />
-                </a>
-              </article>
-            ))}
+            {externalBargains.map((deal) => {
+              const quote = externalKavakById.get(deal.id);
+              const saleDelta = quote?.sellOffer != null ? quote.sellOffer - deal.price : null;
+              return (
+                <article className={deal.rank === 1 ? 'external-card priority' : 'external-card'} key={deal.id}>
+                  <div className="deal-topline">
+                    <span className="deal-rank">#{deal.rank}</span>
+                    <span className="tone-badge tone-badge-ganga">Ganga externa</span>
+                  </div>
+                  <h3>{deal.year} {deal.name}</h3>
+                  {deal.version && <p className="deal-version">{deal.version}</p>}
+                  <div className="deal-price">
+                    <span>Precio publicado</span>
+                    <strong>{formatMoney(deal.price)}</strong>
+                  </div>
+                  <div className={saleDelta != null && saleDelta >= 0 ? 'kavak-sale positive' : 'kavak-sale'}>
+                    <span>Kavak venta directa</span>
+                    <strong>{externalKavakDisplay(quote)}</strong>
+                    <small>{externalKavakDetail(quote, deal.price)}</small>
+                  </div>
+                  <div className="deal-metrics">
+                    <span>
+                      <strong>{formatMoney(deal.gapToMedian)}</strong>
+                      abajo mediana
+                    </span>
+                    <span>
+                      <strong>{Math.round(deal.gapPct * 100)}%</strong>
+                      descuento vs mediana
+                    </span>
+                    <span>
+                      <strong>{deal.compCount}</strong>
+                      comparables
+                    </span>
+                  </div>
+                  <p className="deal-location">
+                    {deal.city}, {deal.region} - {formatKm(deal.km)} - visto {deal.observedAt}
+                  </p>
+                  <p className="deal-why">{deal.why}</p>
+                  <a className="deal-link" href={deal.url} target="_blank" rel="noreferrer">
+                    Abrir ficha {deal.source}
+                    <ExternalLink size={15} />
+                  </a>
+                </article>
+              );
+            })}
           </div>
           {externalTop && (
             <p className="external-footnote">
@@ -368,12 +421,6 @@ function App() {
                 <div>
                   <span>Kavak resultado</span>
                   <strong>{kavakDisplay(selected)}</strong>
-                </div>
-              )}
-              {selected.kavakTradeOffer != null && (
-                <div>
-                  <span>Kavak cambio</span>
-                  <strong>{formatMoney(selected.kavakTradeOffer)}</strong>
                 </div>
               )}
               {selected.marketReference != null && (

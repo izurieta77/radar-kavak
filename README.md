@@ -10,7 +10,7 @@ Regla central: no inventar valores. El ranking solo suma spread cuando hay una c
 - Excluidos: 10 filas naranjas completas.
 - Analizables: 38 filas.
 - Publicaciones reales capturadas en `data/market_listings.json`: Facebook Marketplace con URL, precio visible y hora de consulta.
-- Cotizaciones Kavak capturadas en `data/kavak_quotes.json`: URL Kavak, oferta de venta directa, cambio/trueque, prestamo y vigencia. No contiene PII.
+- Cotizaciones Kavak capturadas en `data/kavak_quotes.json`: URL Kavak, oferta de venta directa, prestamo y vigencia. El score y la app usan solo venta directa. No contiene PII.
 - Precio de lista ajustado por fin de mes:
   - compra objetivo: lista - 50,000 MXN
   - compra agresiva: lista - 70,000 MXN

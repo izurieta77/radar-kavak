@@ -230,19 +230,11 @@ def deal_analysis(
     target_price: int | None,
     aggressive_price: int | None,
     kavak_offer: int | None,
-    kavak_trade_offer: int | None,
     price_range: dict[str, int] | None,
 ) -> dict[str, Any]:
     list_price = vehicle.get("inventoryPrice")
-    kavak_values = [
-        ("venta", kavak_offer),
-        ("cambio", kavak_trade_offer),
-    ]
-    kavak_values = [(kind, value) for kind, value in kavak_values if value is not None]
-    if kavak_values:
-        kavak_best_type, kavak_best_offer = max(kavak_values, key=lambda item: item[1])
-    else:
-        kavak_best_type, kavak_best_offer = None, None
+    kavak_best_offer = kavak_offer
+    kavak_best_type = "venta" if kavak_offer is not None else None
 
     analysis = {
         "kavakBestOffer": kavak_best_offer,
@@ -284,7 +276,7 @@ def evidence_from_kavak_quote(quote: dict[str, Any]) -> dict[str, Any]:
         label = quote.get("rawText") or "Kavak no mostro modelo/version compatible; no se sustituyo por otro modelo"
         price = None
     elif status == "solo_prestamo":
-        label = f"Kavak solo ofrecio prestamo por {format_money(loan_offer)}; sin oferta de venta/cambio"
+        label = f"Kavak solo ofrecio prestamo por {format_money(loan_offer)}; sin oferta de venta directa"
         price = None
     else:
         offer_label = "Venta en 7 dias" if quote.get("sellOfferType") == "venta_7_dias" else "Venta directa"
@@ -334,7 +326,6 @@ def build_opportunity(
         target_price,
         aggressive_price,
         kavak_offer,
-        kavak_trade_offer,
         price_range,
     )
     priced_market_count = sum(1 for reference in market_references if reference["price"] is not None)
@@ -363,15 +354,13 @@ def build_opportunity(
         if kavak_offer is not None:
             offer_label = "Kavak venta en 7 dias capturado" if kavak_quote.get("sellOfferType") == "venta_7_dias" else "Kavak venta directa capturado"
             parts = [f"{offer_label}: {format_money(kavak_offer)}"]
-            if kavak_trade_offer is not None:
-                parts.append(f"cambio/trueque: {format_money(kavak_trade_offer)}")
             if kavak_loan_offer is not None:
                 parts.append(f"prestamo: {format_money(kavak_loan_offer)}")
             if valid_until:
                 parts.append(f"vigente hasta {valid_until}")
             notes.append("; ".join(parts) + ".")
         elif kavak_status == "solo_prestamo":
-            parts = [f"Kavak no dio oferta de venta/cambio; solo prestamo: {format_money(kavak_loan_offer)}"]
+            parts = [f"Kavak no dio oferta de venta directa; solo prestamo: {format_money(kavak_loan_offer)}"]
             if valid_until:
                 parts.append(f"vigente hasta {valid_until}")
             notes.append("; ".join(parts) + ".")
@@ -379,8 +368,6 @@ def build_opportunity(
             notes.append(quote_text if (quote_text := kavak_quote.get("rawText")) else "Kavak no mostro modelo/version compatible; no se sustituyo por otro modelo.")
         else:
             notes.append("Kavak tiene resultado capturado sin oferta de venta utilizable.")
-        if list_price is not None and kavak_trade_offer is not None and kavak_trade_offer > list_price:
-            notes.append(f"Kavak cambio/trueque queda ${kavak_trade_offer - list_price:,} arriba del precio de lista.")
         if list_price is not None and kavak_offer is not None and kavak_offer < list_price:
             notes.append(f"Kavak venta directa queda ${list_price - kavak_offer:,} debajo del precio de lista.")
     else:
@@ -396,7 +383,7 @@ def build_opportunity(
         "vehicle": vehicle,
         "kavakStatus": kavak_status,
         "kavakOffer": kavak_offer,
-        "kavakTradeOffer": kavak_trade_offer,
+        "kavakTradeOffer": None,
         "kavakLoanOffer": kavak_loan_offer,
         "kavakSellOfferType": kavak_quote.get("sellOfferType") if kavak_quote is not None else None,
         "marketReference": market_reference,
