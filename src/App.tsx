@@ -110,9 +110,9 @@ function App() {
     <div className="app-shell">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-mark">RK</div>
+          <div className="brand-mark">RI</div>
           <div>
-            <strong>Radar Kavak</strong>
+            <strong>Radar Izurietas Cars</strong>
             <span>Arbitraje seminuevos</span>
           </div>
         </div>
@@ -133,7 +133,7 @@ function App() {
       <main className="workspace">
         <header className="topbar">
           <div>
-            <h1>Oportunidades fin de mes</h1>
+            <h1>Radar Izurietas Cars</h1>
             <p>Azul: tu lista y Kavak. Amarillo: gangas detectadas contra piso real de mercado.</p>
           </div>
           <div className="status-row">
