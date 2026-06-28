@@ -140,6 +140,18 @@ function App() {
   );
   const positive = opportunities.filter((item) => (item.spread ?? 0) > 0);
   const publishedMargin = positive.reduce((sum, item) => sum + (item.spread ?? 0), 0);
+  const DISCOUNT_40K = 40_000;
+  const discount40kRows = opportunities
+    .filter((item) => item.vehicle.inventoryPrice != null && item.kavakOffer != null)
+    .map((item) => {
+      const adjustedPrice = item.vehicle.inventoryPrice! - DISCOUNT_40K;
+      const gap = adjustedPrice - item.kavakOffer!;
+      return { item, adjustedPrice, gap };
+    })
+    .sort((a, b) => a.gap - b.gap);
+  const discount40kBelowKavak = discount40kRows.filter((row) => row.gap <= 0);
+  const discount40kAboveKavak = discount40kRows.filter((row) => row.gap > 0);
+
   const kavakAboveList = opportunities
     .filter((item) => (item.dealAnalysis.kavakVsList ?? -Infinity) > 0)
     .sort((a, b) => (b.dealAnalysis.kavakVsList ?? -Infinity) - (a.dealAnalysis.kavakVsList ?? -Infinity));
@@ -270,6 +282,67 @@ function App() {
                 <small>{deltaLabel(item.dealAnalysis.marketLowVsTarget)} vs compra obj. - piso {formatMoney(item.marketPriceRange?.low ?? null)}</small>
               </button>
             ))}
+          </div>
+        </section>
+
+        <section className="discount-section" aria-labelledby="discount-title">
+          <div className="section-heading">
+            <div>
+              <span>Simulador de negociación</span>
+              <h2 id="discount-title">Rebaja -$40,000 de lista · ¿Quién queda abajo de Kavak?</h2>
+              <p>
+                Precio ajustado = lista PDF menos $40,000. Verde = por debajo de la oferta Kavak (spread inmediato).
+                Amarillo = sigue arriba pero ya muy cerca. Ordenado de mejor a peor.
+              </p>
+            </div>
+            <div className="scan-summary direct-summary">
+              <strong>{discount40kBelowKavak.length}</strong>
+              <span>abajo de Kavak con -40k</span>
+              <small>
+                {discount40kAboveKavak.length} siguen arriba ·{' '}
+                {discount40kRows.length} con cotización Kavak activa
+              </small>
+            </div>
+          </div>
+
+          <div className="discount-table">
+            <div className="discount-head">
+              <span>#</span>
+              <span>Vehículo</span>
+              <span>Lista PDF</span>
+              <span>Lista −40k</span>
+              <span>Kavak venta</span>
+              <span>Gap vs Kavak</span>
+            </div>
+            {discount40kRows.map(({ item, adjustedPrice, gap }, rank) => {
+              const isBelow = gap <= 0;
+              const isNear = !isBelow && gap <= 60_000;
+              return (
+                <button
+                  key={item.vehicle.no}
+                  className={[
+                    'discount-row',
+                    isBelow ? 'drow-below' : isNear ? 'drow-near' : 'drow-above'
+                  ].join(' ')}
+                  onClick={() => setSelectedNo(item.vehicle.no)}
+                >
+                  <span className="drow-rank">{rank + 1}</span>
+                  <span className="drow-car">
+                    <strong>{item.vehicle.brand} {item.vehicle.model}</strong>
+                    <small>{item.vehicle.year} · #{item.vehicle.no}</small>
+                  </span>
+                  <span className="drow-num">{formatMoney(item.vehicle.inventoryPrice)}</span>
+                  <span className="drow-num drow-adjusted">{formatMoney(adjustedPrice)}</span>
+                  <span className="drow-num">{formatMoney(item.kavakOffer)}</span>
+                  <span className={`drow-gap ${isBelow ? 'gap-below' : isNear ? 'gap-near' : 'gap-above'}`}>
+                    {isBelow ? '▼ ' : '▲ '}
+                    {formatMoney(Math.abs(gap))}
+                    {isBelow && <small>margen bruto</small>}
+                    {isNear && <small>negociar más</small>}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </section>
 
