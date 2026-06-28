@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import {
+  AlertTriangle,
   BadgeDollarSign,
   Car,
   CircleDot,
@@ -14,14 +15,16 @@ import {
 import opportunitiesData from './data/opportunities.json';
 import externalBargainsData from './data/external_bargains.json';
 import externalKavakQuotesData from './data/external_kavak_quotes.json';
+import directSaleMarketTargetsData from './data/direct_sale_market_targets.json';
 import inventoryData from './data/inventario.json';
-import type { ExternalBargain, ExternalKavakQuote, Opportunity } from './types';
+import type { DirectSaleMarketTarget, ExternalBargain, ExternalKavakQuote, Opportunity } from './types';
 import { formatKm, formatMoney, statusLabel, summarizeInventory } from './lib/format';
 import { opportunityTone } from './lib/opportunityTone';
 
 const opportunities = opportunitiesData as Opportunity[];
 const externalBargains = externalBargainsData as ExternalBargain[];
 const externalKavakQuotes = externalKavakQuotesData as ExternalKavakQuote[];
+const directSaleMarketTargets = directSaleMarketTargetsData as DirectSaleMarketTarget[];
 const externalKavakById = new Map(externalKavakQuotes.map((quote) => [quote.externalId, quote]));
 const workflowItems = [
   { label: 'Inventario', Icon: Car },
@@ -85,6 +88,25 @@ function externalKavakDetail(quote: ExternalKavakQuote | undefined, price: numbe
   return quote?.reason ?? 'sin resultado Kavak';
 }
 
+function marketTargetStatusLabel(status: DirectSaleMarketTarget['status']): string {
+  if (status === 'below_offer') return 'Abajo Kavak';
+  if (status === 'near_offer') return 'Muy cerca';
+  if (status === 'needs_quote') return 'Cotizar exacto';
+  return 'No usar';
+}
+
+function marketTargetFitLabel(fit: DirectSaleMarketTarget['fit']): string {
+  if (fit === 'same_version_comparable') return 'version comparable';
+  if (fit === 'same_version_higher_km') return 'mismo version, km distinto';
+  if (fit === 'same_model_unquoted') return 'mismo modelo, falta Kavak';
+  return 'version/precio dudoso';
+}
+
+function marketTargetDeltaLabel(item: DirectSaleMarketTarget): string {
+  if (item.deltaToKavak >= 0) return `${formatMoney(item.deltaToKavak)} abajo de Kavak`;
+  return `${formatMoney(Math.abs(item.deltaToKavak))} arriba de Kavak`;
+}
+
 function App() {
   const [selectedNo, setSelectedNo] = useState(opportunities[0]?.vehicle.no ?? 0);
   const [query, setQuery] = useState('');
@@ -139,6 +161,13 @@ function App() {
       const quoteB = externalKavakById.get(b.id);
       return (quoteB?.sellOffer ?? 0) - b.price - ((quoteA?.sellOffer ?? 0) - a.price);
     })[0];
+  const belowDirectSale = directSaleMarketTargets.filter((target) => target.status === 'below_offer');
+  const nearDirectSale = directSaleMarketTargets.filter((target) => target.status === 'near_offer');
+  const needsExactQuote = directSaleMarketTargets.filter((target) => target.status === 'needs_quote');
+  const rejectedMarketTargets = directSaleMarketTargets.filter((target) => target.status === 'rejected');
+  const marketTargetBest = directSaleMarketTargets
+    .filter((target) => target.status !== 'rejected')
+    .sort((a, b) => b.deltaToKavak - a.deltaToKavak)[0];
 
   return (
     <div className="app-shell">
@@ -235,6 +264,84 @@ function App() {
                 <strong>#{item.vehicle.no} {item.vehicle.brand} {item.vehicle.model}</strong>
                 <small>{deltaLabel(item.dealAnalysis.marketLowVsTarget)} vs compra obj. - piso {formatMoney(item.marketPriceRange?.low ?? null)}</small>
               </button>
+            ))}
+          </div>
+        </section>
+
+        <section className="direct-market" aria-labelledby="direct-market-title">
+          <div className="section-heading">
+            <div>
+              <span>Kavak venta directa</span>
+              <h2 id="direct-market-title">Compra bajo oferta Kavak</h2>
+              <p>
+                Mercado actual contra la oferta que nos da Kavak. Solo venta directa; no toma valores de cambio.
+              </p>
+            </div>
+            <div className="scan-summary direct-summary">
+              <strong>{belowDirectSale.length}</strong>
+              <span>abajo real</span>
+              <small>{nearDirectSale.length} cerca, {needsExactQuote.length} por cotizar, {rejectedMarketTargets.length} descartados</small>
+            </div>
+          </div>
+
+          <div className="direct-market-callout">
+            <AlertTriangle size={18} />
+            <div>
+              <strong>
+                {marketTargetBest
+                  ? `${marketTargetBest.title}: ${marketTargetDeltaLabel(marketTargetBest)}`
+                  : 'Sin compras abajo de Kavak'}
+              </strong>
+              <span>
+                Los casos con mas kilometraje o version dudosa no cuentan como margen confirmado hasta cotizar esa unidad exacta.
+              </span>
+            </div>
+          </div>
+
+          <div className="direct-market-grid">
+            {directSaleMarketTargets.map((target) => (
+              <article className={`direct-card direct-card-${target.status}`} key={target.id}>
+                <div className="deal-topline">
+                  <span className="deal-rank">#{target.priority}</span>
+                  <span className={`target-badge target-badge-${target.status}`}>
+                    {marketTargetStatusLabel(target.status)}
+                  </span>
+                </div>
+                <h3>{target.title}</h3>
+                <p className="deal-version">{target.subtitle}</p>
+
+                <div className="direct-price-grid">
+                  <div>
+                    <span>Compra publicada</span>
+                    <strong>{formatMoney(target.candidatePrice)}</strong>
+                    <small>{formatKm(target.candidateKm)} - {target.city}</small>
+                  </div>
+                  <div>
+                    <span>Kavak venta</span>
+                    <strong>{formatMoney(target.kavakSellOffer)}</strong>
+                    {target.secondaryKavakSellOffer && <small>2a oferta {formatMoney(target.secondaryKavakSellOffer)}</small>}
+                  </div>
+                </div>
+
+                <div className={target.deltaToKavak >= 0 ? 'direct-delta positive' : 'direct-delta'}>
+                  <strong>{marketTargetDeltaLabel(target)}</strong>
+                  <span>{marketTargetFitLabel(target.fit)}</span>
+                </div>
+
+                <p className="deal-why">{target.action}</p>
+                <p className="direct-evidence">{target.evidence}</p>
+
+                <div className="direct-meta">
+                  <span>{target.source}</span>
+                  <span>{target.region}</span>
+                  <span>{target.observedAt}</span>
+                </div>
+
+                <a className="deal-link" href={target.sourceUrl} target="_blank" rel="noreferrer">
+                  Abrir evidencia
+                  <ExternalLink size={15} />
+                </a>
+              </article>
             ))}
           </div>
         </section>

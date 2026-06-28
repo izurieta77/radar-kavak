@@ -87,6 +87,41 @@ export interface ExternalKavakQuote {
   reason: string | null;
 }
 
+export type DirectSaleMarketTargetStatus = 'below_offer' | 'near_offer' | 'needs_quote' | 'rejected';
+
+export type DirectSaleMarketTargetFit =
+  | 'same_version_comparable'
+  | 'same_version_higher_km'
+  | 'same_model_unquoted'
+  | 'version_or_price_mismatch';
+
+export interface DirectSaleMarketTarget {
+  id: string;
+  origin: 'inventory' | 'external';
+  vehicleNos?: number[];
+  externalId?: string;
+  priority: number;
+  status: DirectSaleMarketTargetStatus;
+  fit: DirectSaleMarketTargetFit;
+  title: string;
+  subtitle: string;
+  source: string;
+  sourceUrl: string;
+  observedAt: string;
+  region: string;
+  city: string;
+  candidatePrice: number;
+  candidateKm: number | null;
+  candidateVersion: string;
+  kavakSellOffer: number;
+  secondaryKavakSellOffer?: number;
+  deltaToKavak: number;
+  targetDropNeeded: number;
+  action: string;
+  evidence: string;
+  notes: string[];
+}
+
 export interface MarketPriceRange {
   low: number;
   mid: number;

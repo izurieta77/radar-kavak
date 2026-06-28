@@ -347,6 +347,204 @@ h1 {
   backdrop-filter: blur(18px);
 }
 
+.direct-market {
+  margin-bottom: 14px;
+  padding: 14px;
+  border: 1px solid var(--blue-line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(222, 240, 255, 0.92), rgba(255, 245, 191, 0.54)),
+    rgba(255, 255, 255, 0.66);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(18px);
+}
+
+.direct-summary {
+  border-color: rgba(29, 130, 230, 0.24);
+}
+
+.direct-market-callout {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border: 1px solid rgba(29, 130, 230, 0.26);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.direct-market-callout svg {
+  flex: 0 0 auto;
+  color: var(--yellow-600);
+}
+
+.direct-market-callout strong,
+.direct-market-callout span {
+  display: block;
+}
+
+.direct-market-callout strong {
+  color: var(--blue-900);
+  line-height: 1.25;
+}
+
+.direct-market-callout span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.direct-market-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.direct-card {
+  display: flex;
+  min-width: 0;
+  min-height: 296px;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 8px;
+  padding: 12px;
+  background: linear-gradient(145deg, rgba(226, 242, 255, 0.92), rgba(255, 255, 255, 0.58));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.direct-card-below_offer {
+  border-color: rgba(11, 106, 57, 0.34);
+  background: linear-gradient(145deg, rgba(219, 247, 228, 0.86), rgba(255, 245, 191, 0.66));
+}
+
+.direct-card-near_offer,
+.direct-card-needs_quote {
+  border-color: var(--yellow-line);
+  background: linear-gradient(145deg, rgba(255, 242, 188, 0.9), rgba(255, 255, 255, 0.58));
+}
+
+.direct-card-rejected {
+  border-color: rgba(90, 109, 129, 0.28);
+  background: linear-gradient(145deg, rgba(233, 239, 246, 0.84), rgba(255, 255, 255, 0.56));
+}
+
+.direct-card h3 {
+  font-size: 16px;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.target-badge {
+  min-height: 22px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.target-badge-below_offer {
+  border-color: rgba(11, 106, 57, 0.34);
+  background: rgba(219, 247, 228, 0.86);
+  color: #0b6a39;
+}
+
+.target-badge-near_offer,
+.target-badge-needs_quote {
+  border-color: var(--yellow-line);
+  background: rgba(255, 232, 140, 0.8);
+  color: #694600;
+}
+
+.target-badge-rejected {
+  border-color: rgba(90, 109, 129, 0.28);
+  background: rgba(238, 243, 248, 0.82);
+  color: #4f647b;
+}
+
+.direct-price-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.direct-price-grid div {
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.direct-price-grid span,
+.direct-price-grid small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.direct-price-grid strong {
+  display: block;
+  margin: 2px 0;
+  color: var(--blue-900);
+  overflow-wrap: anywhere;
+}
+
+.direct-delta {
+  display: grid;
+  gap: 2px;
+  padding: 8px;
+  border: 1px solid rgba(166, 109, 0, 0.24);
+  border-radius: 7px;
+  background: rgba(255, 242, 188, 0.62);
+}
+
+.direct-delta.positive {
+  border-color: rgba(11, 106, 57, 0.32);
+  background: rgba(219, 247, 228, 0.72);
+}
+
+.direct-delta strong {
+  color: var(--blue-900);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.direct-delta span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.direct-evidence {
+  color: #314960;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.direct-meta {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.direct-meta span {
+  min-height: 22px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 2px 7px;
+  background: rgba(255, 255, 255, 0.44);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
 .section-heading {
   display: flex;
   justify-content: space-between;
@@ -882,6 +1080,7 @@ h1 {
   .content-grid,
   .analysis-grid,
   .external-grid,
+  .direct-market-grid,
   .kpi-grid {
     grid-template-columns: 1fr;
   }
