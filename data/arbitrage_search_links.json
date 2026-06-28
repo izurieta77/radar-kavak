@@ -1,0 +1,716 @@
+[
+  {
+    "brand": "BMW",
+    "model": "118i (Automatico) 5p",
+    "year": 2018,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+118i+%28Automatico%29+5p+2018"
+  },
+  {
+    "brand": "BMW",
+    "model": "118i (Automatico) 5p",
+    "year": 2018,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+118i+%28Automatico%29+5p+2018"
+  },
+  {
+    "brand": "BMW",
+    "model": "118i (Automatico) 5p",
+    "year": 2018,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+118i+%28Automatico%29+5p+2018+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "330e (Hibrido/Aut)",
+    "year": 2023,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+330e+%28Hibrido%2FAut%29+2023"
+  },
+  {
+    "brand": "BMW",
+    "model": "330e (Hibrido/Aut)",
+    "year": 2023,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+330e+%28Hibrido%2FAut%29+2023"
+  },
+  {
+    "brand": "BMW",
+    "model": "330e (Hibrido/Aut)",
+    "year": 2023,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+330e+%28Hibrido%2FAut%29+2023+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "M5 (Hibrido/Automatico)",
+    "year": 2025,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+M5+%28Hibrido%2FAutomatico%29+2025"
+  },
+  {
+    "brand": "BMW",
+    "model": "M5 (Hibrido/Automatico)",
+    "year": 2025,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+M5+%28Hibrido%2FAutomatico%29+2025"
+  },
+  {
+    "brand": "BMW",
+    "model": "M5 (Hibrido/Automatico)",
+    "year": 2025,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+M5+%28Hibrido%2FAutomatico%29+2025+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "X1 sDrive18i (Automatico)",
+    "year": 2023,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+X1+sDrive18i+%28Automatico%29+2023"
+  },
+  {
+    "brand": "BMW",
+    "model": "X1 sDrive18i (Automatico)",
+    "year": 2023,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+X1+sDrive18i+%28Automatico%29+2023"
+  },
+  {
+    "brand": "BMW",
+    "model": "X1 sDrive18i (Automatico)",
+    "year": 2023,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+X1+sDrive18i+%28Automatico%29+2023+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "X1 sDrive20i (Automatico)",
+    "year": 2022,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+X1+sDrive20i+%28Automatico%29+2022"
+  },
+  {
+    "brand": "BMW",
+    "model": "X1 sDrive20i (Automatico)",
+    "year": 2022,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+X1+sDrive20i+%28Automatico%29+2022"
+  },
+  {
+    "brand": "BMW",
+    "model": "X1 sDrive20i (Automatico)",
+    "year": 2022,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+X1+sDrive20i+%28Automatico%29+2022+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "X2 sDrive 18i Automatico",
+    "year": 2021,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+X2+sDrive+18i+Automatico+2021"
+  },
+  {
+    "brand": "BMW",
+    "model": "X2 sDrive 18i Automatico",
+    "year": 2021,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+X2+sDrive+18i+Automatico+2021"
+  },
+  {
+    "brand": "BMW",
+    "model": "X2 sDrive 18i Automatico",
+    "year": 2021,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+X2+sDrive+18i+Automatico+2021+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "X3 xDrive30e (Hibrido/Aut)",
+    "year": 2023,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+X3+xDrive30e+%28Hibrido%2FAut%29+2023"
+  },
+  {
+    "brand": "BMW",
+    "model": "X3 xDrive30e (Hibrido/Aut)",
+    "year": 2023,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+X3+xDrive30e+%28Hibrido%2FAut%29+2023"
+  },
+  {
+    "brand": "BMW",
+    "model": "X3 xDrive30e (Hibrido/Aut)",
+    "year": 2023,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+X3+xDrive30e+%28Hibrido%2FAut%29+2023+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "X3 xDrive30e Hibrido",
+    "year": 2024,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+X3+xDrive30e+Hibrido+2024"
+  },
+  {
+    "brand": "BMW",
+    "model": "X3 xDrive30e Hibrido",
+    "year": 2024,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+X3+xDrive30e+Hibrido+2024"
+  },
+  {
+    "brand": "BMW",
+    "model": "X3 xDrive30e Hibrido",
+    "year": 2024,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+X3+xDrive30e+Hibrido+2024+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "X4 M40i Automatico",
+    "year": 2021,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+X4+M40i+Automatico+2021"
+  },
+  {
+    "brand": "BMW",
+    "model": "X4 M40i Automatico",
+    "year": 2021,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+X4+M40i+Automatico+2021"
+  },
+  {
+    "brand": "BMW",
+    "model": "X4 M40i Automatico",
+    "year": 2021,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+X4+M40i+Automatico+2021+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "X4 xDrive 30i (Automatico)",
+    "year": 2025,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+X4+xDrive+30i+%28Automatico%29+2025"
+  },
+  {
+    "brand": "BMW",
+    "model": "X4 xDrive 30i (Automatico)",
+    "year": 2025,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+X4+xDrive+30i+%28Automatico%29+2025"
+  },
+  {
+    "brand": "BMW",
+    "model": "X4 xDrive 30i (Automatico)",
+    "year": 2025,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+X4+xDrive+30i+%28Automatico%29+2025+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "X4 xDrive30i (Automático)",
+    "year": 2025,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+X4+xDrive30i+%28Autom%C3%A1tico%29+2025"
+  },
+  {
+    "brand": "BMW",
+    "model": "X4 xDrive30i (Automático)",
+    "year": 2025,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+X4+xDrive30i+%28Autom%C3%A1tico%29+2025"
+  },
+  {
+    "brand": "BMW",
+    "model": "X4 xDrive30i (Automático)",
+    "year": 2025,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+X4+xDrive30i+%28Autom%C3%A1tico%29+2025+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 xDrive40i (Automatico)",
+    "year": 2024,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+X5+xDrive40i+%28Automatico%29+2024"
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 xDrive40i (Automatico)",
+    "year": 2024,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+X5+xDrive40i+%28Automatico%29+2024"
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 xDrive40i (Automatico)",
+    "year": 2024,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+X5+xDrive40i+%28Automatico%29+2024+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 xDrive45e (Hibrido/Aut)",
+    "year": 2020,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+X5+xDrive45e+%28Hibrido%2FAut%29+2020"
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 xDrive45e (Hibrido/Aut)",
+    "year": 2020,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+X5+xDrive45e+%28Hibrido%2FAut%29+2020"
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 xDrive45e (Hibrido/Aut)",
+    "year": 2020,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+X5+xDrive45e+%28Hibrido%2FAut%29+2020+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 xDrive50e (Hibrido/Aut)",
+    "year": 2024,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024"
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 xDrive50e (Hibrido/Aut)",
+    "year": 2024,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024"
+  },
+  {
+    "brand": "BMW",
+    "model": "X5 xDrive50e (Hibrido/Aut)",
+    "year": 2024,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+X5+xDrive50e+%28Hibrido%2FAut%29+2024+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "XM (Hibrido/Automatico)",
+    "year": 2023,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+XM+%28Hibrido%2FAutomatico%29+2023"
+  },
+  {
+    "brand": "BMW",
+    "model": "XM (Hibrido/Automatico)",
+    "year": 2023,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+XM+%28Hibrido%2FAutomatico%29+2023"
+  },
+  {
+    "brand": "BMW",
+    "model": "XM (Hibrido/Automatico)",
+    "year": 2023,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+XM+%28Hibrido%2FAutomatico%29+2023+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "iX xDrive40 (Electrico/Aut)",
+    "year": 2024,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+iX+xDrive40+%28Electrico%2FAut%29+2024"
+  },
+  {
+    "brand": "BMW",
+    "model": "iX xDrive40 (Electrico/Aut)",
+    "year": 2024,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+iX+xDrive40+%28Electrico%2FAut%29+2024"
+  },
+  {
+    "brand": "BMW",
+    "model": "iX xDrive40 (Electrico/Aut)",
+    "year": 2024,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+iX+xDrive40+%28Electrico%2FAut%29+2024+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "iX xDrive50 (Electrico/Automatico)",
+    "year": 2025,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+iX+xDrive50+%28Electrico%2FAutomatico%29+2025"
+  },
+  {
+    "brand": "BMW",
+    "model": "iX xDrive50 (Electrico/Automatico)",
+    "year": 2025,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+iX+xDrive50+%28Electrico%2FAutomatico%29+2025"
+  },
+  {
+    "brand": "BMW",
+    "model": "iX xDrive50 (Electrico/Automatico)",
+    "year": 2025,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+iX+xDrive50+%28Electrico%2FAutomatico%29+2025+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "BMW",
+    "model": "iX3 M Sport Inspiring (Elect.Automat)",
+    "year": 2023,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/BMW+iX3+M+Sport+Inspiring+%28Elect.Automat%29+2023"
+  },
+  {
+    "brand": "BMW",
+    "model": "iX3 M Sport Inspiring (Elect.Automat)",
+    "year": 2023,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=BMW+iX3+M+Sport+Inspiring+%28Elect.Automat%29+2023"
+  },
+  {
+    "brand": "BMW",
+    "model": "iX3 M Sport Inspiring (Elect.Automat)",
+    "year": 2023,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=BMW+iX3+M+Sport+Inspiring+%28Elect.Automat%29+2023+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "Ford",
+    "model": "Expedition Stealth Performance 4X2 3.5L Ecobost",
+    "year": 2024,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/Ford+Expedition+Stealth+Performance+4X2+3.5L+Ecobost+2024"
+  },
+  {
+    "brand": "Ford",
+    "model": "Expedition Stealth Performance 4X2 3.5L Ecobost",
+    "year": 2024,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=Ford+Expedition+Stealth+Performance+4X2+3.5L+Ecobost+2024"
+  },
+  {
+    "brand": "Ford",
+    "model": "Expedition Stealth Performance 4X2 3.5L Ecobost",
+    "year": 2024,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=Ford+Expedition+Stealth+Performance+4X2+3.5L+Ecobost+2024+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "KIA",
+    "model": "Seltos 1.6 LX M/T",
+    "year": 2022,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/KIA+Seltos+1.6+LX+M%2FT+2022"
+  },
+  {
+    "brand": "KIA",
+    "model": "Seltos 1.6 LX M/T",
+    "year": 2022,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=KIA+Seltos+1.6+LX+M%2FT+2022"
+  },
+  {
+    "brand": "KIA",
+    "model": "Seltos 1.6 LX M/T",
+    "year": 2022,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=KIA+Seltos+1.6+LX+M%2FT+2022+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "Land-Rover",
+    "model": "Range-Rover Sport 3.0 Dynamic SE 400PS MHEV",
+    "year": 2024,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/Land-Rover+Range-Rover+Sport+3.0+Dynamic+SE+400PS+MHEV+2024"
+  },
+  {
+    "brand": "Land-Rover",
+    "model": "Range-Rover Sport 3.0 Dynamic SE 400PS MHEV",
+    "year": 2024,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=Land-Rover+Range-Rover+Sport+3.0+Dynamic+SE+400PS+MHEV+2024"
+  },
+  {
+    "brand": "Land-Rover",
+    "model": "Range-Rover Sport 3.0 Dynamic SE 400PS MHEV",
+    "year": 2024,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=Land-Rover+Range-Rover+Sport+3.0+Dynamic+SE+400PS+MHEV+2024+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "Land-Rover",
+    "model": "Velar R-Dynamic S 340PS",
+    "year": 2023,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/Land-Rover+Velar+R-Dynamic+S+340PS+2023"
+  },
+  {
+    "brand": "Land-Rover",
+    "model": "Velar R-Dynamic S 340PS",
+    "year": 2023,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=Land-Rover+Velar+R-Dynamic+S+340PS+2023"
+  },
+  {
+    "brand": "Land-Rover",
+    "model": "Velar R-Dynamic S 340PS",
+    "year": 2023,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=Land-Rover+Velar+R-Dynamic+S+340PS+2023+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "MINI",
+    "model": "Cooper Convertible C (Aut)",
+    "year": 2026,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/MINI+Cooper+Convertible+C+%28Aut%29+2026"
+  },
+  {
+    "brand": "MINI",
+    "model": "Cooper Convertible C (Aut)",
+    "year": 2026,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=MINI+Cooper+Convertible+C+%28Aut%29+2026"
+  },
+  {
+    "brand": "MINI",
+    "model": "Cooper Convertible C (Aut)",
+    "year": 2026,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=MINI+Cooper+Convertible+C+%28Aut%29+2026+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "MINI",
+    "model": "Cooper SE (Electrico/Aut.)",
+    "year": 2024,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/MINI+Cooper+SE+%28Electrico%2FAut.%29+2024"
+  },
+  {
+    "brand": "MINI",
+    "model": "Cooper SE (Electrico/Aut.)",
+    "year": 2024,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=MINI+Cooper+SE+%28Electrico%2FAut.%29+2024"
+  },
+  {
+    "brand": "MINI",
+    "model": "Cooper SE (Electrico/Aut.)",
+    "year": 2024,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=MINI+Cooper+SE+%28Electrico%2FAut.%29+2024+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "MINI",
+    "model": "Cooper SE Classic (Electrico/Aut.)",
+    "year": 2024,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/MINI+Cooper+SE+Classic+%28Electrico%2FAut.%29+2024"
+  },
+  {
+    "brand": "MINI",
+    "model": "Cooper SE Classic (Electrico/Aut.)",
+    "year": 2024,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=MINI+Cooper+SE+Classic+%28Electrico%2FAut.%29+2024"
+  },
+  {
+    "brand": "MINI",
+    "model": "Cooper SE Classic (Electrico/Aut.)",
+    "year": 2024,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=MINI+Cooper+SE+Classic+%28Electrico%2FAut.%29+2024+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "MINI",
+    "model": "Cooper SE Iconic (Electrico/Aut.)",
+    "year": 2024,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/MINI+Cooper+SE+Iconic+%28Electrico%2FAut.%29+2024"
+  },
+  {
+    "brand": "MINI",
+    "model": "Cooper SE Iconic (Electrico/Aut.)",
+    "year": 2024,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=MINI+Cooper+SE+Iconic+%28Electrico%2FAut.%29+2024"
+  },
+  {
+    "brand": "MINI",
+    "model": "Cooper SE Iconic (Electrico/Aut.)",
+    "year": 2024,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=MINI+Cooper+SE+Iconic+%28Electrico%2FAut.%29+2024+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "MINI",
+    "model": "Countryman Classic (Aut)",
+    "year": 2023,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/MINI+Countryman+Classic+%28Aut%29+2023"
+  },
+  {
+    "brand": "MINI",
+    "model": "Countryman Classic (Aut)",
+    "year": 2023,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=MINI+Countryman+Classic+%28Aut%29+2023"
+  },
+  {
+    "brand": "MINI",
+    "model": "Countryman Classic (Aut)",
+    "year": 2023,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=MINI+Countryman+Classic+%28Aut%29+2023+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "MINI",
+    "model": "MINI Countryman S ALL4 Aut.",
+    "year": 2025,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/MINI+MINI+Countryman+S+ALL4+Aut.+2025"
+  },
+  {
+    "brand": "MINI",
+    "model": "MINI Countryman S ALL4 Aut.",
+    "year": 2025,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=MINI+MINI+Countryman+S+ALL4+Aut.+2025"
+  },
+  {
+    "brand": "MINI",
+    "model": "MINI Countryman S ALL4 Aut.",
+    "year": 2025,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=MINI+MINI+Countryman+S+ALL4+Aut.+2025+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "model": "A 35 AMG 4MATIC Sedan",
+    "year": 2024,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/Mercedes-Benz+A+35+AMG+4MATIC+Sedan+2024"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "model": "A 35 AMG 4MATIC Sedan",
+    "year": 2024,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=Mercedes-Benz+A+35+AMG+4MATIC+Sedan+2024"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "model": "A 35 AMG 4MATIC Sedan",
+    "year": 2024,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=Mercedes-Benz+A+35+AMG+4MATIC+Sedan+2024+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "model": "GLS 450 4MATIC",
+    "year": 2024,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/Mercedes-Benz+GLS+450+4MATIC+2024"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "model": "GLS 450 4MATIC",
+    "year": 2024,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=Mercedes-Benz+GLS+450+4MATIC+2024"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "model": "GLS 450 4MATIC",
+    "year": 2024,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=Mercedes-Benz+GLS+450+4MATIC+2024+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model Y de Autonomía Mayor",
+    "year": 2024,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/Tesla+Model+Y+de+Autonom%C3%ADa+Mayor+2024"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model Y de Autonomía Mayor",
+    "year": 2024,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=Tesla+Model+Y+de+Autonom%C3%ADa+Mayor+2024"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model Y de Autonomía Mayor",
+    "year": 2024,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=Tesla+Model+Y+de+Autonom%C3%ADa+Mayor+2024+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Terramont Highline 3.6 FSI",
+    "year": 2021,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/Volkswagen+Terramont+Highline+3.6+FSI+2021"
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Terramont Highline 3.6 FSI",
+    "year": 2021,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=Volkswagen+Terramont+Highline+3.6+FSI+2021"
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Terramont Highline 3.6 FSI",
+    "year": 2021,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=Volkswagen+Terramont+Highline+3.6+FSI+2021+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "Volvo",
+    "model": "EX30 BEV Ultra Electrico Aut",
+    "year": 2025,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/Volvo+EX30+BEV+Ultra+Electrico+Aut+2025"
+  },
+  {
+    "brand": "Volvo",
+    "model": "EX30 BEV Ultra Electrico Aut",
+    "year": 2025,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=Volvo+EX30+BEV+Ultra+Electrico+Aut+2025"
+  },
+  {
+    "brand": "Volvo",
+    "model": "EX30 BEV Ultra Electrico Aut",
+    "year": 2025,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=Volvo+EX30+BEV+Ultra+Electrico+Aut+2025+seminuevo&categoryId=vehicles"
+  },
+  {
+    "brand": "Volvo",
+    "model": "XC60 Ultimate Dark T8 PLUG-IN HYBRID",
+    "year": 2023,
+    "source": "MercadoLibre",
+    "url": "https://autos.mercadolibre.com.mx/Volvo+XC60+Ultimate+Dark+T8+PLUG-IN+HYBRID+2023"
+  },
+  {
+    "brand": "Volvo",
+    "model": "XC60 Ultimate Dark T8 PLUG-IN HYBRID",
+    "year": 2023,
+    "source": "Seminuevos",
+    "url": "https://www.seminuevos.com/search?q=Volvo+XC60+Ultimate+Dark+T8+PLUG-IN+HYBRID+2023"
+  },
+  {
+    "brand": "Volvo",
+    "model": "XC60 Ultimate Dark T8 PLUG-IN HYBRID",
+    "year": 2023,
+    "source": "Facebook Marketplace",
+    "url": "https://www.facebook.com/marketplace/search/?query=Volvo+XC60+Ultimate+Dark+T8+PLUG-IN+HYBRID+2023+seminuevo&categoryId=vehicles"
+  }
+]

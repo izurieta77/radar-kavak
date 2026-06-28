@@ -163,20 +163,6 @@ function App() {
     .filter((item) => item.dealAnalysis.marketLowVsTarget != null)
     .sort((a, b) => (b.dealAnalysis.marketLowVsTarget ?? -Infinity) - (a.dealAnalysis.marketLowVsTarget ?? -Infinity))
     .slice(0, 5);
-  const DISCOUNT_GANGA = 5_000;
-  const discountGangaRows = externalBargains
-    .filter((deal) => externalKavakById.get(deal.id)?.sellOffer != null)
-    .map((deal) => {
-      const quote = externalKavakById.get(deal.id)!;
-      const kavakOffer = quote.sellOffer!;
-      const adjustedPrice = deal.price - DISCOUNT_GANGA;
-      const gap = adjustedPrice - kavakOffer;
-      return { deal, kavakOffer, adjustedPrice, gap };
-    })
-    .sort((a, b) => a.gap - b.gap);
-  const discountGangaBelowKavak = discountGangaRows.filter((row) => row.gap <= 0);
-  const discountGangaAboveKavak = discountGangaRows.filter((row) => row.gap > 0);
-
   const externalGapTotal = externalBargains.reduce((sum, item) => sum + item.gapToMedian, 0);
   const externalTop = externalBargains[0];
   const externalSaleQuotes = externalKavakQuotes.filter((quote) => quote.sellOffer != null);
@@ -521,67 +507,6 @@ function App() {
               Prioridad actual: {externalTop.year} {externalTop.name} en {externalTop.city}, {externalTop.region}, por {formatMoney(externalTop.price)}.
             </p>
           )}
-        </section>
-
-        <section className="discount-section" aria-labelledby="ganga-discount-title">
-          <div className="section-heading">
-            <div>
-              <span>Simulador gangas externas</span>
-              <h2 id="ganga-discount-title">Gangas −$5,000 de publicado · ¿Quién queda abajo de Kavak?</h2>
-              <p>
-                Precio ajustado = publicado menos $5,000 (margen de regateo mínimo). Verde = queda por debajo
-                de venta directa Kavak. Solo incluye gangas con cotización Kavak capturada.
-              </p>
-            </div>
-            <div className="scan-summary direct-summary">
-              <strong>{discountGangaBelowKavak.length}</strong>
-              <span>abajo de Kavak con −5k</span>
-              <small>
-                {discountGangaAboveKavak.length} siguen arriba ·{' '}
-                {discountGangaRows.length} con cotización activa
-              </small>
-            </div>
-          </div>
-
-          <div className="discount-table">
-            <div className="discount-head">
-              <span>#</span>
-              <span>Ganga</span>
-              <span>Publicado</span>
-              <span>Publicado −5k</span>
-              <span>Kavak venta</span>
-              <span>Gap vs Kavak</span>
-            </div>
-            {discountGangaRows.map(({ deal, kavakOffer, adjustedPrice, gap }, rank) => {
-              const isBelow = gap <= 0;
-              const isNear = !isBelow && gap <= 30_000;
-              return (
-                <div
-                  key={deal.id}
-                  className={[
-                    'discount-row',
-                    isBelow ? 'drow-below' : isNear ? 'drow-near' : 'drow-above'
-                  ].join(' ')}
-                  style={{ cursor: 'default' }}
-                >
-                  <span className="drow-rank">{rank + 1}</span>
-                  <span className="drow-car">
-                    <strong>{deal.year} {deal.name}</strong>
-                    <small>{deal.city}, {deal.region}</small>
-                  </span>
-                  <span className="drow-num">{formatMoney(deal.price)}</span>
-                  <span className="drow-num drow-adjusted">{formatMoney(adjustedPrice)}</span>
-                  <span className="drow-num">{formatMoney(kavakOffer)}</span>
-                  <span className={`drow-gap ${isBelow ? 'gap-below' : isNear ? 'gap-near' : 'gap-above'}`}>
-                    {isBelow ? '▼ ' : '▲ '}
-                    {formatMoney(Math.abs(gap))}
-                    {isBelow && <small>margen bruto</small>}
-                    {isNear && <small>negociar más</small>}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
         </section>
 
         <section className="content-grid">
